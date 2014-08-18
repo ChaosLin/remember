@@ -19,6 +19,7 @@
 		7EAB3A1F19A1944200024E00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAB3A0719A1944200024E00 /* UIKit.framework */; };
 		7EAB3A2719A1944200024E00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EAB3A2519A1944200024E00 /* InfoPlist.strings */; };
 		7EAB3A2919A1944200024E00 /* rememberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB3A2819A1944200024E00 /* rememberTests.m */; };
+		7EAB3A3519A1949900024E00 /* ReviewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB3A3419A1949900024E00 /* ReviewItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		7EAB3A2419A1944200024E00 /* rememberTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "rememberTests-Info.plist"; sourceTree = "<group>"; };
 		7EAB3A2619A1944200024E00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7EAB3A2819A1944200024E00 /* rememberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rememberTests.m; sourceTree = "<group>"; };
+		7EAB3A3319A1949900024E00 /* ReviewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewItem.h; sourceTree = "<group>"; };
+		7EAB3A3419A1949900024E00 /* ReviewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,7 @@
 		7EAB3A0919A1944200024E00 /* remember */ = {
 			isa = PBXGroup;
 			children = (
+				7EAB3A3219A1948A00024E00 /* Model */,
 				7EAB3A1219A1944200024E00 /* AppDelegate.h */,
 				7EAB3A1319A1944200024E00 /* AppDelegate.m */,
 				7EAB3A1519A1944200024E00 /* Images.xcassets */,
@@ -142,6 +146,15 @@
 				7EAB3A2519A1944200024E00 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7EAB3A3219A1948A00024E00 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7EAB3A3319A1949900024E00 /* ReviewItem.h */,
+				7EAB3A3419A1949900024E00 /* ReviewItem.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EAB3A3519A1949900024E00 /* ReviewItem.m in Sources */,
 				7EAB3A1419A1944200024E00 /* AppDelegate.m in Sources */,
 				7EAB3A1019A1944200024E00 /* main.m in Sources */,
 			);
