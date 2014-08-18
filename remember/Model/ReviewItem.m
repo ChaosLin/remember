@@ -7,8 +7,83 @@
 //
 
 #import "ReviewItem.h"
+#import "DateUtils.h"
+#import "UniqueID.h"
 
 @implementation ReviewItem
+
+- (id)init
+{
+    if (self = [super init])
+    {
+        self.id_review = [UniqueID getUniqueID];
+        self.dateId_created = [DateUtils getTodayDateId];
+        self.dateId_lastReviewed = [DateUtils getTodayDateId];
+    }
+    return self;
+}
+
+- (BOOL)review
+{
+    self.dateId_lastReviewed = [DateUtils getTodayDateId];
+    self.time_reviews += 1;
+    if (self.time_reviews >= cycle_count){
+        self.finished = YES;
+    }
+    //通知另外一个类去更新，并更新数据源
+    return YES;
+}
+
+- (NSInteger)getNextReviewDateId
+{
+    //如果没有delay，就取下一个日子,否则返回今天
+    NSInteger dayId_next = self.dateId_lastReviewed;
+    if (0 == self.time_reviews){
+        dayId_next = self.dateId_created;
+    }
+    else {
+        NSInteger times = self.time_reviews;
+        dayId_next = [DateUtils getDayIdWithDays:cycle_date[times] - cycle_date[times - 1] afterDayId:self.dateId_lastReviewed];
+    }
+    
+    NSInteger today = [DateUtils getTodayDateId];
+    if (today > dayId_next){
+        return [DateUtils getTodayDateId];
+    }
+    else{
+        return dayId_next;
+    }
+}
+
+- (NSInteger)getReviewDateIdOnIndex:(NSInteger)index//得到第index的周期的复习时间
+{
+    if (self.time_reviews >= index || index > cycle_count){
+        return -1;
+    }
+    else{
+        if (!self.delayed){
+            if (0 == self.time_reviews){
+                return [DateUtils getDayIdWithDays:cycle_date[index - 1] afterDayId:self.dateId_lastReviewed];
+            }
+            return [DateUtils getDayIdWithDays:cycle_date[index - 1] - cycle_date[self.time_reviews - 1] afterDayId:self.dateId_lastReviewed];
+        }
+        else{
+            if (index == self.time_reviews + 1)
+            {
+                return [DateUtils getTodayDateId];
+            }
+            return [DateUtils getDayIdWithDays:cycle_date[index - 1] - cycle_date[self.time_reviews] afterDayId:[DateUtils getTodayDateId]];
+        }
+    }
+    return 0;
+}
+
+#pragma mark - 工厂方法
++ (instancetype)createReviewItem
+{
+    ReviewItem* item = [[ReviewItem alloc]init];
+    return item;
+}
 
 #pragma mark - NSCoding
 //@property (nonatomic, retain) NSString* id_review;//唯一的标识
@@ -43,5 +118,38 @@
         self.finished = [aDecoder decodeBoolForKey:key_finished];
     }
     return self;
+}
+
+#pragma mark - getter,setter
+- (BOOL)delayed
+{
+    //如果已经复习完，为NO
+    if (self.time_reviews >= cycle_count)
+    {
+        return NO;
+    }
+    
+    NSInteger dayId_next = self.dateId_lastReviewed;
+    if (0 == self.time_reviews){
+        dayId_next = self.dateId_created;
+    }
+    else {
+        NSInteger times = self.time_reviews;
+        dayId_next = [DateUtils getDayIdWithDays:cycle_date[times] - cycle_date[times - 1] afterDayId:self.dateId_lastReviewed];
+    }
+    
+    NSInteger today = [DateUtils getTodayDateId];
+    if (today > dayId_next){
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+}
+
+- (void)setDateId_lastReviewed:(NSInteger)dateId_lastReviewed
+{
+    _dateId_lastReviewed = dateId_lastReviewed;
 }
 @end
