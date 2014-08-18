@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "ReviewItem.h"
+#import "ReviewItemManager.h"
 
 @interface rememberTests : XCTestCase
 
@@ -65,5 +66,13 @@
     XCTAssert(20150831 == [item getReviewDateIdOnIndex:5], @"");
     XCTAssert(20150915 == [item getReviewDateIdOnIndex:6], @"");
     XCTAssert(20151015 == [item getReviewDateIdOnIndex:7], @"");
+}
+
+- (void)testReviewItemManagerSaveAndLoad
+{
+    ReviewItemManager* manager = [ReviewItemManager sharedInstance];
+    ReviewItem* item = [ReviewItem createReviewItem];
+    
+    
 }
 @end
