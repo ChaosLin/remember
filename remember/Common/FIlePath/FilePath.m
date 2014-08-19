@@ -12,13 +12,13 @@
 
 + (NSString*)getDocumentPathWithFileName:(NSString*)fileName
 {
-    if (!fileName || [fileName isKindOfClass:[NSString class]])
+    if (!fileName || ![fileName isKindOfClass:[NSString class]])
     {
         return nil;
     }
     NSArray* arr_urls = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
     NSURL* url_document = [arr_urls firstObject];
-    NSString* str_document = [url_document absoluteString];
+    NSString* str_document = [url_document path];
     return [str_document stringByAppendingPathComponent:fileName];
 }
 

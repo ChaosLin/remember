@@ -8,7 +8,7 @@
 
 #ifndef remember_DateConfig_h
 #define remember_DateConfig_h
-static int cycle_count = 7;
-static int cycle_date[7] = {0, 1, 3, 7, 14, 29, 59};
+static NSInteger cycle_count = 7;
+static NSInteger cycle_date[7] = {0, 1, 3, 7, 14, 29, 59};
 //{0,1,2,4,7,15,30}
 #endif

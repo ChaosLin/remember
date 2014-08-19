@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "ReviewItem.h"
 #import "ReviewItemManager.h"
+#import "ReviewItemGenerator.h"
 
 @interface rememberTests : XCTestCase
 
@@ -64,7 +65,7 @@
     XCTAssert(20150820 == [item getReviewDateIdOnIndex:3], @"");
     XCTAssert(20150824 == [item getReviewDateIdOnIndex:4], @"");
     XCTAssert(20150831 == [item getReviewDateIdOnIndex:5], @"");
-    XCTAssert(20150915 == [item getReviewDateIdOnIndex:6], @"");
+    XCTAssert(20150915 == [item getReviewDateIdOnIndex:6]);
     XCTAssert(20151015 == [item getReviewDateIdOnIndex:7], @"");
 }
 
@@ -72,7 +73,35 @@
 {
     ReviewItemManager* manager = [ReviewItemManager sharedInstance];
     ReviewItem* item = [ReviewItem createReviewItem];
+    ReviewItem* item2 = [ReviewItem createReviewItem];
+    XCTAssert([manager deleteAllItems], @"");
+    XCTAssert([manager addItem:item], @"");
+    XCTAssert([manager addItem:item2], @"");
+    XCTAssert([manager save], @"");
+    XCTAssert([manager load], @"");
+    XCTAssert(2 == manager.items.count, @"");
+    XCTAssert([manager deleteItemByID:item.id_review], @"");
+    XCTAssert(1 == manager.items.count, @"");
     
-    
+}
+
+- (void)testReviewGenerator
+{
+    ReviewItemManager* manager = [ReviewItemManager sharedInstance];
+    ReviewItem* item = [ReviewItem createReviewItem];
+    ReviewItem* item2 = [ReviewItem createReviewItem];
+    XCTAssert([manager deleteAllItems], @"");
+    XCTAssert([manager addItem:item], @"");
+    XCTAssert([manager addItem:item2], @"");
+    XCTAssert([manager save], @"");
+    XCTAssert([manager load], @"");
+    XCTAssert(2 == manager.items.count, @"");
+    XCTAssert([manager deleteItemByID:item2.id_review], @"");
+    XCTAssert(1 == manager.items.count, @"");
+    [[ReviewItemGenerator sharedInstance] refresh];
+    item = manager.items.firstObject;
+    [item review];
+    [item review];
+    [[ReviewItemGenerator sharedInstance] refreshForItem:item];
 }
 @end

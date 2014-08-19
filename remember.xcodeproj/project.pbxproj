@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5983792319A2422F00AD4BC7 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983792219A2422F00AD4BC7 /* DateUtils.m */; };
-		5983792419A2422F00AD4BC7 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983792219A2422F00AD4BC7 /* DateUtils.m */; };
 		5983792719A2447C00AD4BC7 /* ReviewItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983792619A2447C00AD4BC7 /* ReviewItemManager.m */; };
 		5983792819A2447C00AD4BC7 /* ReviewItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983792619A2447C00AD4BC7 /* ReviewItemManager.m */; };
 		5983793119A24B4400AD4BC7 /* FilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983793019A24B4400AD4BC7 /* FilePath.m */; };
@@ -28,6 +26,10 @@
 		7EAB3A3519A1949900024E00 /* ReviewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB3A3419A1949900024E00 /* ReviewItem.m */; };
 		7EAB3A4A19A1EDE000024E00 /* UniqueID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB3A4919A1EDE000024E00 /* UniqueID.m */; };
 		7EAB3A4B19A1EDE000024E00 /* UniqueID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB3A4919A1EDE000024E00 /* UniqueID.m */; };
+		7EAB3A4F19A2E50400024E00 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB3A4E19A2E50400024E00 /* DateUtils.m */; };
+		7EAB3A5019A2E50400024E00 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB3A4E19A2E50400024E00 /* DateUtils.m */; };
+		7EAB3A5319A2FD8E00024E00 /* ReviewItemGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB3A5219A2FD8E00024E00 /* ReviewItemGenerator.m */; };
+		7EAB3A5419A2FD8E00024E00 /* ReviewItemGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB3A5219A2FD8E00024E00 /* ReviewItemGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +43,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5983792119A2422F00AD4BC7 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
-		5983792219A2422F00AD4BC7 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
 		5983792519A2447C00AD4BC7 /* ReviewItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewItemManager.h; sourceTree = "<group>"; };
 		5983792619A2447C00AD4BC7 /* ReviewItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewItemManager.m; sourceTree = "<group>"; };
 		5983792F19A24B4400AD4BC7 /* FilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePath.h; sourceTree = "<group>"; };
@@ -68,6 +68,10 @@
 		7EAB3A4619A1A2BE00024E00 /* DateConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateConfig.h; sourceTree = "<group>"; };
 		7EAB3A4819A1EDE000024E00 /* UniqueID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniqueID.h; sourceTree = "<group>"; };
 		7EAB3A4919A1EDE000024E00 /* UniqueID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniqueID.m; sourceTree = "<group>"; };
+		7EAB3A4D19A2E50400024E00 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
+		7EAB3A4E19A2E50400024E00 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
+		7EAB3A5119A2FD8E00024E00 /* ReviewItemGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewItemGenerator.h; sourceTree = "<group>"; };
+		7EAB3A5219A2FD8E00024E00 /* ReviewItemGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewItemGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,16 +98,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5983792019A2422F00AD4BC7 /* DateUtils */ = {
-			isa = PBXGroup;
-			children = (
-				5983792119A2422F00AD4BC7 /* DateUtils.h */,
-				5983792219A2422F00AD4BC7 /* DateUtils.m */,
-			);
-			name = DateUtils;
-			path = ../../../DateUtilsDemonstration/DateUtils;
-			sourceTree = "<group>";
-		};
 		5983792E19A24B3700AD4BC7 /* FIlePath */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +187,8 @@
 				7EAB3A3419A1949900024E00 /* ReviewItem.m */,
 				5983792519A2447C00AD4BC7 /* ReviewItemManager.h */,
 				5983792619A2447C00AD4BC7 /* ReviewItemManager.m */,
+				7EAB3A5119A2FD8E00024E00 /* ReviewItemGenerator.h */,
+				7EAB3A5219A2FD8E00024E00 /* ReviewItemGenerator.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,8 +196,8 @@
 		7EAB3A3619A19AB800024E00 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7EAB3A4C19A2E50400024E00 /* DateUtils */,
 				5983792E19A24B3700AD4BC7 /* FIlePath */,
-				5983792019A2422F00AD4BC7 /* DateUtils */,
 				7EAB3A4719A1EDCD00024E00 /* UniqueID */,
 			);
 			path = Common;
@@ -222,6 +218,16 @@
 				7EAB3A4919A1EDE000024E00 /* UniqueID.m */,
 			);
 			path = UniqueID;
+			sourceTree = "<group>";
+		};
+		7EAB3A4C19A2E50400024E00 /* DateUtils */ = {
+			isa = PBXGroup;
+			children = (
+				7EAB3A4D19A2E50400024E00 /* DateUtils.h */,
+				7EAB3A4E19A2E50400024E00 /* DateUtils.m */,
+			);
+			name = DateUtils;
+			path = ../../../../../GitHub/DateUtils/DateUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,11 +326,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EAB3A3519A1949900024E00 /* ReviewItem.m in Sources */,
+				7EAB3A5319A2FD8E00024E00 /* ReviewItemGenerator.m in Sources */,
 				5983793119A24B4400AD4BC7 /* FilePath.m in Sources */,
 				7EAB3A4A19A1EDE000024E00 /* UniqueID.m in Sources */,
 				5983792719A2447C00AD4BC7 /* ReviewItemManager.m in Sources */,
+				7EAB3A4F19A2E50400024E00 /* DateUtils.m in Sources */,
 				7EAB3A1419A1944200024E00 /* AppDelegate.m in Sources */,
-				5983792319A2422F00AD4BC7 /* DateUtils.m in Sources */,
 				7EAB3A1019A1944200024E00 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,8 +343,9 @@
 				5983793219A24B4400AD4BC7 /* FilePath.m in Sources */,
 				7EAB3A4B19A1EDE000024E00 /* UniqueID.m in Sources */,
 				7EAB3A2919A1944200024E00 /* rememberTests.m in Sources */,
+				7EAB3A5419A2FD8E00024E00 /* ReviewItemGenerator.m in Sources */,
 				5983792819A2447C00AD4BC7 /* ReviewItemManager.m in Sources */,
-				5983792419A2422F00AD4BC7 /* DateUtils.m in Sources */,
+				7EAB3A5019A2E50400024E00 /* DateUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

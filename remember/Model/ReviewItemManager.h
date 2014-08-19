@@ -20,5 +20,6 @@
 - (ReviewItem*)getItemByID:(NSString*)uniqueID;
 
 - (BOOL)addItem:(ReviewItem*)item;
-- (BOOL)deleteItem:(ReviewItem*)item;
+- (BOOL)deleteItemByID:(NSString*)uniqueID;
+- (BOOL)deleteAllItems;
 @end

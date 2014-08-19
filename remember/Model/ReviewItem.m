@@ -9,6 +9,7 @@
 #import "ReviewItem.h"
 #import "DateUtils.h"
 #import "UniqueID.h"
+#import "FilePath.h"
 
 @implementation ReviewItem
 
@@ -86,7 +87,7 @@
 }
 
 #pragma mark - NSCoding
-//@property (nonatomic, retain) NSString* id_review;//唯一的标识
+//@property (nonatomic, strong) NSString* id_review;//唯一的标识
 //@property (nonatomic) NSInteger dateId_created;
 //@property (nonatomic) NSInteger dateId_lastReviewed;
 //@property (nonatomic) NSInteger time_reviews;//复习过的次数
@@ -97,6 +98,7 @@
 #define key_dateId_lastReviewed @"dateId_lastReviewed"
 #define key_time_reviews @"time_reviews"
 #define key_finished @"finished"
+#define key_imageCount @"imageCount"
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
@@ -105,6 +107,7 @@
     [aCoder encodeInteger:self.dateId_lastReviewed forKey:key_dateId_lastReviewed];
     [aCoder encodeInteger:self.time_reviews forKey:key_time_reviews];
     [aCoder encodeBool:self.finished forKey:key_finished];
+    [aCoder encodeInteger:self.count_images forKey:key_imageCount];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -116,6 +119,7 @@
         self.dateId_lastReviewed = [aDecoder decodeIntegerForKey:key_dateId_lastReviewed];
         self.time_reviews = [aDecoder decodeIntegerForKey:key_time_reviews];
         self.finished = [aDecoder decodeBoolForKey:key_finished];
+        self.count_images = [aDecoder decodeIntegerForKey:key_imageCount];
     }
     return self;
 }
@@ -151,5 +155,15 @@
 - (void)setDateId_lastReviewed:(NSInteger)dateId_lastReviewed
 {
     _dateId_lastReviewed = dateId_lastReviewed;
+}
+
+#pragma mark - Image
+- (BOOL)addImage:(UIImage *)image
+{
+    self.count_images += 1;
+    NSString* str_fileName = [NSString stringWithFormat:@"%@_%d.jpeg", self.id_review, self.count_images];
+    NSString* str_filePath = [FilePath getDocumentPathWithFileName:str_fileName];
+    NSData* data_image = UIImageJPEGRepresentation(image, 1);
+    return [data_image writeToFile:str_filePath atomically:YES];
 }
 @end
