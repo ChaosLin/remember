@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		590CD53E19A4E1E000573FBD /* EventDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 590CD53D19A4E1E000573FBD /* EventDayCellView.m */; };
+		590CD54119A4E42900573FBD /* NumberDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 590CD54019A4E42900573FBD /* NumberDayCellView.m */; };
 		5983792719A2447C00AD4BC7 /* ReviewItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983792619A2447C00AD4BC7 /* ReviewItemManager.m */; };
 		5983792819A2447C00AD4BC7 /* ReviewItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983792619A2447C00AD4BC7 /* ReviewItemManager.m */; };
 		5983793119A24B4400AD4BC7 /* FilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983793019A24B4400AD4BC7 /* FilePath.m */; };
@@ -49,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		590CD53C19A4E1E000573FBD /* EventDayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDayCellView.h; sourceTree = "<group>"; };
+		590CD53D19A4E1E000573FBD /* EventDayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDayCellView.m; sourceTree = "<group>"; };
+		590CD53F19A4E42900573FBD /* NumberDayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberDayCellView.h; sourceTree = "<group>"; };
+		590CD54019A4E42900573FBD /* NumberDayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberDayCellView.m; sourceTree = "<group>"; };
 		5983792519A2447C00AD4BC7 /* ReviewItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewItemManager.h; sourceTree = "<group>"; };
 		5983792619A2447C00AD4BC7 /* ReviewItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewItemManager.m; sourceTree = "<group>"; };
 		5983792F19A24B4400AD4BC7 /* FilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePath.h; sourceTree = "<group>"; };
@@ -136,6 +142,10 @@
 				5983793A19A38C5700AD4BC7 /* DayCellView.m */,
 				5983793B19A38C5700AD4BC7 /* MonthView.h */,
 				5983793C19A38C5700AD4BC7 /* MonthView.m */,
+				590CD53F19A4E42900573FBD /* NumberDayCellView.h */,
+				590CD54019A4E42900573FBD /* NumberDayCellView.m */,
+				590CD53C19A4E1E000573FBD /* EventDayCellView.h */,
+				590CD53D19A4E1E000573FBD /* EventDayCellView.m */,
 			);
 			name = RTCalendarView;
 			path = ../../../RTCalendarViewDemo/RTCalendarViewDemo/RTCalendarView;
@@ -364,9 +374,11 @@
 				7EAB3A5319A2FD8E00024E00 /* ReviewItemGenerator.m in Sources */,
 				5983793119A24B4400AD4BC7 /* FilePath.m in Sources */,
 				7EAB3A4A19A1EDE000024E00 /* UniqueID.m in Sources */,
+				590CD53E19A4E1E000573FBD /* EventDayCellView.m in Sources */,
 				5983792719A2447C00AD4BC7 /* ReviewItemManager.m in Sources */,
 				5983793F19A38C5700AD4BC7 /* MonthView.m in Sources */,
 				5983794419A38C8400AD4BC7 /* HomeViewController.m in Sources */,
+				590CD54119A4E42900573FBD /* NumberDayCellView.m in Sources */,
 				5983793619A386F200AD4BC7 /* DateUtils.m in Sources */,
 				7EAB3A1419A1944200024E00 /* AppDelegate.m in Sources */,
 				5983793D19A38C5700AD4BC7 /* DayCellView.m in Sources */,

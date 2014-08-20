@@ -17,4 +17,6 @@
 - (NSArray*)getReviewItemsForDayID:(NSInteger)dayID;
 
 - (BOOL)refreshForItem:(ReviewItem*)item;//根据item的状态刷新自己的数据
+
+- (NSDictionary*)generateDicDayID2Bool;
 @end

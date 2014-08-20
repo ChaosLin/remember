@@ -55,7 +55,7 @@ static ReviewItemGenerator* generator = nil;
                 NSInteger dayID = [item getReviewDateIdOnIndex:i];
                 if (-1 != dayID)
                 {
-                    NSString* str_dayID = getStringFromDayID(dayID);
+                    NSString* str_dayID = GetStringFromDayID(dayID);
                     NSMutableArray* arr_items = (NSMutableArray*)[self.dic_dayID2ItemArr valueForKey:str_dayID];
                     if (!arr_items)
                     {
@@ -71,12 +71,12 @@ static ReviewItemGenerator* generator = nil;
 
 - (NSArray*)getTodaysReviewItems
 {
-    return [self.dic_dayID2ItemArr valueForKey:getStringFromDayID([DateUtils getTodayDateId])];
+    return [self.dic_dayID2ItemArr valueForKey:GetStringFromDayID([DateUtils getTodayDateId])];
 }
 
 - (NSArray*)getReviewItemsForDayID:(NSInteger)dayID
 {
-    return [self.dic_dayID2ItemArr valueForKey:getStringFromDayID(dayID)];
+    return [self.dic_dayID2ItemArr valueForKey:GetStringFromDayID(dayID)];
 }
 
 - (BOOL)refreshForItem:(ReviewItem*)item//根据item的状态刷新自己的数据
@@ -89,7 +89,7 @@ static ReviewItemGenerator* generator = nil;
             NSInteger dayID = [item getReviewDateIdOnIndex:i];
             if (-1 != dayID)
             {
-                NSString* str_dayID = getStringFromDayID(dayID);
+                NSString* str_dayID = GetStringFromDayID(dayID);
                 NSMutableArray* arr_items = (NSMutableArray*)[self.dic_dayID2ItemArr valueForKey:str_dayID];
                 if (!arr_items)
                 {
@@ -137,5 +137,19 @@ static ReviewItemGenerator* generator = nil;
         [arr_items removeObject:item];
     }
     return result;
+}
+
+#pragma mark - output
+- (NSDictionary*)generateDicDayID2Bool
+{
+    NSMutableDictionary* dic_result = [NSMutableDictionary dictionary];
+    for (NSString* key in self.dic_dayID2ItemArr.allKeys)
+    {
+        if (0 != [self.dic_dayID2ItemArr valueForKey:key])
+        {
+            [dic_result setValue:@(YES) forKeyPath:key];
+        }
+    }
+    return dic_result;
 }
 @end
