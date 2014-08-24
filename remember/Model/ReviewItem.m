@@ -166,4 +166,15 @@
     NSData* data_image = UIImageJPEGRepresentation(image, 1);
     return [data_image writeToFile:str_filePath atomically:YES];
 }
+
+- (BOOL)addImages:(NSArray*)images
+{
+    
+    return YES;
+}
+
+- (UIImage*)getImageAtIndex:(NSInteger)index
+{
+    return nil;
+}
 @end

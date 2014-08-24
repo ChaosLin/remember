@@ -28,4 +28,7 @@
 - (NSInteger)getReviewDateIdOnIndex:(NSInteger)index;//得到第index的周期的复习时间
 
 - (BOOL)addImage:(UIImage*)image;
+- (BOOL)addImages:(NSArray*)images;
+
+- (UIImage*)getImageAtIndex:(NSInteger)index;
 @end
