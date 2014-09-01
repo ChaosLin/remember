@@ -33,10 +33,16 @@ static ReviewItemManager* manager = nil;
 {
     if (self = [super init])
     {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(save) name:UIApplicationWillResignActiveNotification object:nil];
         self.arr_items = [NSMutableArray array];
         [self load];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (NSArray*)items
@@ -47,7 +53,8 @@ static ReviewItemManager* manager = nil;
 - (BOOL)save
 {
     NSString* str_filePath = [FilePath getDocumentPathWithFileName:ItemFileName];
-    return [NSKeyedArchiver archiveRootObject:self.arr_items toFile:str_filePath];
+    BOOL result = [NSKeyedArchiver archiveRootObject:self.arr_items toFile:str_filePath];
+    return result;
 }
 
 - (BOOL)load

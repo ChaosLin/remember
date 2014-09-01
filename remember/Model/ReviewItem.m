@@ -169,12 +169,26 @@
 
 - (BOOL)addImages:(NSArray*)images
 {
-    
+    self.count_images += images.count;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [images enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            if ([obj isKindOfClass:[UIImage class]])
+            {
+                NSString* str_fileName = [NSString stringWithFormat:@"%@_%d.jpeg", self.id_review, idx + 1];
+                NSString* str_filePath = [FilePath getDocumentPathWithFileName:str_fileName];
+                NSData* data_image = UIImageJPEGRepresentation(obj, 1);
+                BOOL result_save = [data_image writeToFile:str_filePath atomically:YES];
+                NSLog(@"save file:%d", result_save);
+            }
+        }];
+    });
     return YES;
 }
 
 - (UIImage*)getImageAtIndex:(NSInteger)index
 {
-    return nil;
+    NSString* str_fileName = [NSString stringWithFormat:@"%@_%d.jpeg", self.id_review, index];
+    NSString* str_filePath = [FilePath getDocumentPathWithFileName:str_fileName];
+    return [[UIImage alloc]initWithContentsOfFile:str_filePath];
 }
 @end

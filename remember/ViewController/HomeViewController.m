@@ -13,13 +13,19 @@
 #import "ReviewItemManager.h"
 #import "ReviewItemGenerator.h"
 #import "DateUtils.h"
+#import "RTReviewAddItemDirector.h"
+#import "ItemListTableViewController.h"
 
 @interface HomeViewController ()<MonthViewResource, MonthViewDelegate>
 @property (nonatomic, strong) MonthView* monthView;
 
 @property (nonatomic, strong) NSDictionary* dic_dayId2flatEvent;//dayID:YES/NO
 
+@property (nonatomic, strong) RTReviewAddItemDirector* addItemDirector;
+
 - (void)test;//填充一些数据
+
+- (void)createItem:(id)sender;
 @end
 
 @implementation HomeViewController
@@ -45,6 +51,17 @@
     self.monthView.dataResource = self;
     [self.view addSubview:self.monthView];
     [self.monthView showToday];
+    
+    UIBarButtonItem* rightItem = [[UIBarButtonItem alloc]initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(createItem:)];
+    self.navigationItem.rightBarButtonItem = rightItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.dic_dayId2flatEvent = [[ReviewItemGenerator sharedInstance] generateDicDayID2Bool];
+    [self.monthView reloadView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,23 +91,44 @@
 #pragma mark - MonthViewDelegate
 - (void)monthView:(MonthView*)monthView didSelectDayId:(NSInteger)dayId
 {
-    
+    ItemListTableViewController* itemListVC = [[ItemListTableViewController alloc]init];
+    itemListVC.dayID = dayId;
+    [self.navigationController pushViewController:itemListVC animated:YES];
 }
 
 #pragma mark - test
 - (void)test
 {
-    ReviewItem* item = [ReviewItem createReviewItem];
-//    item.dateId_created = 20150818;
-//    item.dateId_lastReviewed = 20150818;
-    
-    [[ReviewItemManager sharedInstance] addItem:item];
-    [item review];
-    [item review];
-    
+//    ReviewItem* item = [ReviewItem createReviewItem];
+////    item.dateId_created = 20150818;
+////    item.dateId_lastReviewed = 20150818;
+//    
+//    [[ReviewItemManager sharedInstance] addItem:item];
+//    [item review];
+//    [item review];
+//    
     [[ReviewItemGenerator sharedInstance] refresh];
-    
+//
     self.dic_dayId2flatEvent = [[ReviewItemGenerator sharedInstance] generateDicDayID2Bool];
     [self.monthView reloadView];
+    
+}
+
+- (void)createItem:(id)sender
+{
+    __weak HomeViewController* weakself = self;
+    self.addItemDirector = [[RTReviewAddItemDirector alloc]init];
+    self.addItemDirector.succBlock = ^(void){
+        [[ReviewItemGenerator sharedInstance] refresh];
+        weakself.dic_dayId2flatEvent = [[ReviewItemGenerator sharedInstance] generateDicDayID2Bool];
+        [weakself.monthView reloadView];
+        NSLog(@"success");
+    };
+    self.addItemDirector.failBlock = ^(void)
+    {
+        NSLog(@"failed");
+    };
+    self.addItemDirector.rootViewController = self;
+    [self.addItemDirector action];
 }
 @end

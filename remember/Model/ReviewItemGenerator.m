@@ -67,6 +67,7 @@ static ReviewItemGenerator* generator = nil;
             }
         }
     }
+    return;
 }
 
 - (NSArray*)getTodaysReviewItems
@@ -145,7 +146,7 @@ static ReviewItemGenerator* generator = nil;
     NSMutableDictionary* dic_result = [NSMutableDictionary dictionary];
     for (NSString* key in self.dic_dayID2ItemArr.allKeys)
     {
-        if (0 != [self.dic_dayID2ItemArr valueForKey:key])
+        if (0 != [[self.dic_dayID2ItemArr valueForKey:key] count])
         {
             [dic_result setValue:@(YES) forKeyPath:key];
         }
