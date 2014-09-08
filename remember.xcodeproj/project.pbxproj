@@ -420,6 +420,13 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		7E886C9119BDAA2800AA5784 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		7EAB39F719A1944200024E00 = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +460,7 @@
 		7EAB3A0919A1944200024E00 /* remember */ = {
 			isa = PBXGroup;
 			children = (
+				7E886C9119BDAA2800AA5784 /* Resource */,
 				59D0347319AF781600C0E40D /* OpenResource */,
 				59D0346C19AF775100C0E40D /* Controller */,
 				5983794119A38C7300AD4BC7 /* ViewController */,
@@ -875,13 +883,12 @@
 		7EAB3A2D19A1944200024E00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "remember/remember-Prefix.pch";
 				INFOPLIST_FILE = "remember/remember-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "132031da-ed92-410e-a8c8-83de96fa6135";
+				PROVISIONING_PROFILE = "7dcd3e85-9585-4c70-9cb7-c612c6bf825c";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -889,13 +896,12 @@
 		7EAB3A2E19A1944200024E00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "remember/remember-Prefix.pch";
 				INFOPLIST_FILE = "remember/remember-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "132031da-ed92-410e-a8c8-83de96fa6135";
+				PROVISIONING_PROFILE = "39e0dc56-31eb-4769-8ebe-3fbab1bf08c6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

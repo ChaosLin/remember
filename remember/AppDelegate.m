@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HomeViewController.h"
+#import "ReviewFacade.h"
 
 @implementation AppDelegate
 
@@ -19,6 +20,8 @@
     HomeViewController* homeVC = [[HomeViewController alloc]initWithNibName:nil bundle:nil];
     UINavigationController* navigationVC = [[UINavigationController alloc]initWithRootViewController:homeVC];
     self.window.rootViewController = navigationVC;
+    
+    [ReviewFacade sharedInstance];
     
     [self.window makeKeyAndVisible];
     return YES;

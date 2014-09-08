@@ -25,6 +25,8 @@
 - (void)test;//填充一些数据
 
 - (void)createItem:(id)sender;
+
+- (void)startToLoad;
 @end
 
 @implementation HomeViewController
@@ -44,15 +46,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self test];
-    self.monthView = [[MonthView alloc]initWithFrame:self.view.bounds];
-    self.monthView.delegate = self;
-    self.monthView.dataResource = self;
-    [self.view addSubview:self.monthView];
-    [self.monthView showToday];
     
     UIBarButtonItem* rightItem = [[UIBarButtonItem alloc]initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(createItem:)];
     self.navigationItem.rightBarButtonItem = rightItem;
+    
+    [self performSelector:@selector(startToLoad) withObject:nil afterDelay:0.3];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -96,6 +94,17 @@
 }
 
 #pragma mark - test
+
+- (void)startToLoad
+{
+    [self test];
+    self.monthView = [[MonthView alloc]initWithFrame:self.view.bounds];
+    self.monthView.delegate = self;
+    self.monthView.dataResource = self;
+    [self.view addSubview:self.monthView];
+    [self.monthView showToday];
+}
+
 - (void)test
 {
 //    ReviewItem* item = [ReviewItem createReviewItem];

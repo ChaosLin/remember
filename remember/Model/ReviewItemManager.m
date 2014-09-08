@@ -53,21 +53,30 @@ static ReviewItemManager* manager = nil;
 - (BOOL)save
 {
     NSString* str_filePath = [FilePath getDocumentPathWithFileName:ItemFileName];
-    BOOL result = [NSKeyedArchiver archiveRootObject:self.arr_items toFile:str_filePath];
+    BOOL result = YES;
+    NSArray* arr_items = [self.arr_items mutableCopy];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+        BOOL archiveResult = [NSKeyedArchiver archiveRootObject:arr_items toFile:str_filePath];
+        if (!archiveResult)
+        {
+#warning 记录一下事件，或者通知出去
+        }
+    });
     return result;
 }
 
 - (BOOL)load
 {
-    BOOL result = NO;
+    BOOL result = YES;
     NSString* str_filePath = [FilePath getDocumentPathWithFileName:ItemFileName];
-    NSArray* arr_files = [NSKeyedUnarchiver unarchiveObjectWithFile:str_filePath];
-    [self.arr_items removeAllObjects];
-    if (arr_files && [arr_files isKindOfClass:[NSArray class]])
-    {
-        result = YES;
-        [self.arr_items addObjectsFromArray:arr_files];
-    }
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void){
+        NSArray* arr_files = [NSKeyedUnarchiver unarchiveObjectWithFile:str_filePath];
+        [self.arr_items removeAllObjects];
+        if (arr_files && [arr_files isKindOfClass:[NSArray class]])
+        {
+            [self.arr_items addObjectsFromArray:arr_files];
+        }
+    });
     return result;
 }
 
@@ -99,6 +108,7 @@ static ReviewItemManager* manager = nil;
         [self.arr_items addObject:item];
         result = YES;
     }
+    [self save];
     return result;
 }
 
@@ -115,12 +125,14 @@ static ReviewItemManager* manager = nil;
         [self.arr_items removeObject:item];
         result = YES;
     }
+    [self save];
     return result;
 }
 
 - (BOOL)deleteAllItems
 {
     [self.arr_items removeAllObjects];
+    [self save];
     return YES;
 }
 
@@ -133,6 +145,7 @@ static ReviewItemManager* manager = nil;
             *stop = YES;
         }
     }];
+    [self save];
     return YES;
 }
 @end

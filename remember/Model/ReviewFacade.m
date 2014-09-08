@@ -107,6 +107,10 @@ static ReviewFacade* facade = nil;
 
 - (NSDictionary*)generateDicDayID2Bool
 {
-    return [self.generator generateDicDayID2Bool];
+    NSDate* date_begin = [NSDate date];
+    id result = [self.generator generateDicDayID2Bool];
+    NSDate* date_end = [NSDate date];
+    NSLog(@"%f", [date_end timeIntervalSinceDate:date_begin]);
+    return result;
 }
 @end
