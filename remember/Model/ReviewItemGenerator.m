@@ -9,7 +9,7 @@
 #import "ReviewItemGenerator.h"
 #import "ReviewItem.h"
 #import "DateUtils.h"
-#import "ReviewItemManager.h"
+#import "ReviewFacade.h"
 
 #warning 以item直接去处理不太好，因为很可能copy、从文件生成新的实例
 
@@ -45,7 +45,7 @@ static ReviewItemGenerator* generator = nil;
 - (void)refresh//开始生成自己的数据
 {
     [self.dic_dayID2ItemArr removeAllObjects];
-    NSArray* arr_items = [[ReviewItemManager sharedInstance] items];
+    NSArray* arr_items = [[ReviewFacade sharedInstance] items];
     for (ReviewItem* item in arr_items)
     {
         if (!item.finished)

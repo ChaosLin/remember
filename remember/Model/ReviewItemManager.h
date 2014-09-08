@@ -22,4 +22,6 @@
 - (BOOL)addItem:(ReviewItem*)item;
 - (BOOL)deleteItemByID:(NSString*)uniqueID;
 - (BOOL)deleteAllItems;
+
+- (BOOL)reviewItem:(ReviewItem*)item;
 @end

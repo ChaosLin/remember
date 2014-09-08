@@ -89,6 +89,8 @@
 		59D0350619AF80F000C0E40D /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D034D219AF80F000C0E40D /* UIImageView+WebCache.m */; };
 		59D0350D19AF8E5200C0E40D /* ItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0350C19AF8E5200C0E40D /* ItemListTableViewController.m */; };
 		59D0350E19AF8E5200C0E40D /* ItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0350C19AF8E5200C0E40D /* ItemListTableViewController.m */; };
+		7E886C8F19BD8AAE00AA5784 /* ReviewFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E886C8E19BD8AAE00AA5784 /* ReviewFacade.m */; };
+		7E886C9019BD8AAE00AA5784 /* ReviewFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E886C8E19BD8AAE00AA5784 /* ReviewFacade.m */; };
 		7EAB3A0419A1944200024E00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAB3A0319A1944200024E00 /* Foundation.framework */; };
 		7EAB3A0619A1944200024E00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAB3A0519A1944200024E00 /* CoreGraphics.framework */; };
 		7EAB3A0819A1944200024E00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAB3A0719A1944200024E00 /* UIKit.framework */; };
@@ -210,6 +212,8 @@
 		59D034D219AF80F000C0E40D /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		59D0350B19AF8E5200C0E40D /* ItemListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemListTableViewController.h; sourceTree = "<group>"; };
 		59D0350C19AF8E5200C0E40D /* ItemListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemListTableViewController.m; sourceTree = "<group>"; };
+		7E886C8D19BD8AAE00AA5784 /* ReviewFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewFacade.h; sourceTree = "<group>"; };
+		7E886C8E19BD8AAE00AA5784 /* ReviewFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewFacade.m; sourceTree = "<group>"; };
 		7EAB3A0019A1944200024E00 /* remember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = remember.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAB3A0319A1944200024E00 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7EAB3A0519A1944200024E00 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -501,6 +505,8 @@
 				5983792619A2447C00AD4BC7 /* ReviewItemManager.m */,
 				7EAB3A5119A2FD8E00024E00 /* ReviewItemGenerator.h */,
 				7EAB3A5219A2FD8E00024E00 /* ReviewItemGenerator.m */,
+				7E886C8D19BD8AAE00AA5784 /* ReviewFacade.h */,
+				7E886C8E19BD8AAE00AA5784 /* ReviewFacade.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -694,6 +700,7 @@
 				59D034F519AF80F000C0E40D /* SDWebImageManager+MJ.m in Sources */,
 				59D034D719AF80F000C0E40D /* MBProgressHUD.m in Sources */,
 				59D0349B19AF792F00C0E40D /* RTReviewAddItemDirector.m in Sources */,
+				7E886C8F19BD8AAE00AA5784 /* ReviewFacade.m in Sources */,
 				59D034FF19AF80F000C0E40D /* UIImage+MultiFormat.m in Sources */,
 				7EAB3A1419A1944200024E00 /* AppDelegate.m in Sources */,
 				7EAB3A1019A1944200024E00 /* main.m in Sources */,
@@ -723,6 +730,7 @@
 				59D0349C19AF792F00C0E40D /* RTReviewAddItemDirector.m in Sources */,
 				59D0349619AF782200C0E40D /* AGIPCToolbarItem.m in Sources */,
 				59D0349419AF782200C0E40D /* AGIPCGridItem.m in Sources */,
+				7E886C9019BD8AAE00AA5784 /* ReviewFacade.m in Sources */,
 				59D034DE19AF80F000C0E40D /* MJPhotoBrowser.m in Sources */,
 				59D034F419AF80F000C0E40D /* SDWebImageDownloaderOperation.m in Sources */,
 				59D034FA19AF80F000C0E40D /* SDWebImagePrefetcher.m in Sources */,

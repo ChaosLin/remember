@@ -9,7 +9,7 @@
 #import "RTReviewAddItemDirector.h"
 #import "AGImagePickerController.h"
 #import "ReviewItem.h"
-#import "ReviewItemManager.h"
+#import "ReviewFacade.h"
 
 @interface RTReviewAddItemDirector()
 @property (nonatomic, strong) AGImagePickerController* imagePickerController;
@@ -76,7 +76,7 @@
     BOOL result = [self.item addImages:images];
     if (result)
     {
-        BOOL result_addItem = [[ReviewItemManager sharedInstance] addItem:self.item];
+        BOOL result_addItem = [[ReviewFacade sharedInstance] addItem:self.item];
         if (result_addItem)
         {
             if (self.succBlock)

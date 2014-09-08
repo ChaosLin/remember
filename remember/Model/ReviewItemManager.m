@@ -123,4 +123,16 @@ static ReviewItemManager* manager = nil;
     [self.arr_items removeAllObjects];
     return YES;
 }
+
+- (BOOL)reviewItem:(ReviewItem*)item
+{
+    [self.arr_items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if (item == obj)
+        {
+            [item review];
+            *stop = YES;
+        }
+    }];
+    return YES;
+}
 @end

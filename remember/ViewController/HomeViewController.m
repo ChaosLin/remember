@@ -10,11 +10,10 @@
 #import "MonthView.h"
 #import "EventDayCellView.h"
 #import "ReviewItem.h"
-#import "ReviewItemManager.h"
-#import "ReviewItemGenerator.h"
 #import "DateUtils.h"
 #import "RTReviewAddItemDirector.h"
 #import "ItemListTableViewController.h"
+#import "ReviewFacade.h"
 
 @interface HomeViewController ()<MonthViewResource, MonthViewDelegate>
 @property (nonatomic, strong) MonthView* monthView;
@@ -60,7 +59,7 @@
 {
     [super viewWillAppear:animated];
     
-    self.dic_dayId2flatEvent = [[ReviewItemGenerator sharedInstance] generateDicDayID2Bool];
+    self.dic_dayId2flatEvent = [[ReviewFacade sharedInstance] generateDicDayID2Bool];
     [self.monthView reloadView];
 }
 
@@ -103,13 +102,13 @@
 ////    item.dateId_created = 20150818;
 ////    item.dateId_lastReviewed = 20150818;
 //    
-//    [[ReviewItemManager sharedInstance] addItem:item];
+//    [[ReviewFacade sharedInstance] addItem:item];
 //    [item review];
 //    [item review];
 //    
-    [[ReviewItemGenerator sharedInstance] refresh];
+    [[ReviewFacade sharedInstance] refresh];
 //
-    self.dic_dayId2flatEvent = [[ReviewItemGenerator sharedInstance] generateDicDayID2Bool];
+    self.dic_dayId2flatEvent = [[ReviewFacade sharedInstance] generateDicDayID2Bool];
     [self.monthView reloadView];
     
 }
@@ -119,8 +118,8 @@
     __weak HomeViewController* weakself = self;
     self.addItemDirector = [[RTReviewAddItemDirector alloc]init];
     self.addItemDirector.succBlock = ^(void){
-        [[ReviewItemGenerator sharedInstance] refresh];
-        weakself.dic_dayId2flatEvent = [[ReviewItemGenerator sharedInstance] generateDicDayID2Bool];
+        [[ReviewFacade sharedInstance] refresh];
+        weakself.dic_dayId2flatEvent = [[ReviewFacade sharedInstance] generateDicDayID2Bool];
         [weakself.monthView reloadView];
         NSLog(@"success");
     };

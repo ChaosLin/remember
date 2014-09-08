@@ -7,8 +7,7 @@
 //
 
 #import "ItemListTableViewController.h"
-#import "ReviewItemManager.h"
-#import "ReviewItemGenerator.h"
+#import "ReviewFacade.h"
 #import "ReviewItem.h"
 #import "MJPhotoBrowser.h"
 #import "MJPhoto.h"
@@ -56,7 +55,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSArray* arr_items = [[ReviewItemGenerator sharedInstance] getReviewItemsForDayID:self.dayID];
+    NSArray* arr_items = [[ReviewFacade sharedInstance] getReviewItemsForDayID:self.dayID];
     return arr_items.count;
 }
 
@@ -71,7 +70,7 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseID];
     }
     
-    NSArray* arr_items = [[ReviewItemGenerator sharedInstance] getReviewItemsForDayID:self.dayID];
+    NSArray* arr_items = [[ReviewFacade sharedInstance] getReviewItemsForDayID:self.dayID];
     ReviewItem* item = [arr_items objectAtIndex:indexPath.row];
     
     //考虑用图片去填充
@@ -82,7 +81,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray* arr_items = [[ReviewItemGenerator sharedInstance] getReviewItemsForDayID:self.dayID];
+    NSArray* arr_items = [[ReviewFacade sharedInstance] getReviewItemsForDayID:self.dayID];
     ReviewItem* item = [arr_items objectAtIndex:indexPath.row];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSMutableArray* arr_images = [NSMutableArray array];
@@ -163,8 +162,8 @@
 - (void)photoBrowser:(MJPhotoBrowser *)photoBrowser didClickReviewButtonAtIndex:(NSUInteger)index
 {
     ReviewItem* item = photoBrowser.info;
-    [item review];
-    [[ReviewItemGenerator sharedInstance] refreshForItem:item];
+    [[ReviewFacade sharedInstance] reviewItem:item];
+    [[ReviewFacade sharedInstance] refreshForItem:item];
     
     [self.tableView reloadData];
 }
