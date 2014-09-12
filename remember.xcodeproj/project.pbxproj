@@ -23,8 +23,8 @@
 		598D036419C337DA00274DC3 /* MonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D035C19C337DA00274DC3 /* MonthView.m */; };
 		598D036519C337DA00274DC3 /* NumberDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D035E19C337DA00274DC3 /* NumberDayCellView.m */; };
 		598D036619C337DA00274DC3 /* NumberDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D035E19C337DA00274DC3 /* NumberDayCellView.m */; };
-		59D0347119AF779C00C0E40D /* RTReviewDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0347019AF779C00C0E40D /* RTReviewDirector.m */; };
-		59D0347219AF779C00C0E40D /* RTReviewDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0347019AF779C00C0E40D /* RTReviewDirector.m */; };
+		5992BCA519C34B1C00339FC5 /* PhotoTakerUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5992BCA419C34B1C00339FC5 /* PhotoTakerUnit.m */; };
+		5992BCA619C34B1C00339FC5 /* PhotoTakerUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5992BCA419C34B1C00339FC5 /* PhotoTakerUnit.m */; };
 		59D0348719AF782200C0E40D /* AGImagePickerController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0347619AF782200C0E40D /* AGImagePickerController+Helper.m */; };
 		59D0348819AF782200C0E40D /* AGImagePickerController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0347619AF782200C0E40D /* AGImagePickerController+Helper.m */; };
 		59D0348919AF782200C0E40D /* AGImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 59D0347719AF782200C0E40D /* AGImagePickerController.bundle */; };
@@ -147,8 +147,9 @@
 		598D035C19C337DA00274DC3 /* MonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthView.m; sourceTree = "<group>"; };
 		598D035D19C337DA00274DC3 /* NumberDayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberDayCellView.h; sourceTree = "<group>"; };
 		598D035E19C337DA00274DC3 /* NumberDayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberDayCellView.m; sourceTree = "<group>"; };
-		59D0346F19AF779C00C0E40D /* RTReviewDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTReviewDirector.h; sourceTree = "<group>"; };
-		59D0347019AF779C00C0E40D /* RTReviewDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTReviewDirector.m; sourceTree = "<group>"; };
+		5992BCA319C34B1C00339FC5 /* PhotoTakerUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTakerUnit.h; sourceTree = "<group>"; };
+		5992BCA419C34B1C00339FC5 /* PhotoTakerUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTakerUnit.m; sourceTree = "<group>"; };
+		59D0346F19AF779C00C0E40D /* RTDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTDirector.h; sourceTree = "<group>"; };
 		59D0347519AF782200C0E40D /* AGImagePickerController+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AGImagePickerController+Helper.h"; sourceTree = "<group>"; };
 		59D0347619AF782200C0E40D /* AGImagePickerController+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AGImagePickerController+Helper.m"; sourceTree = "<group>"; };
 		59D0347719AF782200C0E40D /* AGImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AGImagePickerController.bundle; sourceTree = "<group>"; };
@@ -319,6 +320,15 @@
 			path = ../../../RTCalendarViewDemo/RTCalendarViewDemo/RTCalendarView;
 			sourceTree = "<group>";
 		};
+		5992BCA219C34AEA00339FC5 /* PhotoTakerUnit */ = {
+			isa = PBXGroup;
+			children = (
+				5992BCA319C34B1C00339FC5 /* PhotoTakerUnit.h */,
+				5992BCA419C34B1C00339FC5 /* PhotoTakerUnit.m */,
+			);
+			path = PhotoTakerUnit;
+			sourceTree = "<group>";
+		};
 		59D0346C19AF775100C0E40D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,8 +340,7 @@
 		59D0346E19AF778400C0E40D /* Director */ = {
 			isa = PBXGroup;
 			children = (
-				59D0346F19AF779C00C0E40D /* RTReviewDirector.h */,
-				59D0347019AF779C00C0E40D /* RTReviewDirector.m */,
+				59D0346F19AF779C00C0E40D /* RTDirector.h */,
 				59D0349919AF792F00C0E40D /* RTReviewAddItemDirector.h */,
 				59D0349A19AF792F00C0E40D /* RTReviewAddItemDirector.m */,
 			);
@@ -548,6 +557,7 @@
 		7EAB3A3619A19AB800024E00 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5992BCA219C34AEA00339FC5 /* PhotoTakerUnit */,
 				598D035619C337DA00274DC3 /* RTCalendarView */,
 				598D035119C337C700274DC3 /* DateUtils */,
 				5983792E19A24B3700AD4BC7 /* FIlePath */,
@@ -685,11 +695,11 @@
 				7EAB3A5319A2FD8E00024E00 /* ReviewItemGenerator.m in Sources */,
 				59D034FB19AF80F000C0E40D /* UIButton+WebCache.m in Sources */,
 				5983793119A24B4400AD4BC7 /* FilePath.m in Sources */,
-				59D0347119AF779C00C0E40D /* RTReviewDirector.m in Sources */,
 				598D036119C337DA00274DC3 /* EventDayCellView.m in Sources */,
 				59D034D319AF80F000C0E40D /* MBProgressHUD+Add.m in Sources */,
 				59D034FD19AF80F000C0E40D /* UIImage+GIF.m in Sources */,
 				59D034F919AF80F000C0E40D /* SDWebImagePrefetcher.m in Sources */,
+				5992BCA519C34B1C00339FC5 /* PhotoTakerUnit.m in Sources */,
 				59D0349519AF782200C0E40D /* AGIPCToolbarItem.m in Sources */,
 				7EAB3A4A19A1EDE000024E00 /* UniqueID.m in Sources */,
 				59D034F119AF80F000C0E40D /* SDWebImageDownloader.m in Sources */,
@@ -734,7 +744,6 @@
 				5983793219A24B4400AD4BC7 /* FilePath.m in Sources */,
 				59D034E019AF80F000C0E40D /* MJPhotoLoadingView.m in Sources */,
 				59D034F619AF80F000C0E40D /* SDWebImageManager+MJ.m in Sources */,
-				59D0347219AF779C00C0E40D /* RTReviewDirector.m in Sources */,
 				59D0349C19AF792F00C0E40D /* RTReviewAddItemDirector.m in Sources */,
 				59D0349619AF782200C0E40D /* AGIPCToolbarItem.m in Sources */,
 				59D0349419AF782200C0E40D /* AGIPCGridItem.m in Sources */,
@@ -758,6 +767,7 @@
 				59D034E619AF80F000C0E40D /* MJPhotoView.m in Sources */,
 				59D0349819AF782200C0E40D /* ALAsset+AGIPC.m in Sources */,
 				59D0350419AF80F000C0E40D /* UIImageView+MJWebCache.m in Sources */,
+				5992BCA619C34B1C00339FC5 /* PhotoTakerUnit.m in Sources */,
 				59D0350619AF80F000C0E40D /* UIImageView+WebCache.m in Sources */,
 				59D034F819AF80F000C0E40D /* SDWebImageManager.m in Sources */,
 				598D036619C337DA00274DC3 /* NumberDayCellView.m in Sources */,

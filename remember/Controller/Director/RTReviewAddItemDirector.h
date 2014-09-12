@@ -6,8 +6,13 @@
 //  Copyright (c) 2014 Uncoped Studio. All rights reserved.
 //
 
-#import "RTReviewDirector.h"
+#import "RTDirector.h"
 
-@interface RTReviewAddItemDirector : RTReviewDirector
+typedef void (^DirectorSuccBlock)(void);
+typedef void (^DirectorFailBlock)(void);
+
+@interface RTReviewAddItemDirector<RTDirector>
+@property (nonatomic, copy) DirectorSuccBlock succBlock;
+@property (nonatomic, copy) DirectorFailBlock failBlock;
 @property (nonatomic, weak) UIViewController* rootViewController;
 @end
