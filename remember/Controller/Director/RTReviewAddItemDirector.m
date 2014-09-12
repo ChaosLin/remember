@@ -10,6 +10,7 @@
 #import "AGImagePickerController.h"
 #import "ReviewItem.h"
 #import "ReviewFacade.h"
+#import "MJPhoto.h"
 
 @interface RTReviewAddItemDirector()
 @property (nonatomic, strong) AGImagePickerController* imagePickerController;
@@ -47,7 +48,9 @@
                 {
                     ALAssetRepresentation* presentation = [set defaultRepresentation];
                     UIImage* image = [UIImage imageWithCGImage:[presentation fullScreenImage] scale:presentation.scale orientation:UIImageOrientationUp];
-                    [arr_images addObject:image];
+                    MJPhoto* photo = MJPhoto.new;
+                    photo.image = image;
+                    [arr_images addObject:photo];
                 }
                 dispatch_async(dispatch_get_main_queue(), ^(void){
                     [weakSelf insertIntoReviewItemWithImages:arr_images];

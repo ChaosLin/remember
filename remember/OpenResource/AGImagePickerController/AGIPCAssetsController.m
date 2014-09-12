@@ -346,7 +346,7 @@
             {
                 MJPhoto* photo = [MJPhoto new];
                 photo.image = image;
-                [arr_images addObject:image];
+                [arr_images addObject:photo];
             }
         }
         dispatch_async(dispatch_get_main_queue(), ^(void){
