@@ -21,6 +21,7 @@
 //类方法,工厂方法，生成一个随机ID标识，并用今天的ID填上～
 + (instancetype)createReviewItem;
 
+- (BOOL)shouldReviewToday;
 - (BOOL)review;
 - (NSInteger)getNextReviewDateId;
 //如果出现错误，比如index<当前已经复习的次数，返回-1

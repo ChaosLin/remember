@@ -138,14 +138,18 @@ static ReviewItemManager* manager = nil;
 
 - (BOOL)reviewItem:(ReviewItem*)item
 {
-    [self.arr_items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        if (item == obj)
-        {
-            [item review];
-            *stop = YES;
-        }
-    }];
-    [self save];
-    return YES;
+    if ([item shouldReviewToday])
+    {
+        [self.arr_items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            if (item == obj)
+            {
+                [item review];
+                *stop = YES;
+            }
+        }];
+        [self save];
+        return YES;
+    }
+    return NO;
 }
 @end

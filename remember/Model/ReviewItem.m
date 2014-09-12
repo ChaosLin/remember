@@ -24,6 +24,17 @@
     return self;
 }
 
+- (BOOL)shouldReviewToday
+{
+    BOOL result = NO;
+    BOOL isDelayed = self.delayed;
+    if (isDelayed || (!isDelayed && [self getNextReviewDateId] == [DateUtils getTodayDateId]))
+    {
+        result = YES;
+    }
+    return result;
+}
+
 - (BOOL)review
 {
     self.dateId_lastReviewed = [DateUtils getTodayDateId];

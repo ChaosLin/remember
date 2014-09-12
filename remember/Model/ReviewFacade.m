@@ -80,8 +80,12 @@ static ReviewFacade* facade = nil;
 
 - (BOOL)reviewItem:(ReviewItem*)item
 {
-    BOOL result = [self.itemManager reviewItem:item];
-    [self.generator refreshForItem:item];
+    BOOL result = NO;
+    result = [self.itemManager reviewItem:item];
+    if (result)
+    {
+        [self.generator refreshForItem:item];
+    }
     return result;
 }
 
