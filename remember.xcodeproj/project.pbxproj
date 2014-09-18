@@ -91,7 +91,6 @@
 		59D0350E19AF8E5200C0E40D /* ItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0350C19AF8E5200C0E40D /* ItemListTableViewController.m */; };
 		7E886C8F19BD8AAE00AA5784 /* ReviewFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E886C8E19BD8AAE00AA5784 /* ReviewFacade.m */; };
 		7E886C9019BD8AAE00AA5784 /* ReviewFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E886C8E19BD8AAE00AA5784 /* ReviewFacade.m */; };
-		7EA563DA19CA9108001FC13B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA563D919CA9108001FC13B /* CloudKit.framework */; };
 		7EA563DE19CAA9F4001FC13B /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA563DD19CAA9F4001FC13B /* DateUtils.m */; };
 		7EA563DF19CAA9F4001FC13B /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA563DD19CAA9F4001FC13B /* DateUtils.m */; };
 		7EA563E919CAAA1A001FC13B /* DayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA563E219CAAA1A001FC13B /* DayCellView.m */; };
@@ -217,7 +216,6 @@
 		7E886C8D19BD8AAE00AA5784 /* ReviewFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewFacade.h; sourceTree = "<group>"; };
 		7E886C8E19BD8AAE00AA5784 /* ReviewFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewFacade.m; sourceTree = "<group>"; };
 		7EA563D819CA90A8001FC13B /* remember.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = remember.entitlements; sourceTree = "<group>"; };
-		7EA563D919CA9108001FC13B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		7EA563DC19CAA9F4001FC13B /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
 		7EA563DD19CAA9F4001FC13B /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
 		7EA563E119CAAA1A001FC13B /* DayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayCellView.h; sourceTree = "<group>"; };
@@ -259,7 +257,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EAB3A0619A1944200024E00 /* CoreGraphics.framework in Frameworks */,
-				7EA563DA19CA9108001FC13B /* CloudKit.framework in Frameworks */,
 				7EAB3A0819A1944200024E00 /* UIKit.framework in Frameworks */,
 				7EAB3A0419A1944200024E00 /* Foundation.framework in Frameworks */,
 			);
@@ -488,7 +485,6 @@
 		7EAB3A0219A1944200024E00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7EA563D919CA9108001FC13B /* CloudKit.framework */,
 				7EAB3A0319A1944200024E00 /* Foundation.framework */,
 				7EAB3A0519A1944200024E00 /* CoreGraphics.framework */,
 				7EAB3A0719A1944200024E00 /* UIKit.framework */,
@@ -914,8 +910,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "remember/remember-Prefix.pch";
 				INFOPLIST_FILE = "remember/remember-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a62f2ca0-c077-4aea-b3bb-494a39f54e44";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -930,6 +927,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "remember/remember-Prefix.pch";
 				INFOPLIST_FILE = "remember/remember-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -953,7 +951,7 @@
 				);
 				INFOPLIST_FILE = "rememberTests/rememberTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d8cefdee-19f5-495b-921e-8812b3c9f68d";
+				PROVISIONING_PROFILE = "a62f2ca0-c077-4aea-b3bb-494a39f54e44";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

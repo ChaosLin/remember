@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "RTDirector.h"
 
-typedef void (^PhotoTakerSuccBlock)(void);
+typedef void (^PhotoTakerSuccBlock)(NSArray* arr_images);
 typedef void (^PhotoTakerFailedBlock)(NSError* error);
 
 @interface PhotoTakerUnit : NSObject<RTDirector>
