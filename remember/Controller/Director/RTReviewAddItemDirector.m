@@ -44,13 +44,15 @@
             weakSelf.imagePickerController = nil;
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
                 NSMutableArray* arr_images = [NSMutableArray arrayWithCapacity:6];
+                NSMutableArray* arr_photos = [NSMutableArray arrayWithCapacity:6];
                 for (ALAsset* set in info)
                 {
                     ALAssetRepresentation* presentation = [set defaultRepresentation];
                     UIImage* image = [UIImage imageWithCGImage:[presentation fullScreenImage] scale:presentation.scale orientation:UIImageOrientationUp];
                     MJPhoto* photo = MJPhoto.new;
                     photo.image = image;
-                    [arr_images addObject:photo];
+                    [arr_photos addObject:photo];
+                    [arr_images addObject:image];
                 }
                 dispatch_async(dispatch_get_main_queue(), ^(void){
                     [weakSelf insertIntoReviewItemWithImages:arr_images];

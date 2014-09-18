@@ -74,7 +74,7 @@
     ReviewItem* item = [arr_items objectAtIndex:indexPath.row];
     
     //考虑用图片去填充
-    cell.textLabel.text = item.id_review;
+    cell.textLabel.text = [NSString stringWithFormat:@"%d", item.dateId_created];
     
     return cell;
 }

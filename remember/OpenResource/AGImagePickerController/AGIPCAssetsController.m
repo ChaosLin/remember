@@ -351,7 +351,10 @@
         }
         dispatch_async(dispatch_get_main_queue(), ^(void){
             browser.photos = arr_images;
-            [browser show];
+            if (0 != browser.photos.count)
+            {
+                [browser show];
+            }
         });
 
     });
