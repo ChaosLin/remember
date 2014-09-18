@@ -10,6 +10,7 @@
 #import "ReviewItem.h"
 #import "ReviewItemManager.h"
 #import "ReviewItemGenerator.h"
+#import <CloudKit/CloudKit.h>
 
 @interface rememberTests : XCTestCase
 
@@ -104,4 +105,25 @@
     [item review];
     [[ReviewItemGenerator sharedInstance] refreshForItem:item];
 }
+
+//- (void)testICloudKit
+//{
+//    CKContainer* container = [CKContainer defaultContainer];
+//    CKDatabase* dataBase = [container publicCloudDatabase];
+//    CKRecordID* recordID = [[CKRecordID alloc]initWithRecordName:@"TestID"];
+//    CKRecord* record = [[CKRecord alloc]initWithRecordType:@"TestUnit" recordID:recordID];
+//    
+//    record[@"key1"] = @"22";
+//    [dataBase saveRecord:record completionHandler:^(CKRecord *record, NSError *error) {
+//        if (error)
+//        {
+//            NSLog(@"%@", error);
+//        }
+//        else
+//        {
+//            id sth = record;
+//            NSLog(@"%@", sth);
+//        }
+//    }];
+//}
 @end

@@ -9,8 +9,59 @@
 #import "AppDelegate.h"
 #import "HomeViewController.h"
 #import "ReviewFacade.h"
+#import <CloudKit/CloudKit.h>
 
 @implementation AppDelegate
+
+- (void)test
+{
+//    CKContainer* container = [CKContainer defaultContainer];
+//    CKDatabase* dataBase = [container publicCloudDatabase];
+//    CKRecordID* recordID = [[CKRecordID alloc]initWithRecordName:@"TestID"];
+//    CKRecord* record = [[CKRecord alloc]initWithRecordType:@"TestUnit" recordID:recordID];
+//
+//    record[@"key1"] = @"22";
+//    [dataBase saveRecord:record completionHandler:^(CKRecord *record, NSError *error) {
+//        if (error)
+//        {
+//            NSLog(@"%@", error);
+//        }
+//        else
+//        {
+//            id sth = record;
+//            NSLog(@"%@", sth);
+//        }
+//    }];
+//    [dataBase fetchRecordWithID:recordID completionHandler:^(CKRecord *record, NSError *error) {
+//        if (error)
+//        {
+//            NSLog(@"%@", error);
+//        }
+//        else
+//        {
+//            NSLog(@"%@", record);
+//            
+//            
+//            UIImage* image_test = [UIImage imageNamed:@"LaunchImage"];
+//            NSData* data_image = UIImageJPEGRepresentation(image_test, 1);
+//            NSURL* url_path = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"testImage.jpeg"]];
+//            [data_image writeToURL:url_path atomically:YES];
+//            CKAsset* asset = [[CKAsset alloc]initWithFileURL:url_path];
+//            record[@"image"] = asset;
+//            [dataBase saveRecord:record completionHandler:^(CKRecord *record, NSError *error) {
+//                if (error)
+//                {
+//                    NSLog(@"%@", error);
+//                }
+//                else
+//                {
+//                    id sth = record;
+//                    NSLog(@"%@", sth);
+//                }
+//            }];
+//        }
+//    }];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -24,6 +75,10 @@
     [ReviewFacade sharedInstance];
     
     [self.window makeKeyAndVisible];
+    
+    [self test];
+    
+    
     return YES;
 }
 

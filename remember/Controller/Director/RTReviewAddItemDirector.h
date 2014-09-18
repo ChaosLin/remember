@@ -11,7 +11,7 @@
 typedef void (^DirectorSuccBlock)(void);
 typedef void (^DirectorFailBlock)(void);
 
-@interface RTReviewAddItemDirector<RTDirector>
+@interface RTReviewAddItemDirector :NSObject <RTDirector>
 @property (nonatomic, copy) DirectorSuccBlock succBlock;
 @property (nonatomic, copy) DirectorFailBlock failBlock;
 @property (nonatomic, weak) UIViewController* rootViewController;

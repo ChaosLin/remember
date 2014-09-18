@@ -13,16 +13,6 @@
 		5983793219A24B4400AD4BC7 /* FilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983793019A24B4400AD4BC7 /* FilePath.m */; };
 		5983794419A38C8400AD4BC7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983794319A38C8400AD4BC7 /* HomeViewController.m */; };
 		5983794519A38C8400AD4BC7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983794319A38C8400AD4BC7 /* HomeViewController.m */; };
-		598D035419C337C700274DC3 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D035319C337C700274DC3 /* DateUtils.m */; };
-		598D035519C337C700274DC3 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D035319C337C700274DC3 /* DateUtils.m */; };
-		598D035F19C337DA00274DC3 /* DayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D035819C337DA00274DC3 /* DayCellView.m */; };
-		598D036019C337DA00274DC3 /* DayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D035819C337DA00274DC3 /* DayCellView.m */; };
-		598D036119C337DA00274DC3 /* EventDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D035A19C337DA00274DC3 /* EventDayCellView.m */; };
-		598D036219C337DA00274DC3 /* EventDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D035A19C337DA00274DC3 /* EventDayCellView.m */; };
-		598D036319C337DA00274DC3 /* MonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D035C19C337DA00274DC3 /* MonthView.m */; };
-		598D036419C337DA00274DC3 /* MonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D035C19C337DA00274DC3 /* MonthView.m */; };
-		598D036519C337DA00274DC3 /* NumberDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D035E19C337DA00274DC3 /* NumberDayCellView.m */; };
-		598D036619C337DA00274DC3 /* NumberDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D035E19C337DA00274DC3 /* NumberDayCellView.m */; };
 		5992BCA519C34B1C00339FC5 /* PhotoTakerUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5992BCA419C34B1C00339FC5 /* PhotoTakerUnit.m */; };
 		5992BCA619C34B1C00339FC5 /* PhotoTakerUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5992BCA419C34B1C00339FC5 /* PhotoTakerUnit.m */; };
 		59D0348719AF782200C0E40D /* AGImagePickerController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0347619AF782200C0E40D /* AGImagePickerController+Helper.m */; };
@@ -101,6 +91,17 @@
 		59D0350E19AF8E5200C0E40D /* ItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0350C19AF8E5200C0E40D /* ItemListTableViewController.m */; };
 		7E886C8F19BD8AAE00AA5784 /* ReviewFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E886C8E19BD8AAE00AA5784 /* ReviewFacade.m */; };
 		7E886C9019BD8AAE00AA5784 /* ReviewFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E886C8E19BD8AAE00AA5784 /* ReviewFacade.m */; };
+		7EA563DA19CA9108001FC13B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA563D919CA9108001FC13B /* CloudKit.framework */; };
+		7EA563DE19CAA9F4001FC13B /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA563DD19CAA9F4001FC13B /* DateUtils.m */; };
+		7EA563DF19CAA9F4001FC13B /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA563DD19CAA9F4001FC13B /* DateUtils.m */; };
+		7EA563E919CAAA1A001FC13B /* DayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA563E219CAAA1A001FC13B /* DayCellView.m */; };
+		7EA563EA19CAAA1A001FC13B /* DayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA563E219CAAA1A001FC13B /* DayCellView.m */; };
+		7EA563EB19CAAA1A001FC13B /* EventDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA563E419CAAA1A001FC13B /* EventDayCellView.m */; };
+		7EA563EC19CAAA1A001FC13B /* EventDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA563E419CAAA1A001FC13B /* EventDayCellView.m */; };
+		7EA563ED19CAAA1A001FC13B /* MonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA563E619CAAA1A001FC13B /* MonthView.m */; };
+		7EA563EE19CAAA1A001FC13B /* MonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA563E619CAAA1A001FC13B /* MonthView.m */; };
+		7EA563EF19CAAA1A001FC13B /* NumberDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA563E819CAAA1A001FC13B /* NumberDayCellView.m */; };
+		7EA563F019CAAA1A001FC13B /* NumberDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA563E819CAAA1A001FC13B /* NumberDayCellView.m */; };
 		7EAB3A0419A1944200024E00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAB3A0319A1944200024E00 /* Foundation.framework */; };
 		7EAB3A0619A1944200024E00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAB3A0519A1944200024E00 /* CoreGraphics.framework */; };
 		7EAB3A0819A1944200024E00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAB3A0719A1944200024E00 /* UIKit.framework */; };
@@ -137,16 +138,6 @@
 		5983793019A24B4400AD4BC7 /* FilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilePath.m; sourceTree = "<group>"; };
 		5983794219A38C8400AD4BC7 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		5983794319A38C8400AD4BC7 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		598D035219C337C700274DC3 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
-		598D035319C337C700274DC3 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
-		598D035719C337DA00274DC3 /* DayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayCellView.h; sourceTree = "<group>"; };
-		598D035819C337DA00274DC3 /* DayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayCellView.m; sourceTree = "<group>"; };
-		598D035919C337DA00274DC3 /* EventDayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDayCellView.h; sourceTree = "<group>"; };
-		598D035A19C337DA00274DC3 /* EventDayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDayCellView.m; sourceTree = "<group>"; };
-		598D035B19C337DA00274DC3 /* MonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthView.h; sourceTree = "<group>"; };
-		598D035C19C337DA00274DC3 /* MonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthView.m; sourceTree = "<group>"; };
-		598D035D19C337DA00274DC3 /* NumberDayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberDayCellView.h; sourceTree = "<group>"; };
-		598D035E19C337DA00274DC3 /* NumberDayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberDayCellView.m; sourceTree = "<group>"; };
 		5992BCA319C34B1C00339FC5 /* PhotoTakerUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTakerUnit.h; sourceTree = "<group>"; };
 		5992BCA419C34B1C00339FC5 /* PhotoTakerUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTakerUnit.m; sourceTree = "<group>"; };
 		59D0346F19AF779C00C0E40D /* RTDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTDirector.h; sourceTree = "<group>"; };
@@ -225,6 +216,18 @@
 		59D0350C19AF8E5200C0E40D /* ItemListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemListTableViewController.m; sourceTree = "<group>"; };
 		7E886C8D19BD8AAE00AA5784 /* ReviewFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewFacade.h; sourceTree = "<group>"; };
 		7E886C8E19BD8AAE00AA5784 /* ReviewFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewFacade.m; sourceTree = "<group>"; };
+		7EA563D819CA90A8001FC13B /* remember.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = remember.entitlements; sourceTree = "<group>"; };
+		7EA563D919CA9108001FC13B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		7EA563DC19CAA9F4001FC13B /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
+		7EA563DD19CAA9F4001FC13B /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
+		7EA563E119CAAA1A001FC13B /* DayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayCellView.h; sourceTree = "<group>"; };
+		7EA563E219CAAA1A001FC13B /* DayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayCellView.m; sourceTree = "<group>"; };
+		7EA563E319CAAA1A001FC13B /* EventDayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDayCellView.h; sourceTree = "<group>"; };
+		7EA563E419CAAA1A001FC13B /* EventDayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDayCellView.m; sourceTree = "<group>"; };
+		7EA563E519CAAA1A001FC13B /* MonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthView.h; sourceTree = "<group>"; };
+		7EA563E619CAAA1A001FC13B /* MonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthView.m; sourceTree = "<group>"; };
+		7EA563E719CAAA1A001FC13B /* NumberDayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberDayCellView.h; sourceTree = "<group>"; };
+		7EA563E819CAAA1A001FC13B /* NumberDayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberDayCellView.m; sourceTree = "<group>"; };
 		7EAB3A0019A1944200024E00 /* remember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = remember.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAB3A0319A1944200024E00 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7EAB3A0519A1944200024E00 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EAB3A0619A1944200024E00 /* CoreGraphics.framework in Frameworks */,
+				7EA563DA19CA9108001FC13B /* CloudKit.framework in Frameworks */,
 				7EAB3A0819A1944200024E00 /* UIKit.framework in Frameworks */,
 				7EAB3A0419A1944200024E00 /* Foundation.framework in Frameworks */,
 			);
@@ -292,32 +296,6 @@
 				59D0350C19AF8E5200C0E40D /* ItemListTableViewController.m */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		598D035119C337C700274DC3 /* DateUtils */ = {
-			isa = PBXGroup;
-			children = (
-				598D035219C337C700274DC3 /* DateUtils.h */,
-				598D035319C337C700274DC3 /* DateUtils.m */,
-			);
-			name = DateUtils;
-			path = ../../../DateUtilsDemonstration/DateUtils;
-			sourceTree = "<group>";
-		};
-		598D035619C337DA00274DC3 /* RTCalendarView */ = {
-			isa = PBXGroup;
-			children = (
-				598D035719C337DA00274DC3 /* DayCellView.h */,
-				598D035819C337DA00274DC3 /* DayCellView.m */,
-				598D035919C337DA00274DC3 /* EventDayCellView.h */,
-				598D035A19C337DA00274DC3 /* EventDayCellView.m */,
-				598D035B19C337DA00274DC3 /* MonthView.h */,
-				598D035C19C337DA00274DC3 /* MonthView.m */,
-				598D035D19C337DA00274DC3 /* NumberDayCellView.h */,
-				598D035E19C337DA00274DC3 /* NumberDayCellView.m */,
-			);
-			name = RTCalendarView;
-			path = ../../../RTCalendarViewDemo/RTCalendarViewDemo/RTCalendarView;
 			sourceTree = "<group>";
 		};
 		5992BCA219C34AEA00339FC5 /* PhotoTakerUnit */ = {
@@ -462,6 +440,32 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		7EA563DB19CAA9F4001FC13B /* DateUtils */ = {
+			isa = PBXGroup;
+			children = (
+				7EA563DC19CAA9F4001FC13B /* DateUtils.h */,
+				7EA563DD19CAA9F4001FC13B /* DateUtils.m */,
+			);
+			name = DateUtils;
+			path = ../../../GitHub/DateUtils/DateUtils;
+			sourceTree = "<group>";
+		};
+		7EA563E019CAAA1A001FC13B /* RTCalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				7EA563E119CAAA1A001FC13B /* DayCellView.h */,
+				7EA563E219CAAA1A001FC13B /* DayCellView.m */,
+				7EA563E319CAAA1A001FC13B /* EventDayCellView.h */,
+				7EA563E419CAAA1A001FC13B /* EventDayCellView.m */,
+				7EA563E519CAAA1A001FC13B /* MonthView.h */,
+				7EA563E619CAAA1A001FC13B /* MonthView.m */,
+				7EA563E719CAAA1A001FC13B /* NumberDayCellView.h */,
+				7EA563E819CAAA1A001FC13B /* NumberDayCellView.m */,
+			);
+			name = RTCalendarView;
+			path = ../../../GitHub/RTCalendarViewDemo/RTCalendarViewDemo/RTCalendarView;
+			sourceTree = "<group>";
+		};
 		7EAB39F719A1944200024E00 = {
 			isa = PBXGroup;
 			children = (
@@ -484,6 +488,7 @@
 		7EAB3A0219A1944200024E00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7EA563D919CA9108001FC13B /* CloudKit.framework */,
 				7EAB3A0319A1944200024E00 /* Foundation.framework */,
 				7EAB3A0519A1944200024E00 /* CoreGraphics.framework */,
 				7EAB3A0719A1944200024E00 /* UIKit.framework */,
@@ -495,6 +500,7 @@
 		7EAB3A0919A1944200024E00 /* remember */ = {
 			isa = PBXGroup;
 			children = (
+				7EA563D819CA90A8001FC13B /* remember.entitlements */,
 				7E886C9119BDAA2800AA5784 /* Resource */,
 				59D0347319AF781600C0E40D /* OpenResource */,
 				59D0346C19AF775100C0E40D /* Controller */,
@@ -557,9 +563,9 @@
 		7EAB3A3619A19AB800024E00 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7EA563E019CAAA1A001FC13B /* RTCalendarView */,
+				7EA563DB19CAA9F4001FC13B /* DateUtils */,
 				5992BCA219C34AEA00339FC5 /* PhotoTakerUnit */,
-				598D035619C337DA00274DC3 /* RTCalendarView */,
-				598D035119C337C700274DC3 /* DateUtils */,
 				5983792E19A24B3700AD4BC7 /* FIlePath */,
 				7EAB3A4719A1EDCD00024E00 /* UniqueID */,
 			);
@@ -630,6 +636,14 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Uncoped Studio";
 				TargetAttributes = {
+					7EAB39FF19A1944200024E00 = {
+						DevelopmentTeam = 5Y89BKS4ZL;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
 					7EAB3A1A19A1944200024E00 = {
 						TestTargetID = 7EAB39FF19A1944200024E00;
 					};
@@ -695,8 +709,8 @@
 				7EAB3A5319A2FD8E00024E00 /* ReviewItemGenerator.m in Sources */,
 				59D034FB19AF80F000C0E40D /* UIButton+WebCache.m in Sources */,
 				5983793119A24B4400AD4BC7 /* FilePath.m in Sources */,
-				598D036119C337DA00274DC3 /* EventDayCellView.m in Sources */,
 				59D034D319AF80F000C0E40D /* MBProgressHUD+Add.m in Sources */,
+				7EA563EB19CAAA1A001FC13B /* EventDayCellView.m in Sources */,
 				59D034FD19AF80F000C0E40D /* UIImage+GIF.m in Sources */,
 				59D034F919AF80F000C0E40D /* SDWebImagePrefetcher.m in Sources */,
 				5992BCA519C34B1C00339FC5 /* PhotoTakerUnit.m in Sources */,
@@ -707,7 +721,7 @@
 				59D0349319AF782200C0E40D /* AGIPCGridItem.m in Sources */,
 				5983792719A2447C00AD4BC7 /* ReviewItemManager.m in Sources */,
 				59D034F719AF80F000C0E40D /* SDWebImageManager.m in Sources */,
-				598D036319C337DA00274DC3 /* MonthView.m in Sources */,
+				7EA563ED19CAAA1A001FC13B /* MonthView.m in Sources */,
 				59D034EF19AF80F000C0E40D /* SDWebImageDecoder.m in Sources */,
 				59D0348F19AF782200C0E40D /* AGIPCAssetsController.m in Sources */,
 				59D034E119AF80F000C0E40D /* MJPhotoProgressView.m in Sources */,
@@ -720,7 +734,7 @@
 				59D034FF19AF80F000C0E40D /* UIImage+MultiFormat.m in Sources */,
 				7EAB3A1419A1944200024E00 /* AppDelegate.m in Sources */,
 				7EAB3A1019A1944200024E00 /* main.m in Sources */,
-				598D035419C337C700274DC3 /* DateUtils.m in Sources */,
+				7EA563DE19CAA9F4001FC13B /* DateUtils.m in Sources */,
 				59D034E519AF80F000C0E40D /* MJPhotoView.m in Sources */,
 				59D0350119AF80F000C0E40D /* UIImage+WebP.m in Sources */,
 				59D0349119AF782200C0E40D /* AGIPCGridCell.m in Sources */,
@@ -729,10 +743,10 @@
 				59D034EB19AF80F000C0E40D /* SDImageCache.m in Sources */,
 				59D034E319AF80F000C0E40D /* MJPhotoToolbar.m in Sources */,
 				59D0348719AF782200C0E40D /* AGImagePickerController+Helper.m in Sources */,
-				598D036519C337DA00274DC3 /* NumberDayCellView.m in Sources */,
+				7EA563EF19CAAA1A001FC13B /* NumberDayCellView.m in Sources */,
 				59D034E919AF80F000C0E40D /* NSData+GIF.m in Sources */,
 				59D034D919AF80F000C0E40D /* MJPhoto.m in Sources */,
-				598D035F19C337DA00274DC3 /* DayCellView.m in Sources */,
+				7EA563E919CAAA1A001FC13B /* DayCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,30 +761,30 @@
 				59D0349C19AF792F00C0E40D /* RTReviewAddItemDirector.m in Sources */,
 				59D0349619AF782200C0E40D /* AGIPCToolbarItem.m in Sources */,
 				59D0349419AF782200C0E40D /* AGIPCGridItem.m in Sources */,
-				598D035519C337C700274DC3 /* DateUtils.m in Sources */,
 				7E886C9019BD8AAE00AA5784 /* ReviewFacade.m in Sources */,
+				7EA563DF19CAA9F4001FC13B /* DateUtils.m in Sources */,
 				59D034DE19AF80F000C0E40D /* MJPhotoBrowser.m in Sources */,
 				59D034F419AF80F000C0E40D /* SDWebImageDownloaderOperation.m in Sources */,
 				59D034FA19AF80F000C0E40D /* SDWebImagePrefetcher.m in Sources */,
-				598D036019C337DA00274DC3 /* DayCellView.m in Sources */,
 				59D034D419AF80F000C0E40D /* MBProgressHUD+Add.m in Sources */,
+				7EA563EA19CAAA1A001FC13B /* DayCellView.m in Sources */,
 				7EAB3A4B19A1EDE000024E00 /* UniqueID.m in Sources */,
 				59D034E419AF80F000C0E40D /* MJPhotoToolbar.m in Sources */,
 				59D034EA19AF80F000C0E40D /* NSData+GIF.m in Sources */,
 				59D034DA19AF80F000C0E40D /* MJPhoto.m in Sources */,
 				59D0350E19AF8E5200C0E40D /* ItemListTableViewController.m in Sources */,
 				59D0348C19AF782200C0E40D /* AGImagePickerController.m in Sources */,
-				598D036419C337DA00274DC3 /* MonthView.m in Sources */,
 				7EAB3A2919A1944200024E00 /* rememberTests.m in Sources */,
-				598D036219C337DA00274DC3 /* EventDayCellView.m in Sources */,
+				7EA563EE19CAAA1A001FC13B /* MonthView.m in Sources */,
 				59D0349219AF782200C0E40D /* AGIPCGridCell.m in Sources */,
+				7EA563EC19CAAA1A001FC13B /* EventDayCellView.m in Sources */,
 				59D034E619AF80F000C0E40D /* MJPhotoView.m in Sources */,
 				59D0349819AF782200C0E40D /* ALAsset+AGIPC.m in Sources */,
 				59D0350419AF80F000C0E40D /* UIImageView+MJWebCache.m in Sources */,
 				5992BCA619C34B1C00339FC5 /* PhotoTakerUnit.m in Sources */,
 				59D0350619AF80F000C0E40D /* UIImageView+WebCache.m in Sources */,
 				59D034F819AF80F000C0E40D /* SDWebImageManager.m in Sources */,
-				598D036619C337DA00274DC3 /* NumberDayCellView.m in Sources */,
+				7EA563F019CAAA1A001FC13B /* NumberDayCellView.m in Sources */,
 				59D034EC19AF80F000C0E40D /* SDImageCache.m in Sources */,
 				59D034D819AF80F000C0E40D /* MBProgressHUD.m in Sources */,
 				59D0348E19AF782200C0E40D /* AGIPCAlbumsController.m in Sources */,
@@ -852,7 +866,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -884,7 +898,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -894,12 +908,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_ENTITLEMENTS = remember/remember.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "remember/remember-Prefix.pch";
 				INFOPLIST_FILE = "remember/remember-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "de26bb55-eb0f-47e1-9eb4-603244e81537";
+				PROVISIONING_PROFILE = "a62f2ca0-c077-4aea-b3bb-494a39f54e44";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -908,12 +924,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_ENTITLEMENTS = remember/remember.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "remember/remember-Prefix.pch";
 				INFOPLIST_FILE = "remember/remember-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e1b3a493-d793-4915-83f4-0be3093ebfc6";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -935,6 +953,7 @@
 				);
 				INFOPLIST_FILE = "rememberTests/rememberTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d8cefdee-19f5-495b-921e-8812b3c9f68d";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -944,6 +963,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/remember.app/remember";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -953,6 +973,7 @@
 				GCC_PREFIX_HEADER = "remember/remember-Prefix.pch";
 				INFOPLIST_FILE = "rememberTests/rememberTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dab44e93-125d-4c5f-b0ab-ec3340ff6790";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
