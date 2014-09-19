@@ -70,7 +70,12 @@ static ReviewFacade* facade = nil;
 
 - (BOOL)deleteItemByID:(NSString*)uniqueID
 {
-    return [self.itemManager deleteItemByID:uniqueID];
+    BOOL result = [self.itemManager deleteItemByID:uniqueID];
+    if (result)
+    {
+        [self.generator refresh];
+    }
+    return result;
 }
 
 - (BOOL)deleteAllItems
