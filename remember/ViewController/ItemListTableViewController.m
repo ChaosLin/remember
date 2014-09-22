@@ -105,6 +105,7 @@
                 browser.currentPhotoIndex = 0;
                 browser.info = item;
                 browser.delegate = self;
+                browser.canReview = YES;
                 [browser show];
             }
         });
@@ -178,7 +179,7 @@
     ReviewItem* item = photoBrowser.info;
     [[ReviewFacade sharedInstance] reviewItem:item];
     [[ReviewFacade sharedInstance] refreshForItem:item];
-    
+    [self updateDataResource];
     [self.tableView reloadData];
 }
 

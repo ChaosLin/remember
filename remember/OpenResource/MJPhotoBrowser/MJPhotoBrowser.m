@@ -217,14 +217,17 @@
         photoView = [[MJPhotoView alloc] init];
         photoView.photoViewDelegate = self;
     }
-    //如果是最后一张图片，则加一个Review按钮
-    if (index == self.photos.count - 1)
+    if (self.canReview)
     {
-        [photoView refreshWithTagIsLast:YES];
-    }
-    else
-    {
-        [photoView refreshWithTagIsLast:YES];
+        //如果是最后一张图片，则加一个Review按钮
+        if (index == self.photos.count - 1)
+        {
+            [photoView refreshWithTagIsLast:YES];
+        }
+        else
+        {
+            [photoView refreshWithTagIsLast:NO];
+        }
     }
     
     // 调整当期页的frame

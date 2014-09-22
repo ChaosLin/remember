@@ -17,6 +17,8 @@
 
 @property (nonatomic, strong) id info;//绑定的info，这里就是ReviewItem
 
+@property (nonatomic, assign) BOOL canReview;//开一个口，很搓的做法
+
 // 显示
 - (void)show;
 @end

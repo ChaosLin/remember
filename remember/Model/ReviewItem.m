@@ -189,7 +189,7 @@
                 NSString* str_filePath = [FilePath getDocumentPathWithFileName:str_fileName];
                 NSData* data_image = UIImageJPEGRepresentation(obj, 1);
                 BOOL result_save = [data_image writeToFile:str_filePath atomically:YES];
-                NSLog(@"save file:%d", result_save);
+                NSLog(@"%@ save file:%d", NSStringFromSelector(_cmd), result_save);
             }
         }];
     });
