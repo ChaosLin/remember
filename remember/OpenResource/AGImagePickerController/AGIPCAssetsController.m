@@ -376,8 +376,8 @@
     
     __ag_weak AGIPCAssetsController *weakSelf = self;
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+    
         __strong AGIPCAssetsController *strongSelf = weakSelf;
         
         @autoreleasepool {
@@ -418,7 +418,7 @@
             
         });
     
-    });
+//    });
 }
 
 - (void)reloadData
