@@ -13,7 +13,9 @@
 #import "MJPhoto.h"
 
 @interface ItemListTableViewController ()<MJPhotoBrowserDelegate>
+@property (nonatomic, strong) NSMutableArray* arr_items;
 
+- (void)updateDataResource;
 @end
 
 @implementation ItemListTableViewController
@@ -23,6 +25,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        self.arr_items = [NSMutableArray array];
     }
     return self;
 }
@@ -36,6 +39,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.arr_items = [NSMutableArray arrayWithArray:[[ReviewFacade sharedInstance] getReviewItemsForDayID:self.dayID]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,8 +59,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSArray* arr_items = [[ReviewFacade sharedInstance] getReviewItemsForDayID:self.dayID];
-    return arr_items.count;
+    return self.arr_items.count;
 }
 
 
@@ -70,8 +73,7 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseID];
     }
     
-    NSArray* arr_items = [[ReviewFacade sharedInstance] getReviewItemsForDayID:self.dayID];
-    ReviewItem* item = [arr_items objectAtIndex:indexPath.row];
+    ReviewItem* item = [self.arr_items objectAtIndex:indexPath.row];
     
     //考虑用图片去填充
     cell.textLabel.text = [NSString stringWithFormat:@"%d", item.dateId_created];
@@ -81,8 +83,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray* arr_items = [[ReviewFacade sharedInstance] getReviewItemsForDayID:self.dayID];
-    ReviewItem* item = [arr_items objectAtIndex:indexPath.row];
+    ReviewItem* item = [self.arr_items objectAtIndex:indexPath.row];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSMutableArray* arr_images = [NSMutableArray array];
         for (NSInteger i = 1; i <= item.count_images; i++)
@@ -125,12 +126,14 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         NSInteger row = indexPath.row;
-        NSArray* arr_items = [[ReviewFacade sharedInstance] getReviewItemsForDayID:self.dayID];
-        ReviewItem* item = [arr_items objectAtIndex:row];
+        ReviewItem* item = [self.arr_items objectAtIndex:row];
         BOOL result = [[ReviewFacade sharedInstance] deleteItemByID:item.id_review];
         if (result)
         {
+            [self.arr_items removeObject:item];
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self updateDataResource];
+            [self.tableView reloadData];
         }
         else
         {
@@ -178,4 +181,11 @@
     
     [self.tableView reloadData];
 }
+
+#pragma mark - 
+- (void)updateDataResource
+{
+    self.arr_items = [NSMutableArray arrayWithArray:[[ReviewFacade sharedInstance] getTodaysReviewItems]];
+}
+
 @end
