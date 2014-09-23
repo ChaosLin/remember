@@ -181,14 +181,23 @@
 - (BOOL)addImages:(NSArray*)images
 {
     self.count_images += images.count;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         [images enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             if ([obj isKindOfClass:[UIImage class]])
             {
                 NSString* str_fileName = [NSString stringWithFormat:@"%@_%d.jpeg", self.id_review, idx + 1];
                 NSString* str_filePath = [FilePath getDocumentPathWithFileName:str_fileName];
                 
-                NSData* data_image = UIImageJPEGRepresentation(obj, 1);
+                float width = ((UIImage*)obj).size.width;
+                //如果图片的尺寸很大，则用很大的压缩比
+                float rate = 700 < width ? 0.1:1;
+                float rate_new = 0.2;//每次递乘的系数
+                NSData* data_image = UIImageJPEGRepresentation(obj, rate);
+                while (1024 * 1024 < data_image.length && rate > 0.01)
+                {
+                    rate *= rate_new;
+                    data_image = UIImageJPEGRepresentation(obj, rate);
+                }
                 BOOL result_save = [data_image writeToFile:str_filePath atomically:YES];
                 NSLog(@"%@ save file:%d", NSStringFromSelector(_cmd), result_save);
             }
