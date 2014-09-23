@@ -187,6 +187,7 @@
             {
                 NSString* str_fileName = [NSString stringWithFormat:@"%@_%d.jpeg", self.id_review, idx + 1];
                 NSString* str_filePath = [FilePath getDocumentPathWithFileName:str_fileName];
+                
                 NSData* data_image = UIImageJPEGRepresentation(obj, 1);
                 BOOL result_save = [data_image writeToFile:str_filePath atomically:YES];
                 NSLog(@"%@ save file:%d", NSStringFromSelector(_cmd), result_save);
@@ -194,6 +195,17 @@
         }];
     });
     return YES;
+}
+
+- (NSString*)getImagePathAtIndex:(NSInteger)index
+{
+    NSString* str_filePath = nil;
+    if (self.count_images > index)
+    {
+        NSString* str_fileName = [NSString stringWithFormat:@"%@_%d.jpeg", self.id_review, index + 1];
+        str_filePath = [FilePath getDocumentPathWithFileName:str_fileName];
+    }
+    return str_filePath;
 }
 
 - (UIImage*)getImageAtIndex:(NSInteger)index

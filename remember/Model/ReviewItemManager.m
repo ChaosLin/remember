@@ -122,6 +122,16 @@ static ReviewItemManager* manager = nil;
     ReviewItem* item = [self getItemByID:uniqueID];
     if (item)
     {
+        //delete image files
+        for (NSInteger i = 0; i < item.count_images; i++)
+        {
+            NSString* str_filePath = [item getImagePathAtIndex:i];
+            if (str_filePath)
+            {
+#warning error handleing and main thread issue
+                [[NSFileManager defaultManager] removeItemAtPath:str_filePath error:nil];
+            }
+        }
         [self.arr_items removeObject:item];
         result = YES;
     }
