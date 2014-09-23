@@ -89,18 +89,22 @@
 		59D0350619AF80F000C0E40D /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D034D219AF80F000C0E40D /* UIImageView+WebCache.m */; };
 		59D0350D19AF8E5200C0E40D /* ItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0350C19AF8E5200C0E40D /* ItemListTableViewController.m */; };
 		59D0350E19AF8E5200C0E40D /* ItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0350C19AF8E5200C0E40D /* ItemListTableViewController.m */; };
+		7E4C7EF719D16EA600DD8BAF /* UIImageView+setPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7EF619D16EA600DD8BAF /* UIImageView+setPath.m */; };
+		7E4C7EF819D16EA600DD8BAF /* UIImageView+setPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7EF619D16EA600DD8BAF /* UIImageView+setPath.m */; };
+		7E4C7EFC19D1701000DD8BAF /* ItemListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7EFB19D1701000DD8BAF /* ItemListCell.m */; };
+		7E4C7EFD19D1701000DD8BAF /* ItemListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7EFB19D1701000DD8BAF /* ItemListCell.m */; };
+		7E74D7AF19D1533D00D51746 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7AE19D1533D00D51746 /* DateUtils.m */; };
+		7E74D7B019D1533D00D51746 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7AE19D1533D00D51746 /* DateUtils.m */; };
+		7E74D7BA19D1534600D51746 /* DayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7B319D1534600D51746 /* DayCellView.m */; };
+		7E74D7BB19D1534600D51746 /* DayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7B319D1534600D51746 /* DayCellView.m */; };
+		7E74D7BC19D1534600D51746 /* EventDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7B519D1534600D51746 /* EventDayCellView.m */; };
+		7E74D7BD19D1534600D51746 /* EventDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7B519D1534600D51746 /* EventDayCellView.m */; };
+		7E74D7BE19D1534600D51746 /* MonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7B719D1534600D51746 /* MonthView.m */; };
+		7E74D7BF19D1534600D51746 /* MonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7B719D1534600D51746 /* MonthView.m */; };
+		7E74D7C019D1534600D51746 /* NumberDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7B919D1534600D51746 /* NumberDayCellView.m */; };
+		7E74D7C119D1534600D51746 /* NumberDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7B919D1534600D51746 /* NumberDayCellView.m */; };
 		7E886C8F19BD8AAE00AA5784 /* ReviewFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E886C8E19BD8AAE00AA5784 /* ReviewFacade.m */; };
 		7E886C9019BD8AAE00AA5784 /* ReviewFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E886C8E19BD8AAE00AA5784 /* ReviewFacade.m */; };
-		7EA5641019D10FE2001FC13B /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5640F19D10FE2001FC13B /* DateUtils.m */; };
-		7EA5641119D10FE2001FC13B /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5640F19D10FE2001FC13B /* DateUtils.m */; };
-		7EA5641B19D10FEC001FC13B /* DayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5641419D10FEC001FC13B /* DayCellView.m */; };
-		7EA5641C19D10FEC001FC13B /* DayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5641419D10FEC001FC13B /* DayCellView.m */; };
-		7EA5641D19D10FEC001FC13B /* EventDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5641619D10FEC001FC13B /* EventDayCellView.m */; };
-		7EA5641E19D10FEC001FC13B /* EventDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5641619D10FEC001FC13B /* EventDayCellView.m */; };
-		7EA5641F19D10FEC001FC13B /* MonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5641819D10FEC001FC13B /* MonthView.m */; };
-		7EA5642019D10FEC001FC13B /* MonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5641819D10FEC001FC13B /* MonthView.m */; };
-		7EA5642119D10FEC001FC13B /* NumberDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5641A19D10FEC001FC13B /* NumberDayCellView.m */; };
-		7EA5642219D10FEC001FC13B /* NumberDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5641A19D10FEC001FC13B /* NumberDayCellView.m */; };
 		7EAB3A0419A1944200024E00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAB3A0319A1944200024E00 /* Foundation.framework */; };
 		7EAB3A0619A1944200024E00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAB3A0519A1944200024E00 /* CoreGraphics.framework */; };
 		7EAB3A0819A1944200024E00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAB3A0719A1944200024E00 /* UIKit.framework */; };
@@ -213,19 +217,23 @@
 		59D034D219AF80F000C0E40D /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		59D0350B19AF8E5200C0E40D /* ItemListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemListTableViewController.h; sourceTree = "<group>"; };
 		59D0350C19AF8E5200C0E40D /* ItemListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemListTableViewController.m; sourceTree = "<group>"; };
+		7E4C7EF519D16EA600DD8BAF /* UIImageView+setPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+setPath.h"; sourceTree = "<group>"; };
+		7E4C7EF619D16EA600DD8BAF /* UIImageView+setPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+setPath.m"; sourceTree = "<group>"; };
+		7E4C7EFA19D1701000DD8BAF /* ItemListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemListCell.h; sourceTree = "<group>"; };
+		7E4C7EFB19D1701000DD8BAF /* ItemListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemListCell.m; sourceTree = "<group>"; };
+		7E74D7AD19D1533D00D51746 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
+		7E74D7AE19D1533D00D51746 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
+		7E74D7B219D1534600D51746 /* DayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayCellView.h; sourceTree = "<group>"; };
+		7E74D7B319D1534600D51746 /* DayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayCellView.m; sourceTree = "<group>"; };
+		7E74D7B419D1534600D51746 /* EventDayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDayCellView.h; sourceTree = "<group>"; };
+		7E74D7B519D1534600D51746 /* EventDayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDayCellView.m; sourceTree = "<group>"; };
+		7E74D7B619D1534600D51746 /* MonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthView.h; sourceTree = "<group>"; };
+		7E74D7B719D1534600D51746 /* MonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthView.m; sourceTree = "<group>"; };
+		7E74D7B819D1534600D51746 /* NumberDayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberDayCellView.h; sourceTree = "<group>"; };
+		7E74D7B919D1534600D51746 /* NumberDayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberDayCellView.m; sourceTree = "<group>"; };
 		7E886C8D19BD8AAE00AA5784 /* ReviewFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewFacade.h; sourceTree = "<group>"; };
 		7E886C8E19BD8AAE00AA5784 /* ReviewFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewFacade.m; sourceTree = "<group>"; };
 		7EA563D819CA90A8001FC13B /* remember.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = remember.entitlements; sourceTree = "<group>"; };
-		7EA5640E19D10FE2001FC13B /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
-		7EA5640F19D10FE2001FC13B /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
-		7EA5641319D10FEC001FC13B /* DayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayCellView.h; sourceTree = "<group>"; };
-		7EA5641419D10FEC001FC13B /* DayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayCellView.m; sourceTree = "<group>"; };
-		7EA5641519D10FEC001FC13B /* EventDayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDayCellView.h; sourceTree = "<group>"; };
-		7EA5641619D10FEC001FC13B /* EventDayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDayCellView.m; sourceTree = "<group>"; };
-		7EA5641719D10FEC001FC13B /* MonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthView.h; sourceTree = "<group>"; };
-		7EA5641819D10FEC001FC13B /* MonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthView.m; sourceTree = "<group>"; };
-		7EA5641919D10FEC001FC13B /* NumberDayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberDayCellView.h; sourceTree = "<group>"; };
-		7EA5641A19D10FEC001FC13B /* NumberDayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberDayCellView.m; sourceTree = "<group>"; };
 		7EAB3A0019A1944200024E00 /* remember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = remember.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAB3A0319A1944200024E00 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7EAB3A0519A1944200024E00 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -287,6 +295,7 @@
 		5983794119A38C7300AD4BC7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7E4C7EF919D1700500DD8BAF /* View */,
 				5983794219A38C8400AD4BC7 /* HomeViewController.h */,
 				5983794319A38C8400AD4BC7 /* HomeViewController.m */,
 				59D0350B19AF8E5200C0E40D /* ItemListTableViewController.h */,
@@ -430,37 +439,55 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		7E4C7EF419D16E9C00DD8BAF /* UIImageView+setPath */ = {
+			isa = PBXGroup;
+			children = (
+				7E4C7EF519D16EA600DD8BAF /* UIImageView+setPath.h */,
+				7E4C7EF619D16EA600DD8BAF /* UIImageView+setPath.m */,
+			);
+			path = "UIImageView+setPath";
+			sourceTree = "<group>";
+		};
+		7E4C7EF919D1700500DD8BAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E4C7EFA19D1701000DD8BAF /* ItemListCell.h */,
+				7E4C7EFB19D1701000DD8BAF /* ItemListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7E74D7AC19D1533D00D51746 /* DateUtils */ = {
+			isa = PBXGroup;
+			children = (
+				7E74D7AD19D1533D00D51746 /* DateUtils.h */,
+				7E74D7AE19D1533D00D51746 /* DateUtils.m */,
+			);
+			name = DateUtils;
+			path = ../../../DateUtils/DateUtils;
+			sourceTree = "<group>";
+		};
+		7E74D7B119D1534600D51746 /* RTCalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				7E74D7B219D1534600D51746 /* DayCellView.h */,
+				7E74D7B319D1534600D51746 /* DayCellView.m */,
+				7E74D7B419D1534600D51746 /* EventDayCellView.h */,
+				7E74D7B519D1534600D51746 /* EventDayCellView.m */,
+				7E74D7B619D1534600D51746 /* MonthView.h */,
+				7E74D7B719D1534600D51746 /* MonthView.m */,
+				7E74D7B819D1534600D51746 /* NumberDayCellView.h */,
+				7E74D7B919D1534600D51746 /* NumberDayCellView.m */,
+			);
+			name = RTCalendarView;
+			path = ../../../RTCalendarViewDemo/RTCalendarViewDemo/RTCalendarView;
+			sourceTree = "<group>";
+		};
 		7E886C9119BDAA2800AA5784 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		7EA5640D19D10FE2001FC13B /* DateUtils */ = {
-			isa = PBXGroup;
-			children = (
-				7EA5640E19D10FE2001FC13B /* DateUtils.h */,
-				7EA5640F19D10FE2001FC13B /* DateUtils.m */,
-			);
-			name = DateUtils;
-			path = ../../../../../GitHub/DateUtils/DateUtils;
-			sourceTree = "<group>";
-		};
-		7EA5641219D10FEC001FC13B /* RTCalendarView */ = {
-			isa = PBXGroup;
-			children = (
-				7EA5641319D10FEC001FC13B /* DayCellView.h */,
-				7EA5641419D10FEC001FC13B /* DayCellView.m */,
-				7EA5641519D10FEC001FC13B /* EventDayCellView.h */,
-				7EA5641619D10FEC001FC13B /* EventDayCellView.m */,
-				7EA5641719D10FEC001FC13B /* MonthView.h */,
-				7EA5641819D10FEC001FC13B /* MonthView.m */,
-				7EA5641919D10FEC001FC13B /* NumberDayCellView.h */,
-				7EA5641A19D10FEC001FC13B /* NumberDayCellView.m */,
-			);
-			name = RTCalendarView;
-			path = ../../../../../GitHub/RTCalendarViewDemo/RTCalendarViewDemo/RTCalendarView;
 			sourceTree = "<group>";
 		};
 		7EAB39F719A1944200024E00 = {
@@ -559,8 +586,9 @@
 		7EAB3A3619A19AB800024E00 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				7EA5641219D10FEC001FC13B /* RTCalendarView */,
-				7EA5640D19D10FE2001FC13B /* DateUtils */,
+				7E4C7EF419D16E9C00DD8BAF /* UIImageView+setPath */,
+				7E74D7B119D1534600D51746 /* RTCalendarView */,
+				7E74D7AC19D1533D00D51746 /* DateUtils */,
 				5992BCA219C34AEA00339FC5 /* PhotoTakerUnit */,
 				5983792E19A24B3700AD4BC7 /* FIlePath */,
 				7EAB3A4719A1EDCD00024E00 /* UniqueID */,
@@ -706,7 +734,7 @@
 				59D034FB19AF80F000C0E40D /* UIButton+WebCache.m in Sources */,
 				5983793119A24B4400AD4BC7 /* FilePath.m in Sources */,
 				59D034D319AF80F000C0E40D /* MBProgressHUD+Add.m in Sources */,
-				7EA5641D19D10FEC001FC13B /* EventDayCellView.m in Sources */,
+				7E74D7BC19D1534600D51746 /* EventDayCellView.m in Sources */,
 				59D034FD19AF80F000C0E40D /* UIImage+GIF.m in Sources */,
 				59D034F919AF80F000C0E40D /* SDWebImagePrefetcher.m in Sources */,
 				5992BCA519C34B1C00339FC5 /* PhotoTakerUnit.m in Sources */,
@@ -717,11 +745,12 @@
 				59D0349319AF782200C0E40D /* AGIPCGridItem.m in Sources */,
 				5983792719A2447C00AD4BC7 /* ReviewItemManager.m in Sources */,
 				59D034F719AF80F000C0E40D /* SDWebImageManager.m in Sources */,
-				7EA5641F19D10FEC001FC13B /* MonthView.m in Sources */,
+				7E74D7BE19D1534600D51746 /* MonthView.m in Sources */,
 				59D034EF19AF80F000C0E40D /* SDWebImageDecoder.m in Sources */,
 				59D0348F19AF782200C0E40D /* AGIPCAssetsController.m in Sources */,
 				59D034E119AF80F000C0E40D /* MJPhotoProgressView.m in Sources */,
 				5983794419A38C8400AD4BC7 /* HomeViewController.m in Sources */,
+				7E4C7EF719D16EA600DD8BAF /* UIImageView+setPath.m in Sources */,
 				59D034F319AF80F000C0E40D /* SDWebImageDownloaderOperation.m in Sources */,
 				59D034F519AF80F000C0E40D /* SDWebImageManager+MJ.m in Sources */,
 				59D034D719AF80F000C0E40D /* MBProgressHUD.m in Sources */,
@@ -730,19 +759,20 @@
 				59D034FF19AF80F000C0E40D /* UIImage+MultiFormat.m in Sources */,
 				7EAB3A1419A1944200024E00 /* AppDelegate.m in Sources */,
 				7EAB3A1019A1944200024E00 /* main.m in Sources */,
-				7EA5641019D10FE2001FC13B /* DateUtils.m in Sources */,
+				7E74D7AF19D1533D00D51746 /* DateUtils.m in Sources */,
 				59D034E519AF80F000C0E40D /* MJPhotoView.m in Sources */,
 				59D0350119AF80F000C0E40D /* UIImage+WebP.m in Sources */,
 				59D0349119AF782200C0E40D /* AGIPCGridCell.m in Sources */,
 				59D034DF19AF80F000C0E40D /* MJPhotoLoadingView.m in Sources */,
+				7E4C7EFC19D1701000DD8BAF /* ItemListCell.m in Sources */,
 				59D0350D19AF8E5200C0E40D /* ItemListTableViewController.m in Sources */,
 				59D034EB19AF80F000C0E40D /* SDImageCache.m in Sources */,
 				59D034E319AF80F000C0E40D /* MJPhotoToolbar.m in Sources */,
 				59D0348719AF782200C0E40D /* AGImagePickerController+Helper.m in Sources */,
-				7EA5642119D10FEC001FC13B /* NumberDayCellView.m in Sources */,
+				7E74D7C019D1534600D51746 /* NumberDayCellView.m in Sources */,
 				59D034E919AF80F000C0E40D /* NSData+GIF.m in Sources */,
 				59D034D919AF80F000C0E40D /* MJPhoto.m in Sources */,
-				7EA5641B19D10FEC001FC13B /* DayCellView.m in Sources */,
+				7E74D7BA19D1534600D51746 /* DayCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,29 +788,30 @@
 				59D0349619AF782200C0E40D /* AGIPCToolbarItem.m in Sources */,
 				59D0349419AF782200C0E40D /* AGIPCGridItem.m in Sources */,
 				7E886C9019BD8AAE00AA5784 /* ReviewFacade.m in Sources */,
-				7EA5641119D10FE2001FC13B /* DateUtils.m in Sources */,
+				7E74D7B019D1533D00D51746 /* DateUtils.m in Sources */,
 				59D034DE19AF80F000C0E40D /* MJPhotoBrowser.m in Sources */,
 				59D034F419AF80F000C0E40D /* SDWebImageDownloaderOperation.m in Sources */,
 				59D034FA19AF80F000C0E40D /* SDWebImagePrefetcher.m in Sources */,
 				59D034D419AF80F000C0E40D /* MBProgressHUD+Add.m in Sources */,
-				7EA5641C19D10FEC001FC13B /* DayCellView.m in Sources */,
+				7E74D7BB19D1534600D51746 /* DayCellView.m in Sources */,
 				7EAB3A4B19A1EDE000024E00 /* UniqueID.m in Sources */,
 				59D034E419AF80F000C0E40D /* MJPhotoToolbar.m in Sources */,
+				7E4C7EF819D16EA600DD8BAF /* UIImageView+setPath.m in Sources */,
 				59D034EA19AF80F000C0E40D /* NSData+GIF.m in Sources */,
 				59D034DA19AF80F000C0E40D /* MJPhoto.m in Sources */,
 				59D0350E19AF8E5200C0E40D /* ItemListTableViewController.m in Sources */,
 				59D0348C19AF782200C0E40D /* AGImagePickerController.m in Sources */,
 				7EAB3A2919A1944200024E00 /* rememberTests.m in Sources */,
-				7EA5642019D10FEC001FC13B /* MonthView.m in Sources */,
+				7E74D7BF19D1534600D51746 /* MonthView.m in Sources */,
 				59D0349219AF782200C0E40D /* AGIPCGridCell.m in Sources */,
-				7EA5641E19D10FEC001FC13B /* EventDayCellView.m in Sources */,
+				7E74D7BD19D1534600D51746 /* EventDayCellView.m in Sources */,
 				59D034E619AF80F000C0E40D /* MJPhotoView.m in Sources */,
 				59D0349819AF782200C0E40D /* ALAsset+AGIPC.m in Sources */,
 				59D0350419AF80F000C0E40D /* UIImageView+MJWebCache.m in Sources */,
 				5992BCA619C34B1C00339FC5 /* PhotoTakerUnit.m in Sources */,
 				59D0350619AF80F000C0E40D /* UIImageView+WebCache.m in Sources */,
 				59D034F819AF80F000C0E40D /* SDWebImageManager.m in Sources */,
-				7EA5642219D10FEC001FC13B /* NumberDayCellView.m in Sources */,
+				7E74D7C119D1534600D51746 /* NumberDayCellView.m in Sources */,
 				59D034EC19AF80F000C0E40D /* SDImageCache.m in Sources */,
 				59D034D819AF80F000C0E40D /* MBProgressHUD.m in Sources */,
 				59D0348E19AF782200C0E40D /* AGIPCAlbumsController.m in Sources */,
@@ -790,6 +821,7 @@
 				59D034F219AF80F000C0E40D /* SDWebImageDownloader.m in Sources */,
 				5983792819A2447C00AD4BC7 /* ReviewItemManager.m in Sources */,
 				59D0350019AF80F000C0E40D /* UIImage+MultiFormat.m in Sources */,
+				7E4C7EFD19D1701000DD8BAF /* ItemListCell.m in Sources */,
 				59D0350219AF80F000C0E40D /* UIImage+WebP.m in Sources */,
 				59D034FC19AF80F000C0E40D /* UIButton+WebCache.m in Sources */,
 				59D034E819AF80F000C0E40D /* MKAnnotationView+WebCache.m in Sources */,

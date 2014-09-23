@@ -11,6 +11,7 @@
 #import "ReviewItem.h"
 #import "MJPhotoBrowser.h"
 #import "MJPhoto.h"
+#import "ItemListCell.h"
 
 @interface ItemListTableViewController ()<MJPhotoBrowserDelegate>
 @property (nonatomic, strong) NSMutableArray* arr_items;
@@ -66,17 +67,19 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString* reuseID = @"list";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseID];
+    ItemListCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseID];
     if (!cell)
     {
         // Configure the cell...
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseID];
+        cell = [[ItemListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseID];
+        
     }
     
     ReviewItem* item = [self.arr_items objectAtIndex:indexPath.row];
     
     //考虑用图片去填充
-    cell.textLabel.text = [NSString stringWithFormat:@"%d", item.dateId_created];
+//    cell.textLabel.text = [NSString stringWithFormat:@"%d", item.dateId_created];
+    cell.info = item;
     
     return cell;
 }
