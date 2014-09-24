@@ -8,6 +8,7 @@
 
 #import "PhotoTakerUnit.h"
 #import "ImageCompressor.h"
+#import "RTLoadingView.h"
 
 @interface PhotoTakerUnit()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) UIImagePickerController* imagePickerController;
@@ -122,6 +123,8 @@
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    [RTLoadingView closeFromView:self.imagePickerController.view];
+    
     //get image
     UIImage* image = [info valueForKey:UIImagePickerControllerOriginalImage];
     //add to arr
@@ -171,6 +174,7 @@
 {
     [self.imagePickerController takePicture];
     [self showCameraEffect];
+    [RTLoadingView showInView:self.imagePickerController.view];
 }
 
 - (IBAction)cancelButtonClicked:(id)sender
