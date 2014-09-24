@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ItemListTableViewController : UITableViewController
+@interface ItemListTableViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, assign) NSInteger dayID;
 @end

@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "HomeViewController.h"
+//#import "HomeViewController.h"
+#import "ItemListTableViewController.h"
 #import "ReviewFacade.h"
 #import <CloudKit/CloudKit.h>
 
@@ -68,7 +69,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    HomeViewController* homeVC = [[HomeViewController alloc]initWithNibName:nil bundle:nil];
+    ItemListTableViewController* homeVC = [[ItemListTableViewController alloc]initWithNibName:nil bundle:nil];
     UINavigationController* navigationVC = [[UINavigationController alloc]initWithRootViewController:homeVC];
     self.window.rootViewController = navigationVC;
     

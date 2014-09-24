@@ -76,6 +76,7 @@ static ReviewItemManager* manager = nil;
         {
             [self.arr_items addObjectsFromArray:arr_files];
         }
+        NSLog(@"%@ loading data finished", NSStringFromSelector(_cmd));
     });
     return result;
 }

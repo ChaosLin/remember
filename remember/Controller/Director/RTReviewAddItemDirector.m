@@ -70,8 +70,8 @@
             self.failBlock();
         }
     }
-    
 }
+
 #pragma mark - 取图
 
 - (void)takeImageFromCamera

@@ -12,21 +12,30 @@
 #import "MJPhotoBrowser.h"
 #import "MJPhoto.h"
 #import "ItemListCell.h"
+#import "DateUtils.h"
+#import "RTReviewAddItemDirector.h"
 
 @interface ItemListTableViewController ()<MJPhotoBrowserDelegate>
+@property (nonatomic, strong) RTReviewAddItemDirector* addItemDirector;
+
 @property (nonatomic, strong) NSMutableArray* arr_items;
 
+@property (nonatomic, strong) UITableView* tableView;
+@property (nonatomic, strong) UIButton* button_addItem;
+
 - (void)updateDataResource;
+
+- (IBAction)addItemButtonClicked:(id)sender;
 @end
 
 @implementation ItemListTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])
+    {
         self.arr_items = [NSMutableArray array];
+        self.addItemDirector = [RTReviewAddItemDirector new];
     }
     return self;
 }
@@ -40,7 +49,28 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.arr_items = [NSMutableArray arrayWithArray:[[ReviewFacade sharedInstance] getReviewItemsForDayID:self.dayID]];
+    
+    self.dayID = [DateUtils getTodayDateId];
+    //init,prepare data
+    [[ReviewFacade sharedInstance] load];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self prepareData];
+    });
+    
+    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [self.view addSubview:self.tableView];
+    
+    self.button_addItem = [UIButton buttonWithType:UIButtonTypeCustom];
+    float width_button = 100;
+    float height_button = 100;
+    self.button_addItem.frame = CGRectMake((CGRectGetWidth(self.view.bounds) - width_button) / 2.0, CGRectGetHeight(self.view.bounds) - height_button, width_button, height_button);
+    self.button_addItem.backgroundColor = [UIColor redColor];
+    self.button_addItem.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+    [self.button_addItem addTarget:self action:@selector(addItemButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.button_addItem];
 }
 
 - (void)didReceiveMemoryWarning
@@ -177,7 +207,7 @@
 */
 
 #pragma mark - MJPhotoBrowserDelegate
-- (void)photoBrowser:(MJPhotoBrowser *)photoBrowser didClickReviewButtonAtIndex:(NSUInteger)index
+  - (void)photoBrowser:(MJPhotoBrowser *)photoBrowser didClickReviewButtonAtIndex:(NSUInteger)index
 {
     ReviewItem* item = photoBrowser.info;
     [[ReviewFacade sharedInstance] reviewItem:item];
@@ -192,4 +222,27 @@
     self.arr_items = [NSMutableArray arrayWithArray:[[ReviewFacade sharedInstance] getTodaysReviewItems]];
 }
 
+- (IBAction)addItemButtonClicked:(id)sender
+{
+    __weak ItemListTableViewController* weakself = self;
+    self.addItemDirector = [[RTReviewAddItemDirector alloc]init];
+    self.addItemDirector.succBlock = ^(void){
+        [[ReviewFacade sharedInstance] refresh];
+        [weakself prepareData];
+        NSLog(@"success");
+    };
+    self.addItemDirector.failBlock = ^(void)
+    {
+        NSLog(@"failed");
+    };
+    self.addItemDirector.rootViewController = self;
+    [self.addItemDirector action];
+}
+
+- (void)prepareData
+{
+    [[ReviewFacade sharedInstance] refresh];
+    self.arr_items = [NSMutableArray arrayWithArray:[[ReviewFacade sharedInstance] getReviewItemsForDayID:self.dayID]];
+    [self.tableView reloadData];
+}
 @end

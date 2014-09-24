@@ -44,6 +44,7 @@ static ReviewItemGenerator* generator = nil;
 
 - (void)refresh//开始生成自己的数据
 {
+    [TimeRecorder recordWithTag:@"refresh"];
     [self.dic_dayID2ItemArr removeAllObjects];
     NSArray* arr_items = [[ReviewFacade sharedInstance] items];
     for (ReviewItem* item in arr_items)
@@ -67,6 +68,7 @@ static ReviewItemGenerator* generator = nil;
             }
         }
     }
+    [TimeRecorder recordFinishWithTag:@"refresh"];
     return;
 }
 

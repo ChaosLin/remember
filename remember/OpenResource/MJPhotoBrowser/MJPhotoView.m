@@ -74,7 +74,7 @@
         float width = 100;
         float height = 50;
         CGRect bounds = photoView.bounds;
-        button_confirm.frame = CGRectMake(bounds.size.width - width, 0, width, height);
+        button_confirm.frame = CGRectMake(bounds.size.width - width, 50, width, height);
         button_confirm.tag = 10086;
         button_confirm.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
         [button_confirm setTitle:@"Review~" forState:UIControlStateNormal];
