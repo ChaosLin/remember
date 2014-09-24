@@ -12,6 +12,7 @@
 #import "ReviewItem.h"
 #import "ReviewFacade.h"
 #import "MJPhoto.h"
+#import "RTLoadingView.h"
 
 @interface RTReviewAddItemDirector() <UIActionSheetDelegate>
 @property (nonatomic, strong) AGImagePickerController* imagePickerController;
@@ -51,25 +52,30 @@
 
 - (void)insertIntoReviewItemWithImages:(NSArray*)images
 {
-    BOOL result = [self.item addImages:images];
-    if (result)
-    {
-        BOOL result_addItem = [[ReviewFacade sharedInstance] addItem:self.item];
-        if (result_addItem)
-        {
-            if (self.succBlock)
+    [RTLoadingView showInView:self.rootViewController.view];
+    __weak RTReviewAddItemDirector* weakSelf = self;
+    [self.item addImages:images finished:^(BOOL success, NSError *error) {
+        if (success)
             {
-                self.succBlock();
+                BOOL result_addItem = [[ReviewFacade sharedInstance] addItem:weakSelf.item];
+                if (result_addItem)
+                {
+                    if (weakSelf.succBlock)
+                    {
+                        weakSelf.succBlock();
+                        [RTLoadingView closeFromView:weakSelf.rootViewController.view];
+                    }
+                }
             }
-        }
-    }
-    else
-    {
-        if (self.failBlock)
-        {
-            self.failBlock();
-        }
-    }
+            else
+            {
+                if (weakSelf.failBlock)
+                {
+                    weakSelf.failBlock();
+                    [RTLoadingView closeFromView:weakSelf.rootViewController.view];
+                }
+            }
+    }];
 }
 
 #pragma mark - 取图

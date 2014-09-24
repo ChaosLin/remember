@@ -178,8 +178,9 @@
     return [data_image writeToFile:str_filePath atomically:YES];
 }
 
-- (BOOL)addImages:(NSArray*)images
+- (void)addImages:(NSArray*)images finished:(void (^)(BOOL, NSError *))completion
 {
+    __block BOOL result_save_return = YES;
     self.count_images += images.count;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         [images enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -198,12 +199,25 @@
                     rate *= rate_new;
                     data_image = UIImageJPEGRepresentation(obj, rate);
                 }
-                BOOL result_save = [data_image writeToFile:str_filePath atomically:YES];
-                NSLog(@"%@ save file:%d", NSStringFromSelector(_cmd), result_save);
+                BOOL result_save_this = [data_image writeToFile:str_filePath atomically:YES];
+                if (!result_save_this)
+                {
+                    result_save_return = NO;
+                }
+                NSLog(@"%@ save file:%d", NSStringFromSelector(_cmd), result_save_this);
             }
         }];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (result_save_return)
+            {
+                completion(result_save_return, nil);
+            }
+            else
+            {
+                completion(result_save_return, [NSError new]);
+            }
+        });
     });
-    return YES;
 }
 
 - (NSString*)getImagePathAtIndex:(NSInteger)index

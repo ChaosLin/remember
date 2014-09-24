@@ -97,6 +97,8 @@
 		7E4C7F0219D270A300DD8BAF /* TimeRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0019D270A300DD8BAF /* TimeRecorder.m */; };
 		7E4C7F0619D2A6BB00DD8BAF /* ImageCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0519D2A6BB00DD8BAF /* ImageCompressor.m */; };
 		7E4C7F0719D2A6BB00DD8BAF /* ImageCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0519D2A6BB00DD8BAF /* ImageCompressor.m */; };
+		7E4C7F0B19D2C5FC00DD8BAF /* RTLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0A19D2C5FC00DD8BAF /* RTLoadingView.m */; };
+		7E4C7F0C19D2C5FC00DD8BAF /* RTLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0A19D2C5FC00DD8BAF /* RTLoadingView.m */; };
 		7E74D7AF19D1533D00D51746 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7AE19D1533D00D51746 /* DateUtils.m */; };
 		7E74D7B019D1533D00D51746 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7AE19D1533D00D51746 /* DateUtils.m */; };
 		7E74D7BA19D1534600D51746 /* DayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7B319D1534600D51746 /* DayCellView.m */; };
@@ -229,6 +231,8 @@
 		7E4C7F0019D270A300DD8BAF /* TimeRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeRecorder.m; sourceTree = "<group>"; };
 		7E4C7F0419D2A6BB00DD8BAF /* ImageCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCompressor.h; sourceTree = "<group>"; };
 		7E4C7F0519D2A6BB00DD8BAF /* ImageCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCompressor.m; sourceTree = "<group>"; };
+		7E4C7F0919D2C5FC00DD8BAF /* RTLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLoadingView.h; sourceTree = "<group>"; };
+		7E4C7F0A19D2C5FC00DD8BAF /* RTLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLoadingView.m; sourceTree = "<group>"; };
 		7E74D7AD19D1533D00D51746 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
 		7E74D7AE19D1533D00D51746 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
 		7E74D7B219D1534600D51746 /* DayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayCellView.h; sourceTree = "<group>"; };
@@ -483,6 +487,15 @@
 			path = ImageCompressor;
 			sourceTree = "<group>";
 		};
+		7E4C7F0819D2C5E500DD8BAF /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				7E4C7F0919D2C5FC00DD8BAF /* RTLoadingView.h */,
+				7E4C7F0A19D2C5FC00DD8BAF /* RTLoadingView.m */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
 		7E74D7AC19D1533D00D51746 /* DateUtils */ = {
 			isa = PBXGroup;
 			children = (
@@ -612,6 +625,7 @@
 		7EAB3A3619A19AB800024E00 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7E4C7F0819D2C5E500DD8BAF /* Loading */,
 				7E4C7F0319D2A65F00DD8BAF /* ImageCompressor */,
 				7E4C7EFE19D2709A00DD8BAF /* TimeRecord */,
 				7E4C7EF419D16E9C00DD8BAF /* UIImageView+setPath */,
@@ -803,6 +817,7 @@
 				59D034E919AF80F000C0E40D /* NSData+GIF.m in Sources */,
 				59D034D919AF80F000C0E40D /* MJPhoto.m in Sources */,
 				7E74D7BA19D1534600D51746 /* DayCellView.m in Sources */,
+				7E4C7F0B19D2C5FC00DD8BAF /* RTLoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,6 +846,7 @@
 				7E4C7EF819D16EA600DD8BAF /* UIImageView+setPath.m in Sources */,
 				59D034EA19AF80F000C0E40D /* NSData+GIF.m in Sources */,
 				59D034DA19AF80F000C0E40D /* MJPhoto.m in Sources */,
+				7E4C7F0C19D2C5FC00DD8BAF /* RTLoadingView.m in Sources */,
 				59D0350E19AF8E5200C0E40D /* ItemListTableViewController.m in Sources */,
 				59D0348C19AF782200C0E40D /* AGImagePickerController.m in Sources */,
 				7EAB3A2919A1944200024E00 /* rememberTests.m in Sources */,

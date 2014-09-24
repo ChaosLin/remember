@@ -30,7 +30,7 @@
 
 //addImageAndSave
 - (BOOL)addImage:(UIImage*)image;
-- (BOOL)addImages:(NSArray*)images;
+- (void)addImages:(NSArray*)images finished:(void (^)(BOOL success, NSError* error))completion;
 - (NSString*)getImagePathAtIndex:(NSInteger)index;
 
 - (UIImage*)getImageAtIndex:(NSInteger)index;
