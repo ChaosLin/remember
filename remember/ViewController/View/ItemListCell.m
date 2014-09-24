@@ -25,14 +25,14 @@
     {
         self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         self.editingAccessoryType = UITableViewCellAccessoryNone;
-        self.label_date = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 50)];
+        self.label_date = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 40)];
         [self.contentView addSubview:self.label_date];
         
-        self.imageView_first = [[UIImageView alloc]initWithFrame:CGRectMake(150, 0, 50, 50)];
+        self.imageView_first = [[UIImageView alloc]initWithFrame:CGRectMake(150, 0, 40, 40)];
         self.imageView_first.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.imageView_first];
         
-        self.imageView_second = [[UIImageView alloc]initWithFrame:CGRectMake(200, 0, 50, 50)];
+        self.imageView_second = [[UIImageView alloc]initWithFrame:CGRectMake(200, 0, 40, 40)];
         self.imageView_second.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.imageView_second];
     }

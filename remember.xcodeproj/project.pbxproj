@@ -95,6 +95,8 @@
 		7E4C7EFD19D1701000DD8BAF /* ItemListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7EFB19D1701000DD8BAF /* ItemListCell.m */; };
 		7E4C7F0119D270A300DD8BAF /* TimeRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0019D270A300DD8BAF /* TimeRecorder.m */; };
 		7E4C7F0219D270A300DD8BAF /* TimeRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0019D270A300DD8BAF /* TimeRecorder.m */; };
+		7E4C7F0619D2A6BB00DD8BAF /* ImageCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0519D2A6BB00DD8BAF /* ImageCompressor.m */; };
+		7E4C7F0719D2A6BB00DD8BAF /* ImageCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0519D2A6BB00DD8BAF /* ImageCompressor.m */; };
 		7E74D7AF19D1533D00D51746 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7AE19D1533D00D51746 /* DateUtils.m */; };
 		7E74D7B019D1533D00D51746 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7AE19D1533D00D51746 /* DateUtils.m */; };
 		7E74D7BA19D1534600D51746 /* DayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7B319D1534600D51746 /* DayCellView.m */; };
@@ -225,6 +227,8 @@
 		7E4C7EFB19D1701000DD8BAF /* ItemListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemListCell.m; sourceTree = "<group>"; };
 		7E4C7EFF19D270A300DD8BAF /* TimeRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeRecorder.h; sourceTree = "<group>"; };
 		7E4C7F0019D270A300DD8BAF /* TimeRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeRecorder.m; sourceTree = "<group>"; };
+		7E4C7F0419D2A6BB00DD8BAF /* ImageCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCompressor.h; sourceTree = "<group>"; };
+		7E4C7F0519D2A6BB00DD8BAF /* ImageCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCompressor.m; sourceTree = "<group>"; };
 		7E74D7AD19D1533D00D51746 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
 		7E74D7AE19D1533D00D51746 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
 		7E74D7B219D1534600D51746 /* DayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayCellView.h; sourceTree = "<group>"; };
@@ -470,6 +474,15 @@
 			path = TimeRecord;
 			sourceTree = "<group>";
 		};
+		7E4C7F0319D2A65F00DD8BAF /* ImageCompressor */ = {
+			isa = PBXGroup;
+			children = (
+				7E4C7F0419D2A6BB00DD8BAF /* ImageCompressor.h */,
+				7E4C7F0519D2A6BB00DD8BAF /* ImageCompressor.m */,
+			);
+			path = ImageCompressor;
+			sourceTree = "<group>";
+		};
 		7E74D7AC19D1533D00D51746 /* DateUtils */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,6 +612,7 @@
 		7EAB3A3619A19AB800024E00 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7E4C7F0319D2A65F00DD8BAF /* ImageCompressor */,
 				7E4C7EFE19D2709A00DD8BAF /* TimeRecord */,
 				7E4C7EF419D16E9C00DD8BAF /* UIImageView+setPath */,
 				7E74D7B119D1534600D51746 /* RTCalendarView */,
@@ -756,6 +770,7 @@
 				7EAB3A4A19A1EDE000024E00 /* UniqueID.m in Sources */,
 				59D034F119AF80F000C0E40D /* SDWebImageDownloader.m in Sources */,
 				59D034ED19AF80F000C0E40D /* SDWebImageCompat.m in Sources */,
+				7E4C7F0619D2A6BB00DD8BAF /* ImageCompressor.m in Sources */,
 				59D0349319AF782200C0E40D /* AGIPCGridItem.m in Sources */,
 				5983792719A2447C00AD4BC7 /* ReviewItemManager.m in Sources */,
 				59D034F719AF80F000C0E40D /* SDWebImageManager.m in Sources */,
@@ -802,6 +817,7 @@
 				59D0349C19AF792F00C0E40D /* RTReviewAddItemDirector.m in Sources */,
 				59D0349619AF782200C0E40D /* AGIPCToolbarItem.m in Sources */,
 				59D0349419AF782200C0E40D /* AGIPCGridItem.m in Sources */,
+				7E4C7F0719D2A6BB00DD8BAF /* ImageCompressor.m in Sources */,
 				7E886C9019BD8AAE00AA5784 /* ReviewFacade.m in Sources */,
 				7E74D7B019D1533D00D51746 /* DateUtils.m in Sources */,
 				59D034DE19AF80F000C0E40D /* MJPhotoBrowser.m in Sources */,

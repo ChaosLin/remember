@@ -102,7 +102,6 @@
     {
         // Configure the cell...
         cell = [[ItemListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseID];
-        
     }
     
     ReviewItem* item = [self.arr_items objectAtIndex:indexPath.row];

@@ -7,14 +7,19 @@
 //
 
 #import "PhotoTakerUnit.h"
+#import "ImageCompressor.h"
 
 @interface PhotoTakerUnit()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) UIImagePickerController* imagePickerController;
 @property (nonatomic, strong) NSMutableArray* arr_images;
 
+@property (nonatomic, weak) UIButton* button_takePicture;
+
 - (IBAction)takePicButtonClicked:(id)sender;
 - (IBAction)cancelButtonClicked:(id)sender;
 - (IBAction)finishButtonClicked:(id)sender;
+
+- (void)showCameraEffect;
 @end
 
 @implementation PhotoTakerUnit
@@ -70,7 +75,6 @@
     UIView* toolbarView = [[UIView alloc] initWithFrame:CGRectMake(0, screenHeight - toolBarSize.height, toolBarSize.width, toolBarSize.height)];
     toolbarView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     
-    //渐变色
     CGSize btnSize = CGSizeMake(62, 37);
     UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     cancelBtn.frame = CGRectMake(9, (toolBarSize.height - btnSize.height) / 2, btnSize.width, btnSize.height);
@@ -83,10 +87,12 @@
     CGSize pickBtnSize = CGSizeMake(102, 37);
     UIButton* pickBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     pickBtn.frame = CGRectMake((320 - pickBtnSize.width) / 2, (toolBarSize.height - pickBtnSize.height) / 2, pickBtnSize.width, pickBtnSize.height);
-//    [pickBtn setImage:[UIImage imageNamed:@"paizhao_btn.png"] forState:UIControlStateNormal];
     [pickBtn setBackgroundColor:[UIColor redColor]];
     [pickBtn addTarget:self action:@selector(takePicButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [toolbarView addSubview:pickBtn];
+    self.button_takePicture = pickBtn;
+    NSString* str_title = [NSString stringWithFormat:@"%d/%d", self.arr_images.count, self.maxNumToTake];
+    [self.button_takePicture setTitle:str_title forState:UIControlStateNormal];
     
     CGSize finishBtnSize = CGSizeMake(62, 37);
     UIButton* finishBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -122,14 +128,16 @@
     if (image)
     {
         [self.arr_images addObject:image];
-    }
-    
-    //if count >= max succ
-    if (self.arr_images.count >= self.maxNumToTake)
-    {
-        [self.rootViewController dismissViewControllerAnimated:YES completion:^{
-            self.succBlock(self.arr_images);
-        }];
+        NSString* str_title = [NSString stringWithFormat:@"%d/%d", self.arr_images.count, self.maxNumToTake];
+        [self.button_takePicture setTitle:str_title forState:UIControlStateNormal];
+        
+        //if count >= max succ
+        if (self.arr_images.count >= self.maxNumToTake)
+        {
+            [self.rootViewController dismissViewControllerAnimated:YES completion:^{
+                self.succBlock(self.arr_images);
+            }];
+        }
     }
 }
 
@@ -161,13 +169,8 @@
 
 - (IBAction)takePicButtonClicked:(id)sender
 {
-    [self.imagePickerController.view setAlpha:1];
     [self.imagePickerController takePicture];
-    [UIView animateWithDuration:0.1 animations:^{
-        self.imagePickerController.view.alpha = 0;
-    } completion:^(BOOL finished) {
-        self.imagePickerController.view.alpha = 1;
-    }];
+    [self showCameraEffect];
 }
 
 - (IBAction)cancelButtonClicked:(id)sender
@@ -180,5 +183,15 @@
 - (IBAction)finishButtonClicked:(id)sender
 {
     [self imagePickerControllerDidFinishehPickImages];
+}
+
+- (void)showCameraEffect
+{
+    self.imagePickerController.view.alpha = 1;
+    [UIView animateWithDuration:0.1 animations:^{
+        self.imagePickerController.view.alpha = 0;
+    } completion:^(BOOL finished) {
+        self.imagePickerController.view.alpha = 1;
+    }];
 }
 @end
