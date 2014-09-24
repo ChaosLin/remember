@@ -11,4 +11,6 @@
 @interface UIImageView (setPath)
 
 - (void)setImageWithPath:(NSString*)path;
+
+- (void)setThumbnailImageWithPath:(NSString*)path size:(CGSize)size;
 @end

@@ -23,6 +23,8 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])
     {
+        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        self.editingAccessoryType = UITableViewCellAccessoryNone;
         self.label_date = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 50)];
         [self.contentView addSubview:self.label_date];
         
@@ -46,8 +48,8 @@
         self.label_date.text = [NSString stringWithFormat:@"%d", item.dateId_created];
         NSString* str_file1 = [item getImagePathAtIndex:0];
         NSString* str_file2 = [item getImagePathAtIndex:1];
-        [self.imageView_first setImageWithPath:str_file1];
-        [self.imageView_second setImageWithPath:str_file2];
+        [self.imageView_first setThumbnailImageWithPath:str_file1 size:CGSizeMake(50, 50)];
+        [self.imageView_second setThumbnailImageWithPath:str_file2 size:CGSizeMake(50, 50)];
     }
 }
 @end
