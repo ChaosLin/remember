@@ -85,10 +85,14 @@
     __weak RTReviewAddItemDirector* weakSelf = self;
     self.photoUit = [[PhotoTakerUnit alloc]initWithRootViewController:self.rootViewController succBlock:^(NSArray *arr_images) {
         [weakSelf insertIntoReviewItemWithImages:arr_images];
+        [MobClick endEvent:event_addItemFromCamera];
+        [MobClick event:event_addItemFromCamera attributes:@{@"result":SuccString}];
     } failBlock:^(NSError *error) {
         if (self.failBlock)
         {
             self.failBlock();
+            [MobClick endEvent:event_addItemFromCamera];
+            [MobClick event:event_addItemFromCamera attributes:@{@"result":FailString}];
         }
     } maxNumToTake:6];
     [self.photoUit action];
@@ -105,6 +109,8 @@
              {
                  weakSelf.failBlock();
              }
+             [MobClick event:event_addItemFromAlbum attributes:@{@"result":FailString}];
+             [MobClick endEvent:event_addItemFromAlbum];
          }];
     } successBlock:^(NSArray *info) {
         //注意把ALSet转成UIImage
@@ -124,6 +130,8 @@
                 }
                 dispatch_async(dispatch_get_main_queue(), ^(void){
                     [weakSelf insertIntoReviewItemWithImages:arr_images];
+                    [MobClick event:event_addItemFromAlbum attributes:@{@"result":SuccString}];
+                    [MobClick endEvent:event_addItemFromAlbum];
                 });
             });
         }];
@@ -139,10 +147,14 @@
 {
     if (0 == buttonIndex)
     {
+        [MobClick event:event_click_camera];
+        [MobClick beginEvent:event_addItemFromCamera];
         [self takeImageFromCamera];
     }
     else if (1 == buttonIndex)
     {
+        [MobClick event:event_click_album];
+        [MobClick beginEvent:event_addItemFromAlbum];
         [self takeImageFromAlbum];
     }
 }

@@ -14,6 +14,7 @@
 #import "ItemListCell.h"
 #import "DateUtils.h"
 #import "RTReviewAddItemDirector.h"
+#import "MobClick.h"
 
 @interface ItemListTableViewController ()<MJPhotoBrowserDelegate>
 @property (nonatomic, strong) RTReviewAddItemDirector* addItemDirector;
@@ -223,6 +224,7 @@
 
 - (IBAction)addItemButtonClicked:(id)sender
 {
+    [MobClick event:event_click_add];
     __weak ItemListTableViewController* weakself = self;
     self.addItemDirector = [[RTReviewAddItemDirector alloc]init];
     self.addItemDirector.succBlock = ^(void){

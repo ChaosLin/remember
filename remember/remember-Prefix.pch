@@ -15,4 +15,6 @@
     #import <Foundation/Foundation.h>
     #import "DateConfig.h"
     #import "TimeRecorder.h"
+    #import "MobClick.h"
+    #import "CommonConfig.h"
 #endif

@@ -89,6 +89,8 @@
 		59D0350619AF80F000C0E40D /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D034D219AF80F000C0E40D /* UIImageView+WebCache.m */; };
 		59D0350D19AF8E5200C0E40D /* ItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0350C19AF8E5200C0E40D /* ItemListTableViewController.m */; };
 		59D0350E19AF8E5200C0E40D /* ItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0350C19AF8E5200C0E40D /* ItemListTableViewController.m */; };
+		7E420EB419D547A90019C8C5 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E420EB119D547A90019C8C5 /* libMobClickLibrary.a */; };
+		7E420EB619D547E70019C8C5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E420EB519D547E70019C8C5 /* libz.dylib */; };
 		7E4C7EF719D16EA600DD8BAF /* UIImageView+setPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7EF619D16EA600DD8BAF /* UIImageView+setPath.m */; };
 		7E4C7EF819D16EA600DD8BAF /* UIImageView+setPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7EF619D16EA600DD8BAF /* UIImageView+setPath.m */; };
 		7E4C7EFC19D1701000DD8BAF /* ItemListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7EFB19D1701000DD8BAF /* ItemListCell.m */; };
@@ -131,6 +133,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7E98231319D3F1F30066564A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EAB39F819A1944200024E00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EAB39FF19A1944200024E00;
+			remoteInfo = remember;
+		};
+		7E98231519D3F1F30066564A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EAB39F819A1944200024E00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EAB39FF19A1944200024E00;
+			remoteInfo = remember;
+		};
 		7EAB3A2019A1944200024E00 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7EAB39F819A1944200024E00 /* Project object */;
@@ -223,6 +239,11 @@
 		59D034D219AF80F000C0E40D /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		59D0350B19AF8E5200C0E40D /* ItemListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemListTableViewController.h; sourceTree = "<group>"; };
 		59D0350C19AF8E5200C0E40D /* ItemListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemListTableViewController.m; sourceTree = "<group>"; };
+		7E420EAE19D547090019C8C5 /* CommonConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonConfig.h; sourceTree = "<group>"; };
+		7E420EB119D547A90019C8C5 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		7E420EB219D547A90019C8C5 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		7E420EB319D547A90019C8C5 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
+		7E420EB519D547E70019C8C5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		7E4C7EF519D16EA600DD8BAF /* UIImageView+setPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+setPath.h"; sourceTree = "<group>"; };
 		7E4C7EF619D16EA600DD8BAF /* UIImageView+setPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+setPath.m"; sourceTree = "<group>"; };
 		7E4C7EFA19D1701000DD8BAF /* ItemListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemListCell.h; sourceTree = "<group>"; };
@@ -245,6 +266,7 @@
 		7E74D7B919D1534600D51746 /* NumberDayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberDayCellView.m; sourceTree = "<group>"; };
 		7E886C8D19BD8AAE00AA5784 /* ReviewFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewFacade.h; sourceTree = "<group>"; };
 		7E886C8E19BD8AAE00AA5784 /* ReviewFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewFacade.m; sourceTree = "<group>"; };
+		7E98235D19D3F4690066564A /* remember copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "remember copy-Info.plist"; path = "/Users/RentonTheUncoped/GitHub/remember/remember copy-Info.plist"; sourceTree = "<absolute>"; };
 		7EA563D819CA90A8001FC13B /* remember.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = remember.entitlements; sourceTree = "<group>"; };
 		7EAB3A0019A1944200024E00 /* remember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = remember.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAB3A0319A1944200024E00 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -276,9 +298,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E420EB619D547E70019C8C5 /* libz.dylib in Frameworks */,
 				7EAB3A0619A1944200024E00 /* CoreGraphics.framework in Frameworks */,
 				7EAB3A0819A1944200024E00 /* UIKit.framework in Frameworks */,
 				7EAB3A0419A1944200024E00 /* Foundation.framework in Frameworks */,
+				7E420EB419D547A90019C8C5 /* libMobClickLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +475,32 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		7E420EAD19D546D90019C8C5 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				7E420EAE19D547090019C8C5 /* CommonConfig.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		7E420EAF19D547810019C8C5 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				7E420EB019D547980019C8C5 /* UMeng */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		7E420EB019D547980019C8C5 /* UMeng */ = {
+			isa = PBXGroup;
+			children = (
+				7E420EB119D547A90019C8C5 /* libMobClickLibrary.a */,
+				7E420EB219D547A90019C8C5 /* MobClick.h */,
+				7E420EB319D547A90019C8C5 /* MobClickSocialAnalytics.h */,
+			);
+			path = UMeng;
+			sourceTree = "<group>";
+		};
 		7E4C7EF419D16E9C00DD8BAF /* UIImageView+setPath */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,6 +586,7 @@
 				7EAB3A2219A1944200024E00 /* rememberTests */,
 				7EAB3A0219A1944200024E00 /* Frameworks */,
 				7EAB3A0119A1944200024E00 /* Products */,
+				7E98235D19D3F4690066564A /* remember copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -551,6 +602,7 @@
 		7EAB3A0219A1944200024E00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E420EB519D547E70019C8C5 /* libz.dylib */,
 				7EAB3A0319A1944200024E00 /* Foundation.framework */,
 				7EAB3A0519A1944200024E00 /* CoreGraphics.framework */,
 				7EAB3A0719A1944200024E00 /* UIKit.framework */,
@@ -562,6 +614,7 @@
 		7EAB3A0919A1944200024E00 /* remember */ = {
 			isa = PBXGroup;
 			children = (
+				7E420EAD19D546D90019C8C5 /* Config */,
 				7EA563D819CA90A8001FC13B /* remember.entitlements */,
 				7E886C9119BDAA2800AA5784 /* Resource */,
 				59D0347319AF781600C0E40D /* OpenResource */,
@@ -573,6 +626,7 @@
 				7EAB3A1219A1944200024E00 /* AppDelegate.h */,
 				7EAB3A1319A1944200024E00 /* AppDelegate.m */,
 				7EAB3A1519A1944200024E00 /* Images.xcassets */,
+				7E420EAF19D547810019C8C5 /* ThirdParty */,
 				7EAB3A0A19A1944200024E00 /* Supporting Files */,
 			);
 			path = remember;
@@ -687,6 +741,8 @@
 			);
 			dependencies = (
 				7EAB3A2119A1944200024E00 /* PBXTargetDependency */,
+				7E98231419D3F1F30066564A /* PBXTargetDependency */,
+				7E98231619D3F1F30066564A /* PBXTargetDependency */,
 			);
 			name = rememberTests;
 			productName = rememberTests;
@@ -883,6 +939,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7E98231419D3F1F30066564A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EAB39FF19A1944200024E00 /* remember */;
+			targetProxy = 7E98231319D3F1F30066564A /* PBXContainerItemProxy */;
+		};
+		7E98231619D3F1F30066564A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EAB39FF19A1944200024E00 /* remember */;
+			targetProxy = 7E98231519D3F1F30066564A /* PBXContainerItemProxy */;
+		};
 		7EAB3A2119A1944200024E00 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7EAB39FF19A1944200024E00 /* remember */;
@@ -983,6 +1049,8 @@
 		7EAB3A2D19A1944200024E00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = remember/remember.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -990,6 +1058,10 @@
 				GCC_PREFIX_HEADER = "remember/remember-Prefix.pch";
 				INFOPLIST_FILE = "remember/remember-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/remember/ThirdParty/UMeng",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "29b63609-8083-4a7c-8f7e-bad34fa603b9";
 				WRAPPER_EXTENSION = app;
@@ -999,6 +1071,8 @@
 		7EAB3A2E19A1944200024E00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = remember/remember.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1006,6 +1080,10 @@
 				GCC_PREFIX_HEADER = "remember/remember-Prefix.pch";
 				INFOPLIST_FILE = "remember/remember-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/remember/ThirdParty/UMeng",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
