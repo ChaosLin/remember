@@ -71,7 +71,7 @@
 #pragma mark - UMeng Method
 - (void)registerUmeng
 {
-    [MobClick startWithAppkey:UMENG_KEY reportPolicy:REALTIME channelId:UMENG_ChannelID];
+    [MobClick startWithAppkey:UMENG_KEY reportPolicy:SEND_INTERVAL channelId:UMENG_ChannelID];
     NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     [MobClick setAppVersion:version];
 }
