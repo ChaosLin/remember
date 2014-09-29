@@ -34,7 +34,7 @@
 
 - (void)setThumbnailImageWithPath:(NSString*)path size:(CGSize)size
 {
-    if (!path || ![path isKindOfClass:[NSString class]] || CGSizeEqualToSize(size, CGSizeZero))
+    if (!path || ![path isKindOfClass:[NSString class]] || CGSizeEqualToSize(size, CGSizeZero) || 0 >= size.width || 0 >= size.height)
     {
         return;
     }
@@ -43,8 +43,23 @@
         UIImage* image = [UIImage imageWithContentsOfFile:path];
         if (image)
         {
-            UIGraphicsBeginImageContext(size);
-            [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+            CGSize sizeNew = size;
+            float width_image = image.size.width;
+            float height_image = image.size.height;
+            if (0 < height_image)
+            {
+                if (width_image / height_image > size.width / size.height)
+                {
+                    sizeNew.height = size.width * height_image / width_image;
+                }
+                else
+                {
+                    sizeNew.width = size.height * width_image / height_image;
+                }
+            }
+            //注意比例
+            UIGraphicsBeginImageContext(sizeNew);
+            [image drawInRect:CGRectMake(0, 0, sizeNew.width, sizeNew.height)];
             UIImage* image_thumbnail = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext();
             dispatch_async(dispatch_get_main_queue(), ^{

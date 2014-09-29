@@ -68,10 +68,13 @@
     float width_button = 100;
     float height_button = 100;
     self.button_addItem.frame = CGRectMake((CGRectGetWidth(self.view.bounds) - width_button) / 2.0, CGRectGetHeight(self.view.bounds) - height_button, width_button, height_button);
-    self.button_addItem.backgroundColor = [UIColor redColor];
+//    self.button_addItem.backgroundColor = [UIColor redColor];
     self.button_addItem.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+    [self.button_addItem setBackgroundImage:[UIImage imageNamed:@"icon_plus.png"] forState:UIControlStateNormal];
     [self.button_addItem addTarget:self action:@selector(addItemButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.button_addItem];
+    
+    self.title = @"Remember";
 }
 
 - (void)didReceiveMemoryWarning
@@ -81,6 +84,11 @@
 }
 
 #pragma mark - Table view data source
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 90;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -207,7 +215,7 @@
 */
 
 #pragma mark - MJPhotoBrowserDelegate
-  - (void)photoBrowser:(MJPhotoBrowser *)photoBrowser didClickReviewButtonAtIndex:(NSUInteger)index
+- (void)photoBrowser:(MJPhotoBrowser *)photoBrowser didClickReviewButtonAtIndex:(NSUInteger)index
 {
     ReviewItem* item = photoBrowser.info;
     [[ReviewFacade sharedInstance] reviewItem:item];

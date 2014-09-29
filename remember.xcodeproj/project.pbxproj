@@ -266,7 +266,6 @@
 		7E74D7B919D1534600D51746 /* NumberDayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberDayCellView.m; sourceTree = "<group>"; };
 		7E886C8D19BD8AAE00AA5784 /* ReviewFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewFacade.h; sourceTree = "<group>"; };
 		7E886C8E19BD8AAE00AA5784 /* ReviewFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewFacade.m; sourceTree = "<group>"; };
-		7E98235D19D3F4690066564A /* remember copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "remember copy-Info.plist"; path = "/Users/RentonTheUncoped/GitHub/remember/remember copy-Info.plist"; sourceTree = "<absolute>"; };
 		7EA563D819CA90A8001FC13B /* remember.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = remember.entitlements; sourceTree = "<group>"; };
 		7EAB3A0019A1944200024E00 /* remember.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = remember.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAB3A0319A1944200024E00 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -586,7 +585,6 @@
 				7EAB3A2219A1944200024E00 /* rememberTests */,
 				7EAB3A0219A1944200024E00 /* Frameworks */,
 				7EAB3A0119A1944200024E00 /* Products */,
-				7E98235D19D3F4690066564A /* remember copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};

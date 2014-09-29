@@ -9,6 +9,7 @@
 #import "ItemListCell.h"
 #import "ReviewItem.h"
 #import "UIImageView+setPath.h"
+#import "DateUtils.h"
 
 @interface ItemListCell ()
 @property (nonatomic, strong) UILabel* label_date;
@@ -25,15 +26,19 @@
     {
         self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         self.editingAccessoryType = UITableViewCellAccessoryNone;
-        self.label_date = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 40)];
+        self.label_date = [[UILabel alloc]initWithFrame:CGRectMake(218, 35, 74, 20)];
+        self.label_date.textAlignment = NSTextAlignmentRight;
+        self.label_date.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
         [self.contentView addSubview:self.label_date];
         
-        self.imageView_first = [[UIImageView alloc]initWithFrame:CGRectMake(150, 0, 40, 40)];
+        self.imageView_first = [[UIImageView alloc]initWithFrame:CGRectMake(24, 22, 50, 50)];
         self.imageView_first.backgroundColor = [UIColor clearColor];
+        self.imageView_first.contentMode = UIViewContentModeScaleAspectFit;
         [self.contentView addSubview:self.imageView_first];
         
-        self.imageView_second = [[UIImageView alloc]initWithFrame:CGRectMake(200, 0, 40, 40)];
+        self.imageView_second = [[UIImageView alloc]initWithFrame:CGRectMake(100, 22, 50, 50)];
         self.imageView_second.backgroundColor = [UIColor clearColor];
+        self.imageView_second.contentMode = UIViewContentModeScaleAspectFit;
         [self.contentView addSubview:self.imageView_second];
     }
     return self;
@@ -45,7 +50,7 @@
     {
         ReviewItem* item = info;
         _info = info;
-        self.label_date.text = [NSString stringWithFormat:@"%d", item.dateId_created];
+        self.label_date.text = [DateUtils changeToDateFormateWithDayID:item.dateId_created];
         NSString* str_file1 = [item getImagePathAtIndex:0];
         NSString* str_file2 = [item getImagePathAtIndex:1];
         if (str_file1)
