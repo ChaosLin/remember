@@ -254,4 +254,11 @@
     self.arr_items = [NSMutableArray arrayWithArray:[[ReviewFacade sharedInstance] getReviewItemsForDayID:self.dayID]];
     [self.tableView reloadData];
 }
+
+#pragma mark - UIViewControllerDelegate
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
 @end
