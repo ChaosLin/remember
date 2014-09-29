@@ -26,7 +26,7 @@
     {
         self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         self.editingAccessoryType = UITableViewCellAccessoryNone;
-        self.label_date = [[UILabel alloc]initWithFrame:CGRectMake(218, 35, 74, 20)];
+        self.label_date = [[UILabel alloc]initWithFrame:CGRectMake(238, 35, 74, 20)];
         self.label_date.textAlignment = NSTextAlignmentRight;
         self.label_date.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
         [self.contentView addSubview:self.label_date];
@@ -55,7 +55,7 @@
         NSString* str_file2 = [item getImagePathAtIndex:1];
         if (str_file1)
         {
-            [self.imageView_first setThumbnailImageWithPath:str_file1 size:CGSizeMake(50, 50)];
+            [self.imageView_first setThumbnailImageWithPath:str_file1 size:CGSizeMake(100, 100)];
         }
         else
         {
@@ -64,7 +64,7 @@
         
         if (str_file2)
         {
-            [self.imageView_second setThumbnailImageWithPath:str_file2 size:CGSizeMake(50, 50)];
+            [self.imageView_second setThumbnailImageWithPath:str_file2 size:CGSizeMake(100, 100)];
         }
         else
         {
