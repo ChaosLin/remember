@@ -26,7 +26,7 @@
     {
         self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         self.editingAccessoryType = UITableViewCellAccessoryNone;
-        self.label_date = [[UILabel alloc]initWithFrame:CGRectMake(238, 35, 74, 20)];
+        self.label_date = [[UILabel alloc]initWithFrame:CGRectMake(253, 35, 74, 20)];
         self.label_date.textAlignment = NSTextAlignmentRight;
         self.label_date.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
         [self.contentView addSubview:self.label_date];
