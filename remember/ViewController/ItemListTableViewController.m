@@ -15,6 +15,7 @@
 #import "DateUtils.h"
 #import "RTReviewAddItemDirector.h"
 #import "MobClick.h"
+#import "ConfigTableViewController.h"
 
 @interface ItemListTableViewController ()<MJPhotoBrowserDelegate>
 @property (nonatomic, strong) RTReviewAddItemDirector* addItemDirector;
@@ -27,6 +28,8 @@
 - (void)updateDataResource;
 
 - (IBAction)addItemButtonClicked:(id)sender;
+
+- (IBAction)showConfigVC:(id)sender;
 @end
 
 @implementation ItemListTableViewController
@@ -50,6 +53,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.title = @"Remember";
     
     self.dayID = [DateUtils getTodayDateId];
     //init,prepare data
@@ -74,7 +78,8 @@
     [self.button_addItem addTarget:self action:@selector(addItemButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.button_addItem];
     
-    self.title = @"Remember";
+    UIBarButtonItem* buttonItem_config = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showConfigVC:)];
+    self.navigationItem.rightBarButtonItem = buttonItem_config;
 }
 
 - (void)didReceiveMemoryWarning
@@ -259,6 +264,14 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+#pragma mark - IBAction
+
+- (IBAction)showConfigVC:(id)sender
+{
+    ConfigTableViewController* configVC = [[ConfigTableViewController alloc]initWithNibName:@"ConfigTableViewController" bundle:nil];
+    [self.navigationController pushViewController:configVC animated:YES];
 }
 @end

@@ -135,6 +135,10 @@
 		7EC0973B19E66FE10012CD19 /* umFeedback.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7EC0973219E66FE10012CD19 /* umFeedback.bundle */; };
 		7EC0973C19E66FE10012CD19 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC0973519E66FE10012CD19 /* libMobClickLibrary.a */; };
 		7EC0973D19E66FE10012CD19 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC0973519E66FE10012CD19 /* libMobClickLibrary.a */; };
+		7EC0974819E6717B0012CD19 /* ConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0974619E6717B0012CD19 /* ConfigTableViewController.m */; };
+		7EC0974919E6717B0012CD19 /* ConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0974619E6717B0012CD19 /* ConfigTableViewController.m */; };
+		7EC0974A19E6717B0012CD19 /* ConfigTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EC0974719E6717B0012CD19 /* ConfigTableViewController.xib */; };
+		7EC0974B19E6717B0012CD19 /* ConfigTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EC0974719E6717B0012CD19 /* ConfigTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -298,6 +302,9 @@
 		7EC0973519E66FE10012CD19 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		7EC0973619E66FE10012CD19 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		7EC0973719E66FE10012CD19 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
+		7EC0974519E6717B0012CD19 /* ConfigTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigTableViewController.h; sourceTree = "<group>"; };
+		7EC0974619E6717B0012CD19 /* ConfigTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigTableViewController.m; sourceTree = "<group>"; };
+		7EC0974719E6717B0012CD19 /* ConfigTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,6 +353,9 @@
 				5983794319A38C8400AD4BC7 /* HomeViewController.m */,
 				59D0350B19AF8E5200C0E40D /* ItemListTableViewController.h */,
 				59D0350C19AF8E5200C0E40D /* ItemListTableViewController.m */,
+				7EC0974519E6717B0012CD19 /* ConfigTableViewController.h */,
+				7EC0974619E6717B0012CD19 /* ConfigTableViewController.m */,
+				7EC0974719E6717B0012CD19 /* ConfigTableViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -828,6 +838,7 @@
 				59D0348919AF782200C0E40D /* AGImagePickerController.bundle in Resources */,
 				7EAB3A1619A1944200024E00 /* Images.xcassets in Resources */,
 				59D034DB19AF80F000C0E40D /* MJPhotoBrowser.bundle in Resources */,
+				7EC0974A19E6717B0012CD19 /* ConfigTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,6 +847,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EC0973B19E66FE10012CD19 /* umFeedback.bundle in Resources */,
+				7EC0974B19E6717B0012CD19 /* ConfigTableViewController.xib in Resources */,
 				7EAB3A2719A1944200024E00 /* InfoPlist.strings in Resources */,
 				59D0348A19AF782200C0E40D /* AGImagePickerController.bundle in Resources */,
 				59D034DC19AF80F000C0E40D /* MJPhotoBrowser.bundle in Resources */,
@@ -861,6 +873,7 @@
 				7EAB3A5319A2FD8E00024E00 /* ReviewItemGenerator.m in Sources */,
 				59D034FB19AF80F000C0E40D /* UIButton+WebCache.m in Sources */,
 				5983793119A24B4400AD4BC7 /* FilePath.m in Sources */,
+				7EC0974819E6717B0012CD19 /* ConfigTableViewController.m in Sources */,
 				59D034D319AF80F000C0E40D /* MBProgressHUD+Add.m in Sources */,
 				7E74D7BC19D1534600D51746 /* EventDayCellView.m in Sources */,
 				59D034FD19AF80F000C0E40D /* UIImage+GIF.m in Sources */,
@@ -938,6 +951,7 @@
 				7E74D7BF19D1534600D51746 /* MonthView.m in Sources */,
 				59D0349219AF782200C0E40D /* AGIPCGridCell.m in Sources */,
 				7E74D7BD19D1534600D51746 /* EventDayCellView.m in Sources */,
+				7EC0974919E6717B0012CD19 /* ConfigTableViewController.m in Sources */,
 				59D034E619AF80F000C0E40D /* MJPhotoView.m in Sources */,
 				59D0349819AF782200C0E40D /* ALAsset+AGIPC.m in Sources */,
 				59D0350419AF80F000C0E40D /* UIImageView+MJWebCache.m in Sources */,
