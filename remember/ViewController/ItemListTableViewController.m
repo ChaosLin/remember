@@ -249,7 +249,7 @@
 }
 
 - (void)prepareData
-{
+{   
     [[ReviewFacade sharedInstance] refresh];
     self.arr_items = [NSMutableArray arrayWithArray:[[ReviewFacade sharedInstance] getReviewItemsForDayID:self.dayID]];
     [self.tableView reloadData];

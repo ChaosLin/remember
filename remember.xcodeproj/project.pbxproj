@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		592BD22519D9CA7A0015274C /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 592BD22419D9CA7A0015274C /* DateUtils.m */; };
+		592BD22619D9CA7A0015274C /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 592BD22419D9CA7A0015274C /* DateUtils.m */; };
 		5983792719A2447C00AD4BC7 /* ReviewItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983792619A2447C00AD4BC7 /* ReviewItemManager.m */; };
 		5983792819A2447C00AD4BC7 /* ReviewItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983792619A2447C00AD4BC7 /* ReviewItemManager.m */; };
 		5983793119A24B4400AD4BC7 /* FilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983793019A24B4400AD4BC7 /* FilePath.m */; };
@@ -101,8 +103,6 @@
 		7E4C7F0719D2A6BB00DD8BAF /* ImageCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0519D2A6BB00DD8BAF /* ImageCompressor.m */; };
 		7E4C7F0B19D2C5FC00DD8BAF /* RTLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0A19D2C5FC00DD8BAF /* RTLoadingView.m */; };
 		7E4C7F0C19D2C5FC00DD8BAF /* RTLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0A19D2C5FC00DD8BAF /* RTLoadingView.m */; };
-		7E74D7AF19D1533D00D51746 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7AE19D1533D00D51746 /* DateUtils.m */; };
-		7E74D7B019D1533D00D51746 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7AE19D1533D00D51746 /* DateUtils.m */; };
 		7E74D7BA19D1534600D51746 /* DayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7B319D1534600D51746 /* DayCellView.m */; };
 		7E74D7BB19D1534600D51746 /* DayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7B319D1534600D51746 /* DayCellView.m */; };
 		7E74D7BC19D1534600D51746 /* EventDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7B519D1534600D51746 /* EventDayCellView.m */; };
@@ -157,6 +157,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		592BD22319D9CA7A0015274C /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
+		592BD22419D9CA7A0015274C /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
 		5983792519A2447C00AD4BC7 /* ReviewItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewItemManager.h; sourceTree = "<group>"; };
 		5983792619A2447C00AD4BC7 /* ReviewItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewItemManager.m; sourceTree = "<group>"; };
 		5983792F19A24B4400AD4BC7 /* FilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePath.h; sourceTree = "<group>"; };
@@ -254,8 +256,6 @@
 		7E4C7F0519D2A6BB00DD8BAF /* ImageCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCompressor.m; sourceTree = "<group>"; };
 		7E4C7F0919D2C5FC00DD8BAF /* RTLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLoadingView.h; sourceTree = "<group>"; };
 		7E4C7F0A19D2C5FC00DD8BAF /* RTLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLoadingView.m; sourceTree = "<group>"; };
-		7E74D7AD19D1533D00D51746 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
-		7E74D7AE19D1533D00D51746 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
 		7E74D7B219D1534600D51746 /* DayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayCellView.h; sourceTree = "<group>"; };
 		7E74D7B319D1534600D51746 /* DayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayCellView.m; sourceTree = "<group>"; };
 		7E74D7B419D1534600D51746 /* EventDayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDayCellView.h; sourceTree = "<group>"; };
@@ -318,6 +318,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		592BD22219D9CA7A0015274C /* DateUtils */ = {
+			isa = PBXGroup;
+			children = (
+				592BD22319D9CA7A0015274C /* DateUtils.h */,
+				592BD22419D9CA7A0015274C /* DateUtils.m */,
+			);
+			name = DateUtils;
+			path = ../../../DateUtilsDemonstration/DateUtils;
+			sourceTree = "<group>";
+		};
 		5983792E19A24B3700AD4BC7 /* FIlePath */ = {
 			isa = PBXGroup;
 			children = (
@@ -545,16 +555,6 @@
 			path = Loading;
 			sourceTree = "<group>";
 		};
-		7E74D7AC19D1533D00D51746 /* DateUtils */ = {
-			isa = PBXGroup;
-			children = (
-				7E74D7AD19D1533D00D51746 /* DateUtils.h */,
-				7E74D7AE19D1533D00D51746 /* DateUtils.m */,
-			);
-			name = DateUtils;
-			path = ../../../DateUtils/DateUtils;
-			sourceTree = "<group>";
-		};
 		7E74D7B119D1534600D51746 /* RTCalendarView */ = {
 			isa = PBXGroup;
 			children = (
@@ -677,12 +677,12 @@
 		7EAB3A3619A19AB800024E00 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				592BD22219D9CA7A0015274C /* DateUtils */,
 				7E4C7F0819D2C5E500DD8BAF /* Loading */,
 				7E4C7F0319D2A65F00DD8BAF /* ImageCompressor */,
 				7E4C7EFE19D2709A00DD8BAF /* TimeRecord */,
 				7E4C7EF419D16E9C00DD8BAF /* UIImageView+setPath */,
 				7E74D7B119D1534600D51746 /* RTCalendarView */,
-				7E74D7AC19D1533D00D51746 /* DateUtils */,
 				5992BCA219C34AEA00339FC5 /* PhotoTakerUnit */,
 				5983792E19A24B3700AD4BC7 /* FIlePath */,
 				7EAB3A4719A1EDCD00024E00 /* UniqueID */,
@@ -857,11 +857,11 @@
 				59D034FF19AF80F000C0E40D /* UIImage+MultiFormat.m in Sources */,
 				7EAB3A1419A1944200024E00 /* AppDelegate.m in Sources */,
 				7EAB3A1019A1944200024E00 /* main.m in Sources */,
-				7E74D7AF19D1533D00D51746 /* DateUtils.m in Sources */,
 				59D034E519AF80F000C0E40D /* MJPhotoView.m in Sources */,
 				59D0350119AF80F000C0E40D /* UIImage+WebP.m in Sources */,
 				59D0349119AF782200C0E40D /* AGIPCGridCell.m in Sources */,
 				59D034DF19AF80F000C0E40D /* MJPhotoLoadingView.m in Sources */,
+				592BD22519D9CA7A0015274C /* DateUtils.m in Sources */,
 				7E4C7EFC19D1701000DD8BAF /* ItemListCell.m in Sources */,
 				59D0350D19AF8E5200C0E40D /* ItemListTableViewController.m in Sources */,
 				59D034EB19AF80F000C0E40D /* SDImageCache.m in Sources */,
@@ -888,7 +888,6 @@
 				59D0349419AF782200C0E40D /* AGIPCGridItem.m in Sources */,
 				7E4C7F0719D2A6BB00DD8BAF /* ImageCompressor.m in Sources */,
 				7E886C9019BD8AAE00AA5784 /* ReviewFacade.m in Sources */,
-				7E74D7B019D1533D00D51746 /* DateUtils.m in Sources */,
 				59D034DE19AF80F000C0E40D /* MJPhotoBrowser.m in Sources */,
 				59D034F419AF80F000C0E40D /* SDWebImageDownloaderOperation.m in Sources */,
 				59D034FA19AF80F000C0E40D /* SDWebImagePrefetcher.m in Sources */,
@@ -925,6 +924,7 @@
 				59D0350019AF80F000C0E40D /* UIImage+MultiFormat.m in Sources */,
 				7E4C7EFD19D1701000DD8BAF /* ItemListCell.m in Sources */,
 				59D0350219AF80F000C0E40D /* UIImage+WebP.m in Sources */,
+				592BD22619D9CA7A0015274C /* DateUtils.m in Sources */,
 				59D034FC19AF80F000C0E40D /* UIButton+WebCache.m in Sources */,
 				59D034E819AF80F000C0E40D /* MKAnnotationView+WebCache.m in Sources */,
 				59D034F019AF80F000C0E40D /* SDWebImageDecoder.m in Sources */,

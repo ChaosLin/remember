@@ -560,8 +560,8 @@
     __ag_weak AGIPCAssetsController *weakSelf = self;
     if (!self.assetsGroup)
     {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-            
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        
             @autoreleasepool {
                 
                 void (^assetGroupEnumerator)(ALAssetsGroup *, BOOL *) = ^(ALAssetsGroup *group, BOOL *stop)
@@ -592,7 +592,7 @@
                 
             }
             
-        });
+//        });
     }
 }
 
