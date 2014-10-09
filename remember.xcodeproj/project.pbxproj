@@ -89,7 +89,6 @@
 		59D0350619AF80F000C0E40D /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D034D219AF80F000C0E40D /* UIImageView+WebCache.m */; };
 		59D0350D19AF8E5200C0E40D /* ItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0350C19AF8E5200C0E40D /* ItemListTableViewController.m */; };
 		59D0350E19AF8E5200C0E40D /* ItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D0350C19AF8E5200C0E40D /* ItemListTableViewController.m */; };
-		7E420EB419D547A90019C8C5 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E420EB119D547A90019C8C5 /* libMobClickLibrary.a */; };
 		7E420EB619D547E70019C8C5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E420EB519D547E70019C8C5 /* libz.dylib */; };
 		7E4C7EF719D16EA600DD8BAF /* UIImageView+setPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7EF619D16EA600DD8BAF /* UIImageView+setPath.m */; };
 		7E4C7EF819D16EA600DD8BAF /* UIImageView+setPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7EF619D16EA600DD8BAF /* UIImageView+setPath.m */; };
@@ -130,6 +129,12 @@
 		7EAB3A5419A2FD8E00024E00 /* ReviewItemGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB3A5219A2FD8E00024E00 /* ReviewItemGenerator.m */; };
 		7EC0972B19E62B040012CD19 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0972A19E62B040012CD19 /* DateUtils.m */; };
 		7EC0972C19E62B040012CD19 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0972A19E62B040012CD19 /* DateUtils.m */; };
+		7EC0973819E66FE10012CD19 /* libUMFeedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC0973119E66FE10012CD19 /* libUMFeedback.a */; };
+		7EC0973919E66FE10012CD19 /* libUMFeedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC0973119E66FE10012CD19 /* libUMFeedback.a */; };
+		7EC0973A19E66FE10012CD19 /* umFeedback.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7EC0973219E66FE10012CD19 /* umFeedback.bundle */; };
+		7EC0973B19E66FE10012CD19 /* umFeedback.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7EC0973219E66FE10012CD19 /* umFeedback.bundle */; };
+		7EC0973C19E66FE10012CD19 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC0973519E66FE10012CD19 /* libMobClickLibrary.a */; };
+		7EC0973D19E66FE10012CD19 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC0973519E66FE10012CD19 /* libMobClickLibrary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,9 +245,6 @@
 		59D0350B19AF8E5200C0E40D /* ItemListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemListTableViewController.h; sourceTree = "<group>"; };
 		59D0350C19AF8E5200C0E40D /* ItemListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemListTableViewController.m; sourceTree = "<group>"; };
 		7E420EAE19D547090019C8C5 /* CommonConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonConfig.h; sourceTree = "<group>"; };
-		7E420EB119D547A90019C8C5 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
-		7E420EB219D547A90019C8C5 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
-		7E420EB319D547A90019C8C5 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
 		7E420EB519D547E70019C8C5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		7E4C7EF519D16EA600DD8BAF /* UIImageView+setPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+setPath.h"; sourceTree = "<group>"; };
 		7E4C7EF619D16EA600DD8BAF /* UIImageView+setPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+setPath.m"; sourceTree = "<group>"; };
@@ -290,6 +292,12 @@
 		7EAB3A5219A2FD8E00024E00 /* ReviewItemGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewItemGenerator.m; sourceTree = "<group>"; };
 		7EC0972919E62B040012CD19 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
 		7EC0972A19E62B040012CD19 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
+		7EC0973119E66FE10012CD19 /* libUMFeedback.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMFeedback.a; sourceTree = "<group>"; };
+		7EC0973219E66FE10012CD19 /* umFeedback.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = umFeedback.bundle; sourceTree = "<group>"; };
+		7EC0973319E66FE10012CD19 /* UMFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMFeedback.h; sourceTree = "<group>"; };
+		7EC0973519E66FE10012CD19 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		7EC0973619E66FE10012CD19 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		7EC0973719E66FE10012CD19 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,10 +306,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E420EB619D547E70019C8C5 /* libz.dylib in Frameworks */,
+				7EC0973819E66FE10012CD19 /* libUMFeedback.a in Frameworks */,
 				7EAB3A0619A1944200024E00 /* CoreGraphics.framework in Frameworks */,
+				7EC0973C19E66FE10012CD19 /* libMobClickLibrary.a in Frameworks */,
 				7EAB3A0819A1944200024E00 /* UIKit.framework in Frameworks */,
 				7EAB3A0419A1944200024E00 /* Foundation.framework in Frameworks */,
-				7E420EB419D547A90019C8C5 /* libMobClickLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,9 +318,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC0973919E66FE10012CD19 /* libUMFeedback.a in Frameworks */,
 				7EAB3A1D19A1944200024E00 /* XCTest.framework in Frameworks */,
 				7EAB3A1F19A1944200024E00 /* UIKit.framework in Frameworks */,
 				7EAB3A1E19A1944200024E00 /* Foundation.framework in Frameworks */,
+				7EC0973D19E66FE10012CD19 /* libMobClickLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,9 +504,8 @@
 		7E420EB019D547980019C8C5 /* UMeng */ = {
 			isa = PBXGroup;
 			children = (
-				7E420EB119D547A90019C8C5 /* libMobClickLibrary.a */,
-				7E420EB219D547A90019C8C5 /* MobClick.h */,
-				7E420EB319D547A90019C8C5 /* MobClickSocialAnalytics.h */,
+				7EC0973019E66FE10012CD19 /* Feedback */,
+				7EC0973419E66FE10012CD19 /* MobClick */,
 			);
 			path = UMeng;
 			sourceTree = "<group>";
@@ -707,6 +717,26 @@
 			path = ../../../DateUtils/DateUtils;
 			sourceTree = "<group>";
 		};
+		7EC0973019E66FE10012CD19 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				7EC0973119E66FE10012CD19 /* libUMFeedback.a */,
+				7EC0973219E66FE10012CD19 /* umFeedback.bundle */,
+				7EC0973319E66FE10012CD19 /* UMFeedback.h */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		7EC0973419E66FE10012CD19 /* MobClick */ = {
+			isa = PBXGroup;
+			children = (
+				7EC0973519E66FE10012CD19 /* libMobClickLibrary.a */,
+				7EC0973619E66FE10012CD19 /* MobClick.h */,
+				7EC0973719E66FE10012CD19 /* MobClickSocialAnalytics.h */,
+			);
+			path = MobClick;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -794,6 +824,7 @@
 			files = (
 				7EAB3A0E19A1944200024E00 /* InfoPlist.strings in Resources */,
 				59D034D519AF80F000C0E40D /* MBProgressHUD.bundle in Resources */,
+				7EC0973A19E66FE10012CD19 /* umFeedback.bundle in Resources */,
 				59D0348919AF782200C0E40D /* AGImagePickerController.bundle in Resources */,
 				7EAB3A1619A1944200024E00 /* Images.xcassets in Resources */,
 				59D034DB19AF80F000C0E40D /* MJPhotoBrowser.bundle in Resources */,
@@ -804,6 +835,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC0973B19E66FE10012CD19 /* umFeedback.bundle in Resources */,
 				7EAB3A2719A1944200024E00 /* InfoPlist.strings in Resources */,
 				59D0348A19AF782200C0E40D /* AGImagePickerController.bundle in Resources */,
 				59D034DC19AF80F000C0E40D /* MJPhotoBrowser.bundle in Resources */,
@@ -1059,6 +1091,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/remember/ThirdParty/UMeng",
+					"$(PROJECT_DIR)/remember/ThirdParty/UMeng/Feedback",
+					"$(PROJECT_DIR)/remember/ThirdParty/UMeng/MobClick",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "29b63609-8083-4a7c-8f7e-bad34fa603b9";
@@ -1081,6 +1115,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/remember/ThirdParty/UMeng",
+					"$(PROJECT_DIR)/remember/ThirdParty/UMeng/Feedback",
+					"$(PROJECT_DIR)/remember/ThirdParty/UMeng/MobClick",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1104,6 +1140,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "rememberTests/rememberTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/remember/ThirdParty/UMeng/Feedback",
+					"$(PROJECT_DIR)/remember/ThirdParty/UMeng/MobClick",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "29b63609-8083-4a7c-8f7e-bad34fa603b9";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -1124,6 +1165,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "remember/remember-Prefix.pch";
 				INFOPLIST_FILE = "rememberTests/rememberTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/remember/ThirdParty/UMeng/Feedback",
+					"$(PROJECT_DIR)/remember/ThirdParty/UMeng/MobClick",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "dab44e93-125d-4c5f-b0ab-ec3340ff6790";
 				TEST_HOST = "$(BUNDLE_LOADER)";
