@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		592BD22519D9CA7A0015274C /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 592BD22419D9CA7A0015274C /* DateUtils.m */; };
-		592BD22619D9CA7A0015274C /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 592BD22419D9CA7A0015274C /* DateUtils.m */; };
 		5983792719A2447C00AD4BC7 /* ReviewItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983792619A2447C00AD4BC7 /* ReviewItemManager.m */; };
 		5983792819A2447C00AD4BC7 /* ReviewItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983792619A2447C00AD4BC7 /* ReviewItemManager.m */; };
 		5983793119A24B4400AD4BC7 /* FilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5983793019A24B4400AD4BC7 /* FilePath.m */; };
@@ -130,6 +128,8 @@
 		7EAB3A4B19A1EDE000024E00 /* UniqueID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB3A4919A1EDE000024E00 /* UniqueID.m */; };
 		7EAB3A5319A2FD8E00024E00 /* ReviewItemGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB3A5219A2FD8E00024E00 /* ReviewItemGenerator.m */; };
 		7EAB3A5419A2FD8E00024E00 /* ReviewItemGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB3A5219A2FD8E00024E00 /* ReviewItemGenerator.m */; };
+		7EC0972B19E62B040012CD19 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0972A19E62B040012CD19 /* DateUtils.m */; };
+		7EC0972C19E62B040012CD19 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0972A19E62B040012CD19 /* DateUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,8 +157,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		592BD22319D9CA7A0015274C /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
-		592BD22419D9CA7A0015274C /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
 		5983792519A2447C00AD4BC7 /* ReviewItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewItemManager.h; sourceTree = "<group>"; };
 		5983792619A2447C00AD4BC7 /* ReviewItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewItemManager.m; sourceTree = "<group>"; };
 		5983792F19A24B4400AD4BC7 /* FilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePath.h; sourceTree = "<group>"; };
@@ -290,6 +288,8 @@
 		7EAB3A4919A1EDE000024E00 /* UniqueID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniqueID.m; sourceTree = "<group>"; };
 		7EAB3A5119A2FD8E00024E00 /* ReviewItemGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewItemGenerator.h; sourceTree = "<group>"; };
 		7EAB3A5219A2FD8E00024E00 /* ReviewItemGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewItemGenerator.m; sourceTree = "<group>"; };
+		7EC0972919E62B040012CD19 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
+		7EC0972A19E62B040012CD19 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,16 +318,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		592BD22219D9CA7A0015274C /* DateUtils */ = {
-			isa = PBXGroup;
-			children = (
-				592BD22319D9CA7A0015274C /* DateUtils.h */,
-				592BD22419D9CA7A0015274C /* DateUtils.m */,
-			);
-			name = DateUtils;
-			path = ../../../DateUtilsDemonstration/DateUtils;
-			sourceTree = "<group>";
-		};
 		5983792E19A24B3700AD4BC7 /* FIlePath */ = {
 			isa = PBXGroup;
 			children = (
@@ -677,7 +667,7 @@
 		7EAB3A3619A19AB800024E00 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				592BD22219D9CA7A0015274C /* DateUtils */,
+				7EC0972819E62B040012CD19 /* DateUtils */,
 				7E4C7F0819D2C5E500DD8BAF /* Loading */,
 				7E4C7F0319D2A65F00DD8BAF /* ImageCompressor */,
 				7E4C7EFE19D2709A00DD8BAF /* TimeRecord */,
@@ -705,6 +695,16 @@
 				7EAB3A4919A1EDE000024E00 /* UniqueID.m */,
 			);
 			path = UniqueID;
+			sourceTree = "<group>";
+		};
+		7EC0972819E62B040012CD19 /* DateUtils */ = {
+			isa = PBXGroup;
+			children = (
+				7EC0972919E62B040012CD19 /* DateUtils.h */,
+				7EC0972A19E62B040012CD19 /* DateUtils.m */,
+			);
+			name = DateUtils;
+			path = ../../../DateUtils/DateUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -861,7 +861,7 @@
 				59D0350119AF80F000C0E40D /* UIImage+WebP.m in Sources */,
 				59D0349119AF782200C0E40D /* AGIPCGridCell.m in Sources */,
 				59D034DF19AF80F000C0E40D /* MJPhotoLoadingView.m in Sources */,
-				592BD22519D9CA7A0015274C /* DateUtils.m in Sources */,
+				7EC0972B19E62B040012CD19 /* DateUtils.m in Sources */,
 				7E4C7EFC19D1701000DD8BAF /* ItemListCell.m in Sources */,
 				59D0350D19AF8E5200C0E40D /* ItemListTableViewController.m in Sources */,
 				59D034EB19AF80F000C0E40D /* SDImageCache.m in Sources */,
@@ -924,7 +924,7 @@
 				59D0350019AF80F000C0E40D /* UIImage+MultiFormat.m in Sources */,
 				7E4C7EFD19D1701000DD8BAF /* ItemListCell.m in Sources */,
 				59D0350219AF80F000C0E40D /* UIImage+WebP.m in Sources */,
-				592BD22619D9CA7A0015274C /* DateUtils.m in Sources */,
+				7EC0972C19E62B040012CD19 /* DateUtils.m in Sources */,
 				59D034FC19AF80F000C0E40D /* UIButton+WebCache.m in Sources */,
 				59D034E819AF80F000C0E40D /* MKAnnotationView+WebCache.m in Sources */,
 				59D034F019AF80F000C0E40D /* SDWebImageDecoder.m in Sources */,
