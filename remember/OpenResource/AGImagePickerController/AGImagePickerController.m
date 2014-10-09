@@ -190,7 +190,7 @@ andShouldShowSavedPhotosOnTop:(BOOL)shouldShowSavedPhotosOnTop
 
 - (void)didCancelPickingAssets
 {
-    [self popToRootViewControllerAnimated:NO];
+//    [self popToRootViewControllerAnimated:NO];
     
     // Reset the number of selections
     [AGIPCGridItem performSelector:@selector(resetNumberOfSelections)];
