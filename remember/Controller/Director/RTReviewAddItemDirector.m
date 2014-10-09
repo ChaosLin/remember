@@ -34,7 +34,7 @@
     //生成Item
     [self createReviewItem];
     
-    UIActionSheet* action = [[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照", @"从相机选择", nil];
+    UIActionSheet* action = [[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照", @"从相簿选择", nil];
     [action showInView:self.rootViewController.view];
 }
 
