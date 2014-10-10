@@ -13,6 +13,7 @@
 #import "ReviewFacade.h"
 #import "MJPhoto.h"
 #import "RTLoadingView.h"
+#import "MobClick.h"
 
 @interface RTReviewAddItemDirector() <UIActionSheetDelegate>
 @property (nonatomic, strong) AGImagePickerController* imagePickerController;
@@ -113,10 +114,14 @@
              [MobClick endEvent:event_addItemFromAlbum];
          }];
     } successBlock:^(NSArray *info) {
+//        NSMutableArray* arr_info = [NSMutableArray arrayWithCapacity:6];
+//        [info enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//            [arr_info addObject:obj];
+//        }];
         //注意把ALSet转成UIImage
         [weakSelf.rootViewController dismissViewControllerAnimated:YES completion:^(void){
             weakSelf.imagePickerController = nil;
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void){
                 NSMutableArray* arr_images = [NSMutableArray arrayWithCapacity:6];
                 NSMutableArray* arr_photos = [NSMutableArray arrayWithCapacity:6];
                 for (ALAsset* set in info)

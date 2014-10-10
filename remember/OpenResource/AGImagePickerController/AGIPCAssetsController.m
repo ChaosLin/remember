@@ -381,7 +381,7 @@
         __strong AGIPCAssetsController *strongSelf = weakSelf;
         
         @autoreleasepool {
-            [strongSelf.assetsGroup enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
+            [strongSelf.assetsGroup enumerateAssetsWithOptions:NSEnumerationConcurrent usingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
                 
                 if (result == nil) 
                 {
@@ -427,6 +427,20 @@
 //    [self.navigationController setToolbarHidden:[self toolbarHidden] animated:YES];
     
     [self.tableView reloadData];
+    NSInteger rows = [self.tableView numberOfRowsInSection:0];
+    if (0 < rows)
+    {
+        NSIndexPath* indexPath = [NSIndexPath indexPathForRow:rows - 1 inSection:0];
+        @try {
+            [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+        }
+        @catch (NSException *exception) {
+            
+        }
+        @finally {
+            
+        }
+    }
     
     //[self setTitle:[self.assetsGroup valueForProperty:ALAssetsGroupPropertyName]];
     [self changeSelectionInformation];
