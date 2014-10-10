@@ -67,6 +67,12 @@
             ReferencedContainer = "container:remember.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-AppleLanguages &quot;(en)&quot;"
+            isEnabled = "NO">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "CA_DEBUG_TRANSACTIONS"

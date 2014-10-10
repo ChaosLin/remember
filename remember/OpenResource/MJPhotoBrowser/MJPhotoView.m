@@ -77,7 +77,7 @@
         button_confirm.frame = CGRectMake(bounds.size.width - width, 50, width, height);
         button_confirm.tag = 10086;
         button_confirm.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
-        [button_confirm setTitle:@"Review~" forState:UIControlStateNormal];
+        [button_confirm setTitle:NSLocalizedString(@"ReviewButtonTitle", nil) forState:UIControlStateNormal];
         [button_confirm setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
         [button_confirm addTarget:self action:@selector(didTapReviewButton:) forControlEvents:UIControlEventTouchUpInside];
         [photoView addSubview:button_confirm];

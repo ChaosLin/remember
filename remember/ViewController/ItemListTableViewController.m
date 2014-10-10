@@ -53,7 +53,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.title = @"Remember";
+    self.navigationItem.title = NSLocalizedString(@"HomeVCTitle", nil);
     
     self.dayID = [DateUtils getTodayDateId];
     //init,prepare data

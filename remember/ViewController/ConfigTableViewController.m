@@ -23,6 +23,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.title = NSLocalizedString(@"MoreVCTitle", nil);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,7 +56,7 @@
     NSInteger row = indexPath.row;
     if (0 == row)
     {
-        cell.textLabel.text = @"来吐槽吧_(:з」∠)_";
+        cell.textLabel.text = NSLocalizedString(@"ComeAndReview", nil);
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     

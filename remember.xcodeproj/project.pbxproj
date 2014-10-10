@@ -139,6 +139,8 @@
 		7EC0974919E6717B0012CD19 /* ConfigTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0974619E6717B0012CD19 /* ConfigTableViewController.m */; };
 		7EC0974A19E6717B0012CD19 /* ConfigTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EC0974719E6717B0012CD19 /* ConfigTableViewController.xib */; };
 		7EC0974B19E6717B0012CD19 /* ConfigTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EC0974719E6717B0012CD19 /* ConfigTableViewController.xib */; };
+		7EC0979219E78FD60012CD19 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EC0979519E78FD60012CD19 /* Localizable.strings */; };
+		7EC0979319E78FD60012CD19 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EC0979519E78FD60012CD19 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -305,6 +307,13 @@
 		7EC0974519E6717B0012CD19 /* ConfigTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigTableViewController.h; sourceTree = "<group>"; };
 		7EC0974619E6717B0012CD19 /* ConfigTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigTableViewController.m; sourceTree = "<group>"; };
 		7EC0974719E6717B0012CD19 /* ConfigTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigTableViewController.xib; sourceTree = "<group>"; };
+		7EC0974C19E779A30012CD19 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		7EC0974D19E779A30012CD19 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		7EC0974E19E779B10012CD19 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7EC0974F19E779B10012CD19 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7EC0979419E78FD60012CD19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7EC0979619E78FD70012CD19 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		7EC0979719E78FD80012CD19 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -647,6 +656,7 @@
 				7EAB3A0C19A1944200024E00 /* InfoPlist.strings */,
 				7EAB3A0F19A1944200024E00 /* main.m */,
 				7EAB3A1119A1944200024E00 /* remember-Prefix.pch */,
+				7EC0979519E78FD60012CD19 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -815,6 +825,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
+				ja,
 			);
 			mainGroup = 7EAB39F719A1944200024E00;
 			productRefGroup = 7EAB3A0119A1944200024E00 /* Products */;
@@ -837,6 +849,7 @@
 				7EC0973A19E66FE10012CD19 /* umFeedback.bundle in Resources */,
 				59D0348919AF782200C0E40D /* AGImagePickerController.bundle in Resources */,
 				7EAB3A1619A1944200024E00 /* Images.xcassets in Resources */,
+				7EC0979219E78FD60012CD19 /* Localizable.strings in Resources */,
 				59D034DB19AF80F000C0E40D /* MJPhotoBrowser.bundle in Resources */,
 				7EC0974A19E6717B0012CD19 /* ConfigTableViewController.xib in Resources */,
 			);
@@ -849,6 +862,7 @@
 				7EC0973B19E66FE10012CD19 /* umFeedback.bundle in Resources */,
 				7EC0974B19E6717B0012CD19 /* ConfigTableViewController.xib in Resources */,
 				7EAB3A2719A1944200024E00 /* InfoPlist.strings in Resources */,
+				7EC0979319E78FD60012CD19 /* Localizable.strings in Resources */,
 				59D0348A19AF782200C0E40D /* AGImagePickerController.bundle in Resources */,
 				59D034DC19AF80F000C0E40D /* MJPhotoBrowser.bundle in Resources */,
 				59D034D619AF80F000C0E40D /* MBProgressHUD.bundle in Resources */,
@@ -1005,6 +1019,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				7EAB3A0D19A1944200024E00 /* en */,
+				7EC0974C19E779A30012CD19 /* zh-Hans */,
+				7EC0974E19E779B10012CD19 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1013,8 +1029,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				7EAB3A2619A1944200024E00 /* en */,
+				7EC0974D19E779A30012CD19 /* zh-Hans */,
+				7EC0974F19E779B10012CD19 /* ja */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7EC0979519E78FD60012CD19 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EC0979419E78FD60012CD19 /* en */,
+				7EC0979619E78FD70012CD19 /* zh-Hans */,
+				7EC0979719E78FD80012CD19 /* ja */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

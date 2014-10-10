@@ -53,7 +53,7 @@
 {
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
     {
-        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:nil message:@"不支持的设备" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
+        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:nil message:NSLocalizedString(@"AlarmNotSupportedDevice", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"Cancel", nil) otherButtonTitles:nil, nil];
         [alertView show];
         self.failBlock(nil);
         return;
@@ -82,7 +82,7 @@
     [cancelBtn addTarget:self action:@selector(cancelButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [cancelBtn setBackgroundImage:[UIImage imageNamed:@"zhaoxiang_l_btn.png"] forState:UIControlStateNormal];
     cancelBtn.titleLabel.font = [UIFont systemFontOfSize:17];
-    [cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
+    [cancelBtn setTitle:NSLocalizedString(@"Cancel", nil) forState:UIControlStateNormal];
     [toolbarView addSubview:cancelBtn];
     
     CGSize pickBtnSize = CGSizeMake(102, 37);
@@ -98,7 +98,7 @@
     CGSize finishBtnSize = CGSizeMake(62, 37);
     UIButton* finishBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     finishBtn.frame = CGRectMake(250, (toolBarSize.height - finishBtnSize.height) / 2, finishBtnSize.width, finishBtnSize.height);
-    [finishBtn setTitle:@"完成" forState:UIControlStateNormal];
+    [finishBtn setTitle:NSLocalizedString(@"Finish", nil) forState:UIControlStateNormal];
     [finishBtn addTarget:self action:@selector(finishButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [toolbarView addSubview:finishBtn];
     

@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  remember
+
+  Created by RentonTheUncoped on 14-10-10.
+  Copyright (c) 2014年 Uncoped Studio. All rights reserved.
+*/
+"OK"="确定";
+"Cancel"="取消";
+"Finish"="完成";
+
+"ReviewButtonTitle"="联已阅";
+"HomeVCTitle"="Remember";
+"ComeAndReview"="来吐槽吧_(:з」∠)_";
+"MoreVCTitle"="更多";
+"TitleTakeFromCamera"="拍照";
+"TitleTakeFromAlbum"="从相簿选择";
+"TitlePreview"="预览";
+"AlarmNotSupportedDevice"="当前设备不支持";

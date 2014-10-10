@@ -296,7 +296,7 @@
 //    [button_preview setBackgroundImage:image_preview forState:UIControlStateNormal];
     [button_preview setBackgroundColor:[UIColor grayColor]];
 //    [button_preview setTitleColor:[UIColor colorWithHex:0x6e3e8e] forState:UIControlStateNormal];
-    [button_preview setTitle:@"预览" forState:UIControlStateNormal];
+    [button_preview setTitle:NSLocalizedString(@"TitlePreview", nil) forState:UIControlStateNormal];
     [button_preview addTarget:self action:@selector(onPreviewButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     button_preview.titleLabel.font = [UIFont systemFontOfSize:13];
     self.buttonItem_preview = button_preview;
@@ -312,7 +312,7 @@
 //    [image_back_done addSubview:label_done];
     UIButton* button_done = [[UIButton alloc]initWithFrame:CGRectMake(246, 10, 65, 27)];
     [button_done addTarget:self action:@selector(onFinishedBUttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-    [button_done setTitle:@"确定" forState:UIControlStateNormal];
+    [button_done setTitle:NSLocalizedString(@"OK", nil) forState:UIControlStateNormal];
 //    [button_done setBackgroundImage:image_back_done forState:UIControlStateNormal];
     [button_done setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     button_done.titleLabel.font = [UIFont systemFontOfSize:13];
@@ -505,7 +505,7 @@
 {
     self.buttonItem_done.enabled = self.buttonItem_preview.enabled = (numberOfSelections.unsignedIntegerValue > 0);
 //    self.navigationItem.rightBarButtonItem.enabled = (numberOfSelections.unsignedIntegerValue > 0);
-    NSString* title = (0 == numberOfSelections.unsignedIntegerValue) ? @"确定":[NSString stringWithFormat:@"确定(%d)", numberOfSelections.unsignedIntegerValue];
+    NSString* title = (0 == numberOfSelections.unsignedIntegerValue) ? NSLocalizedString(@"OK", nil):[NSString stringWithFormat:@"%@(%d)", NSLocalizedString(@"OK", nil), numberOfSelections.unsignedIntegerValue];
     [self.buttonItem_done setTitle:title forState:UIControlStateNormal];
     [self changeSelectionInformation];
 }
