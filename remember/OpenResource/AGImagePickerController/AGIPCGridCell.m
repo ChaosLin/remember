@@ -44,7 +44,7 @@
             
             for (AGIPCGridItem *gridItem in _items)
             {
-                [self addSubview:gridItem];
+                [self.contentView addSubview:gridItem];
             }
         }
     }
