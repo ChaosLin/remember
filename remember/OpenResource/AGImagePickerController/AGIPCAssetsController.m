@@ -559,7 +559,9 @@
 
 - (void)didChangeLibrary:(NSNotification *)notification
 {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    });
 }
 
 - (void)didChangeToolbarItemsForManagingTheSelection:(NSNotification *)notification
