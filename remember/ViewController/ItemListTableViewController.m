@@ -16,6 +16,7 @@
 #import "RTReviewAddItemDirector.h"
 #import "MobClick.h"
 #import "ConfigTableViewController.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface ItemListTableViewController ()<MJPhotoBrowserDelegate>
 @property (nonatomic, strong) RTReviewAddItemDirector* addItemDirector;
@@ -227,6 +228,10 @@
     [[ReviewFacade sharedInstance] refreshForItem:item];
     [self updateDataResource];
     [self.tableView reloadData];
+    NSURL* url_sound = [NSURL URLWithString:@"file:///System/Library/Audio/UISounds/Modern/sms_alert_circles.caf"];
+    SystemSoundID soundID;
+    AudioServicesCreateSystemSoundID((__bridge_retained CFURLRef)url_sound,&soundID);
+    AudioServicesPlaySystemSound(soundID);
 }
 
 #pragma mark - 
