@@ -7,26 +7,57 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 
 //@interface UIImageView (setPath)
 //
 //@end
 
+static const void *PATHKEY = &PATHKEY;
+
+@interface UIImageView(Path)
+- (NSString*)getPath;
+- (void)setPath:(NSString*)path;
+@end
+
 @implementation UIImageView (setPath)
+
+- (NSString*)getPath
+{
+    return objc_getAssociatedObject(self, PATHKEY);
+}
+
+- (void)setPath:(NSString*)path
+{
+    objc_setAssociatedObject(self, PATHKEY, path, OBJC_ASSOCIATION_RETAIN);
+}
 
 - (void)setImageWithPath:(NSString*)path
 {
-    if (!path || ![path isKindOfClass:[NSString class]])
+    if (nil == path || [path isKindOfClass:[NSString class]])
+    {
+        [self setPath:path];
+        if (!path)
+        {
+            self.image = nil;
+            return;
+        }
+    }
+    if (![path isKindOfClass:[NSString class]])
     {
         return;
     }
+    
     __weak UIImageView* weakSelf = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         UIImage* image = [UIImage imageWithContentsOfFile:path];
         if (image)
         {
             dispatch_async(dispatch_get_main_queue(), ^{
-                weakSelf.image = image;
+                if ([[weakSelf getPath] isEqualToString:path])
+                {
+                    weakSelf.image = image;
+                }
             });
         }
     });
@@ -34,7 +65,16 @@
 
 - (void)setThumbnailImageWithPath:(NSString*)path size:(CGSize)size
 {
-    if (!path || ![path isKindOfClass:[NSString class]] || CGSizeEqualToSize(size, CGSizeZero) || 0 >= size.width || 0 >= size.height)
+    if (nil == path || [path isKindOfClass:[NSString class]])
+    {
+        [self setPath:path];
+        if (!path)
+        {
+            self.image = nil;
+            return;
+        }
+    }
+    if (![path isKindOfClass:[NSString class]] || CGSizeEqualToSize(size, CGSizeZero) || 0 >= size.width || 0 >= size.height)
     {
         return;
     }
@@ -63,7 +103,10 @@
             UIImage* image_thumbnail = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext();
             dispatch_async(dispatch_get_main_queue(), ^{
-                weakSelf.image = image_thumbnail;
+                if ([[self getPath] isEqualToString:path])
+                {
+                    weakSelf.image = image_thumbnail;
+                }
             });
         }
     });

@@ -59,7 +59,7 @@
         }
         else
         {
-            self.imageView_first.image = nil;
+            [self.imageView_second setThumbnailImageWithPath:nil size:CGSizeMake(100, 100)];
         }
         
         if (str_file2)
@@ -68,7 +68,7 @@
         }
         else
         {
-            self.imageView_second.image = nil;
+            [self.imageView_second setThumbnailImageWithPath:nil size:CGSizeMake(100, 100)];
         }
     }
 }
