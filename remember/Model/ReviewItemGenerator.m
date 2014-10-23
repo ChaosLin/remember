@@ -74,12 +74,22 @@ static ReviewItemGenerator* generator = nil;
 
 - (NSArray*)getTodaysReviewItems
 {
-    return [self.dic_dayID2ItemArr valueForKey:GetStringFromDayID([DateUtils getTodayDateId])];
+    NSArray* arr_items = [self.dic_dayID2ItemArr valueForKey:GetStringFromDayID([DateUtils getTodayDateId])];
+    NSMutableArray* arr_reversed = [NSMutableArray array];
+    [arr_items enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [arr_reversed addObject:obj];
+    }];
+    return arr_reversed;
 }
 
 - (NSArray*)getReviewItemsForDayID:(NSInteger)dayID
 {
-    return [self.dic_dayID2ItemArr valueForKey:GetStringFromDayID(dayID)];
+    NSArray* arr_items = [self.dic_dayID2ItemArr valueForKey:GetStringFromDayID(dayID)];
+    NSMutableArray* arr_reversed = [NSMutableArray array];
+    [arr_items enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [arr_reversed addObject:obj];
+    }];
+    return arr_reversed;
 }
 
 - (BOOL)refreshForItem:(ReviewItem*)item//根据item的状态刷新自己的数据

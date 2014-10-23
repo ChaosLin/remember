@@ -26,11 +26,11 @@
 @property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) UIButton* button_addItem;
 
-- (void)updateDataResource;
-
 - (IBAction)addItemButtonClicked:(id)sender;
 
 - (IBAction)showConfigVC:(id)sender;
+
+- (void)prepareData;
 @end
 
 @implementation ItemListTableViewController
@@ -180,7 +180,7 @@
         {
             [self.arr_items removeObject:item];
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            [self updateDataResource];
+            [self prepareData];
             [self.tableView reloadData];
         }
         else
@@ -226,7 +226,7 @@
     ReviewItem* item = photoBrowser.info;
     [[ReviewFacade sharedInstance] reviewItem:item];
     [[ReviewFacade sharedInstance] refreshForItem:item];
-    [self updateDataResource];
+    [self prepareData];
     [self.tableView reloadData];
     NSURL* url_sound = [NSURL URLWithString:@"file:///System/Library/Audio/UISounds/Modern/sms_alert_circles.caf"];
     SystemSoundID soundID;
@@ -234,12 +234,7 @@
     AudioServicesPlaySystemSound(soundID);
 }
 
-#pragma mark - 
-- (void)updateDataResource
-{
-    self.arr_items = [NSMutableArray arrayWithArray:[[ReviewFacade sharedInstance] getTodaysReviewItems]];
-}
-
+#pragma mark -
 - (IBAction)addItemButtonClicked:(id)sender
 {
     [MobClick event:event_click_add];
@@ -248,6 +243,7 @@
     self.addItemDirector.succBlock = ^(void){
         [[ReviewFacade sharedInstance] refresh];
         [weakself prepareData];
+        [weakself.tableView reloadData];
         NSLog(@"success");
     };
     self.addItemDirector.failBlock = ^(void)
@@ -262,7 +258,7 @@
 {   
     [[ReviewFacade sharedInstance] refresh];
     self.arr_items = [NSMutableArray arrayWithArray:[[ReviewFacade sharedInstance] getReviewItemsForDayID:self.dayID]];
-    [self.tableView reloadData];
+//    [self.tableView reloadData];
 }
 
 #pragma mark - UIViewControllerDelegate
