@@ -250,7 +250,7 @@
     [super viewDidUnload];
     
     // Destroy Notifications
-    [self unregisterFromNotifications];
+//    [self unregisterFromNotifications];
 }
 
 #pragma mark - Private

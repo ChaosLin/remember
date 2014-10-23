@@ -31,7 +31,7 @@
     return [NSTemporaryDirectory() stringByAppendingPathComponent:fileName];
 }
 
-+ (NSString*)getDocumentPathWithFolderName:(NSString*)folderName
++ (NSString*)getDocumentFolderPathWithFolderName:(NSString*)folderName
 {
     if (!folderName || ![folderName isKindOfClass:[NSString class]])
     {
@@ -59,7 +59,7 @@
     {
         return nil;
     }
-    NSString* path = [self getDocumentPathWithFolderName:folderName];
+    NSString* path = [self getDocumentFolderPathWithFolderName:folderName];
     return [path stringByAppendingPathComponent:fileName];
 }
 @end

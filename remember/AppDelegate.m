@@ -12,6 +12,9 @@
 #import "ReviewFacade.h"
 #import "MobClick.h"
 #import "CommonConfig.h"
+#import "FilePath.h"
+
+static NSString* STR_FOLDERNAME = @"ImagesAndConfig";
 
 @interface AppDelegate()
 - (void)registerUmeng;
@@ -25,6 +28,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self ignoreFilePath];
+    
     [self registerUmeng];
     
     [self getUmengTestInfo];
@@ -146,8 +151,18 @@
     //    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
 
-- (void)ignoreFilePat
+- (void)ignoreFilePath
 {
-//    NSString
+    NSString* str_folderPath = [FilePath getDocumentFolderPathWithFolderName:STR_FOLDERNAME];
+    if (str_folderPath)
+    {
+        NSURL* url_folder = [[NSURL alloc]initFileURLWithPath:str_folderPath isDirectory:YES];
+        NSError* error = nil;
+        BOOL success = [url_folder setResourceValue: [NSNumber numberWithBool: YES]
+                                      forKey: NSURLIsExcludedFromBackupKey error: &error];
+        if(!success){
+            NSLog(@"Error excluding %@ from backup %@", [url_folder lastPathComponent], error);
+        }
+    }
 }
 @end
