@@ -61,6 +61,7 @@
     [[ReviewFacade sharedInstance] load];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self prepareData];
+        [self.tableView reloadData];
     });
     
     self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -244,6 +245,10 @@
         [[ReviewFacade sharedInstance] refresh];
         [weakself prepareData];
         [weakself.tableView reloadData];
+        if (weakself.arr_items.count)
+        {
+            [weakself.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        }
         NSLog(@"success");
     };
     self.addItemDirector.failBlock = ^(void)
