@@ -16,6 +16,9 @@
 @interface AppDelegate()
 - (void)registerUmeng;
 - (void)getUmengTestInfo;
+
+- (void)ignoreFilePath;
+
 @end
 
 @implementation AppDelegate
@@ -141,5 +144,10 @@
     //    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
     //    notification.alertBody = [NSString stringWithFormat:@"%@", [[NSDate date] description]];
     //    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+}
+
+- (void)ignoreFilePat
+{
+//    NSString
 }
 @end

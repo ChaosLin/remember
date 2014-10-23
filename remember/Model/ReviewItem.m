@@ -11,6 +11,8 @@
 #import "UniqueID.h"
 #import "FilePath.h"
 
+static NSString* STR_FOLDERNAME = @"ImagesAndConfig";
+
 @implementation ReviewItem
 
 - (id)init
@@ -173,7 +175,7 @@
 {
     self.count_images += 1;
     NSString* str_fileName = [NSString stringWithFormat:@"%@_%d.jpeg", self.id_review, self.count_images];
-    NSString* str_filePath = [FilePath getDocumentPathWithFileName:str_fileName];
+    NSString* str_filePath = [FilePath getDocumentPathWithFolderName:STR_FOLDERNAME FileName:str_fileName];
     NSData* data_image = UIImageJPEGRepresentation(image, 1);
     return [data_image writeToFile:str_filePath atomically:YES];
 }
@@ -187,7 +189,7 @@
             if ([obj isKindOfClass:[UIImage class]])
             {
                 NSString* str_fileName = [NSString stringWithFormat:@"%@_%d.jpeg", self.id_review, idx + 1];
-                NSString* str_filePath = [FilePath getDocumentPathWithFileName:str_fileName];
+                NSString* str_filePath = [FilePath getDocumentPathWithFolderName:STR_FOLDERNAME FileName:str_fileName];
                 
                 float width = ((UIImage*)obj).size.width;
                 //如果图片的尺寸很大，则用很大的压缩比
@@ -226,7 +228,7 @@
     if (self.count_images > index)
     {
         NSString* str_fileName = [NSString stringWithFormat:@"%@_%d.jpeg", self.id_review, index + 1];
-        str_filePath = [FilePath getDocumentPathWithFileName:str_fileName];
+        str_filePath = [FilePath getDocumentPathWithFolderName:STR_FOLDERNAME FileName:str_fileName];
     }
     return str_filePath;
 }
@@ -234,7 +236,7 @@
 - (UIImage*)getImageAtIndex:(NSInteger)index
 {
     NSString* str_fileName = [NSString stringWithFormat:@"%@_%d.jpeg", self.id_review, index];
-    NSString* str_filePath = [FilePath getDocumentPathWithFileName:str_fileName];
+    NSString* str_filePath = [FilePath getDocumentPathWithFolderName:STR_FOLDERNAME FileName:str_fileName];
     return [[UIImage alloc]initWithContentsOfFile:str_filePath];
 }
 @end

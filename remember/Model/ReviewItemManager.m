@@ -12,6 +12,7 @@
 
 static ReviewItemManager* manager = nil;
 #define ItemFileName @"ItemFileName.plist"
+static NSString* STR_FOLDERNAME = @"ImagesAndConfig";
 
 @interface ReviewItemManager()
 
@@ -52,7 +53,7 @@ static ReviewItemManager* manager = nil;
 
 - (BOOL)save
 {
-    NSString* str_filePath = [FilePath getDocumentPathWithFileName:ItemFileName];
+    NSString* str_filePath = [FilePath getDocumentPathWithFolderName:STR_FOLDERNAME FileName:ItemFileName];
     BOOL result = YES;
     NSArray* arr_items = [self.arr_items mutableCopy];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
@@ -68,7 +69,7 @@ static ReviewItemManager* manager = nil;
 - (BOOL)load
 {
     BOOL result = YES;
-    NSString* str_filePath = [FilePath getDocumentPathWithFileName:ItemFileName];
+    NSString* str_filePath = [FilePath getDocumentPathWithFolderName:STR_FOLDERNAME FileName:ItemFileName];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void){
         NSArray* arr_files = [NSKeyedUnarchiver unarchiveObjectWithFile:str_filePath];
         [self.arr_items removeAllObjects];
