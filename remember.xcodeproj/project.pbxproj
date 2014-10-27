@@ -100,6 +100,9 @@
 		7E4C7F0719D2A6BB00DD8BAF /* ImageCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0519D2A6BB00DD8BAF /* ImageCompressor.m */; };
 		7E4C7F0B19D2C5FC00DD8BAF /* RTLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0A19D2C5FC00DD8BAF /* RTLoadingView.m */; };
 		7E4C7F0C19D2C5FC00DD8BAF /* RTLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0A19D2C5FC00DD8BAF /* RTLoadingView.m */; };
+		7E61ABE119FDF61000028D8A /* IntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61ABE019FDF61000028D8A /* IntroductionView.m */; };
+		7E61AC3419FE1FAD00028D8A /* IntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61AC3319FE1FAD00028D8A /* IntroductionViewController.m */; };
+		7E61AC3819FE250200028D8A /* IntroductionConfigClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61AC3719FE250200028D8A /* IntroductionConfigClass.m */; };
 		7E74D7BA19D1534600D51746 /* DayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7B319D1534600D51746 /* DayCellView.m */; };
 		7E74D7BB19D1534600D51746 /* DayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7B319D1534600D51746 /* DayCellView.m */; };
 		7E74D7BC19D1534600D51746 /* EventDayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E74D7B519D1534600D51746 /* EventDayCellView.m */; };
@@ -263,6 +266,13 @@
 		7E4C7F0519D2A6BB00DD8BAF /* ImageCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCompressor.m; sourceTree = "<group>"; };
 		7E4C7F0919D2C5FC00DD8BAF /* RTLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLoadingView.h; sourceTree = "<group>"; };
 		7E4C7F0A19D2C5FC00DD8BAF /* RTLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLoadingView.m; sourceTree = "<group>"; };
+		7E61ABDF19FDF61000028D8A /* IntroductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroductionView.h; sourceTree = "<group>"; };
+		7E61ABE019FDF61000028D8A /* IntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroductionView.m; sourceTree = "<group>"; };
+		7E61AC3119FE1C0800028D8A /* remember copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "remember copy-Info.plist"; path = "/Users/RentonTheUncoped/GitHub/remember/remember copy-Info.plist"; sourceTree = "<absolute>"; };
+		7E61AC3219FE1FAD00028D8A /* IntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroductionViewController.h; sourceTree = "<group>"; };
+		7E61AC3319FE1FAD00028D8A /* IntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroductionViewController.m; sourceTree = "<group>"; };
+		7E61AC3619FE250200028D8A /* IntroductionConfigClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroductionConfigClass.h; sourceTree = "<group>"; };
+		7E61AC3719FE250200028D8A /* IntroductionConfigClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroductionConfigClass.m; sourceTree = "<group>"; };
 		7E74D7B219D1534600D51746 /* DayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayCellView.h; sourceTree = "<group>"; };
 		7E74D7B319D1534600D51746 /* DayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayCellView.m; sourceTree = "<group>"; };
 		7E74D7B419D1534600D51746 /* EventDayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDayCellView.h; sourceTree = "<group>"; };
@@ -578,6 +588,43 @@
 			path = Loading;
 			sourceTree = "<group>";
 		};
+		7E61ABDC19FDF5DC00028D8A /* IntroductionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7E61AC3519FE24D200028D8A /* IntroductionHelper */,
+				7E61ABDE19FDF5EF00028D8A /* ViewController */,
+				7E61ABDD19FDF5E600028D8A /* View */,
+			);
+			path = IntroductionViewController;
+			sourceTree = "<group>";
+		};
+		7E61ABDD19FDF5E600028D8A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E61ABDF19FDF61000028D8A /* IntroductionView.h */,
+				7E61ABE019FDF61000028D8A /* IntroductionView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7E61ABDE19FDF5EF00028D8A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7E61AC3219FE1FAD00028D8A /* IntroductionViewController.h */,
+				7E61AC3319FE1FAD00028D8A /* IntroductionViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		7E61AC3519FE24D200028D8A /* IntroductionHelper */ = {
+			isa = PBXGroup;
+			children = (
+				7E61AC3619FE250200028D8A /* IntroductionConfigClass.h */,
+				7E61AC3719FE250200028D8A /* IntroductionConfigClass.m */,
+			);
+			name = IntroductionHelper;
+			sourceTree = "<group>";
+		};
 		7E74D7B119D1534600D51746 /* RTCalendarView */ = {
 			isa = PBXGroup;
 			children = (
@@ -608,6 +655,7 @@
 				7EAB3A2219A1944200024E00 /* rememberTests */,
 				7EAB3A0219A1944200024E00 /* Frameworks */,
 				7EAB3A0119A1944200024E00 /* Products */,
+				7E61AC3119FE1C0800028D8A /* remember copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -703,6 +751,7 @@
 		7EAB3A3619A19AB800024E00 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7E61ABDC19FDF5DC00028D8A /* IntroductionViewController */,
 				7EC0972819E62B040012CD19 /* DateUtils */,
 				7E4C7F0819D2C5E500DD8BAF /* Loading */,
 				7E4C7F0319D2A65F00DD8BAF /* ImageCompressor */,
@@ -890,6 +939,7 @@
 				59D0348B19AF782200C0E40D /* AGImagePickerController.m in Sources */,
 				59D0350519AF80F000C0E40D /* UIImageView+WebCache.m in Sources */,
 				59D034DD19AF80F000C0E40D /* MJPhotoBrowser.m in Sources */,
+				7E61AC3819FE250200028D8A /* IntroductionConfigClass.m in Sources */,
 				7EAB3A5319A2FD8E00024E00 /* ReviewItemGenerator.m in Sources */,
 				59D034FB19AF80F000C0E40D /* UIButton+WebCache.m in Sources */,
 				5983793119A24B4400AD4BC7 /* FilePath.m in Sources */,
@@ -908,6 +958,7 @@
 				5983792719A2447C00AD4BC7 /* ReviewItemManager.m in Sources */,
 				59D034F719AF80F000C0E40D /* SDWebImageManager.m in Sources */,
 				7E74D7BE19D1534600D51746 /* MonthView.m in Sources */,
+				7E61AC3419FE1FAD00028D8A /* IntroductionViewController.m in Sources */,
 				59D034EF19AF80F000C0E40D /* SDWebImageDecoder.m in Sources */,
 				59D0348F19AF782200C0E40D /* AGIPCAssetsController.m in Sources */,
 				7E4C7F0119D270A300DD8BAF /* TimeRecorder.m in Sources */,
@@ -932,6 +983,7 @@
 				59D034EB19AF80F000C0E40D /* SDImageCache.m in Sources */,
 				59D034E319AF80F000C0E40D /* MJPhotoToolbar.m in Sources */,
 				59D0348719AF782200C0E40D /* AGImagePickerController+Helper.m in Sources */,
+				7E61ABE119FDF61000028D8A /* IntroductionView.m in Sources */,
 				7E74D7C019D1534600D51746 /* NumberDayCellView.m in Sources */,
 				59D034E919AF80F000C0E40D /* NSData+GIF.m in Sources */,
 				59D034D919AF80F000C0E40D /* MJPhoto.m in Sources */,

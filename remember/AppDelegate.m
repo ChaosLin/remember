@@ -13,6 +13,8 @@
 #import "MobClick.h"
 #import "CommonConfig.h"
 #import "FilePath.h"
+#import "IntroductionConfigClass.h"
+#import "IntroductionViewController.h"
 
 static NSString* STR_FOLDERNAME = @"ImagesAndConfig";
 
@@ -22,12 +24,15 @@ static NSString* STR_FOLDERNAME = @"ImagesAndConfig";
 
 - (void)ignoreFilePath;
 
+- (void)showMainVC:(NSNotification*)notification;
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showMainVC:) name:NOTIFICATIONNAME_INTRODUCTIONNEXTBUTTONCLICKED object:nil];
+    
     [self ignoreFilePath];
     
     [self registerUmeng];
@@ -37,11 +42,16 @@ static NSString* STR_FOLDERNAME = @"ImagesAndConfig";
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    ItemListTableViewController* homeVC = [[ItemListTableViewController alloc]initWithNibName:nil bundle:nil];
-    UINavigationController* navigationVC = [[UINavigationController alloc]initWithRootViewController:homeVC];
-    self.window.rootViewController = navigationVC;
     
-    [ReviewFacade sharedInstance];
+    if ([[IntroductionConfigClass sharedInstance] shouldReview])
+    {
+        IntroductionViewController* introductionVC = [[IntroductionViewController alloc]init];
+        self.window.rootViewController = introductionVC;
+    }
+    else
+    {
+        [self showMainVC:nil];
+    }
     
     [self.window makeKeyAndVisible];
     
@@ -164,5 +174,14 @@ static NSString* STR_FOLDERNAME = @"ImagesAndConfig";
             NSLog(@"Error excluding %@ from backup %@", [url_folder lastPathComponent], error);
         }
     }
+}
+
+- (void)showMainVC:(NSNotification*)notification
+{
+    ItemListTableViewController* homeVC = [[ItemListTableViewController alloc]initWithNibName:nil bundle:nil];
+    UINavigationController* navigationVC = [[UINavigationController alloc]initWithRootViewController:homeVC];
+    self.window.rootViewController = navigationVC;
+    
+    [ReviewFacade sharedInstance];
 }
 @end
