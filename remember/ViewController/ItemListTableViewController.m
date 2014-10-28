@@ -17,6 +17,7 @@
 #import "MobClick.h"
 #import "ConfigTableViewController.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "UIColor+CommonUtils.h"
 
 @interface ItemListTableViewController ()<MJPhotoBrowserDelegate>
 @property (nonatomic, strong) RTReviewAddItemDirector* addItemDirector;
@@ -52,9 +53,10 @@
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.title = NSLocalizedString(@"HomeVCTitle", nil);
+//    0xef8232
+//    NSAttributedString
+//    self.navigationController.navigationBar.titleTextAttributes
     
     self.dayID = [DateUtils getTodayDateId];
     //init,prepare data
@@ -118,9 +120,12 @@
     {
         // Configure the cell...
         cell = [[ItemListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseID];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
+    cell.contentView.backgroundColor = ((0 != indexPath.row % 2) ? [UIColor colorWithHex:0x606aaa] : [UIColor colorWithHex:0xfbcc89]);
     ReviewItem* item = [self.arr_items objectAtIndex:indexPath.row];
+    
     
     //考虑用图片去填充
 //    cell.textLabel.text = [NSString stringWithFormat:@"%d", item.dateId_created];

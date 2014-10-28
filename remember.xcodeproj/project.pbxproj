@@ -100,6 +100,7 @@
 		7E4C7F0719D2A6BB00DD8BAF /* ImageCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0519D2A6BB00DD8BAF /* ImageCompressor.m */; };
 		7E4C7F0B19D2C5FC00DD8BAF /* RTLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0A19D2C5FC00DD8BAF /* RTLoadingView.m */; };
 		7E4C7F0C19D2C5FC00DD8BAF /* RTLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E4C7F0A19D2C5FC00DD8BAF /* RTLoadingView.m */; };
+		7E56696519FFB92600B1C4F8 /* UIColor+CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E56696419FFB92600B1C4F8 /* UIColor+CommonUtils.m */; };
 		7E61ABE119FDF61000028D8A /* IntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61ABE019FDF61000028D8A /* IntroductionView.m */; };
 		7E61AC3419FE1FAD00028D8A /* IntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61AC3319FE1FAD00028D8A /* IntroductionViewController.m */; };
 		7E61AC3819FE250200028D8A /* IntroductionConfigClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61AC3719FE250200028D8A /* IntroductionConfigClass.m */; };
@@ -266,6 +267,8 @@
 		7E4C7F0519D2A6BB00DD8BAF /* ImageCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCompressor.m; sourceTree = "<group>"; };
 		7E4C7F0919D2C5FC00DD8BAF /* RTLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLoadingView.h; sourceTree = "<group>"; };
 		7E4C7F0A19D2C5FC00DD8BAF /* RTLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLoadingView.m; sourceTree = "<group>"; };
+		7E56696319FFB92600B1C4F8 /* UIColor+CommonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CommonUtils.h"; sourceTree = "<group>"; };
+		7E56696419FFB92600B1C4F8 /* UIColor+CommonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CommonUtils.m"; sourceTree = "<group>"; };
 		7E61ABDF19FDF61000028D8A /* IntroductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroductionView.h; sourceTree = "<group>"; };
 		7E61ABE019FDF61000028D8A /* IntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroductionView.m; sourceTree = "<group>"; };
 		7E61AC3119FE1C0800028D8A /* remember copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "remember copy-Info.plist"; path = "/Users/RentonTheUncoped/GitHub/remember/remember copy-Info.plist"; sourceTree = "<absolute>"; };
@@ -588,6 +591,15 @@
 			path = Loading;
 			sourceTree = "<group>";
 		};
+		7E56696219FFB92600B1C4F8 /* UIColor+CommonUtils */ = {
+			isa = PBXGroup;
+			children = (
+				7E56696319FFB92600B1C4F8 /* UIColor+CommonUtils.h */,
+				7E56696419FFB92600B1C4F8 /* UIColor+CommonUtils.m */,
+			);
+			path = "UIColor+CommonUtils";
+			sourceTree = "<group>";
+		};
 		7E61ABDC19FDF5DC00028D8A /* IntroductionViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -751,6 +763,7 @@
 		7EAB3A3619A19AB800024E00 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7E56696219FFB92600B1C4F8 /* UIColor+CommonUtils */,
 				7E61ABDC19FDF5DC00028D8A /* IntroductionViewController */,
 				7EC0972819E62B040012CD19 /* DateUtils */,
 				7E4C7F0819D2C5E500DD8BAF /* Loading */,
@@ -951,6 +964,7 @@
 				5992BCA519C34B1C00339FC5 /* PhotoTakerUnit.m in Sources */,
 				59D0349519AF782200C0E40D /* AGIPCToolbarItem.m in Sources */,
 				7EAB3A4A19A1EDE000024E00 /* UniqueID.m in Sources */,
+				7E56696519FFB92600B1C4F8 /* UIColor+CommonUtils.m in Sources */,
 				59D034F119AF80F000C0E40D /* SDWebImageDownloader.m in Sources */,
 				59D034ED19AF80F000C0E40D /* SDWebImageCompat.m in Sources */,
 				7E4C7F0619D2A6BB00DD8BAF /* ImageCompressor.m in Sources */,

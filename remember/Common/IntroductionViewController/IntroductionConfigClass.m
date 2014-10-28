@@ -61,7 +61,12 @@ static IntroductionConfigClass* config = nil;
         NSString* str_currentVersion = [self currentVersion];
         //read local file
         NSString* str_filePath = [FilePath getTempPathWithFileName:IntroductionVersionFileName];
-        [str_currentVersion writeToFile:str_filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+        NSError* error = nil;
+        BOOL result = [str_currentVersion writeToFile:str_filePath atomically:YES encoding:NSUTF8StringEncoding error:&error];
+        if (!result)
+        {
+            NSLog(@"Write version file failed:%@", error);
+        }
     }
 }
 
