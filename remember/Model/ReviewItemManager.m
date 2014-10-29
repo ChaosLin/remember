@@ -116,8 +116,8 @@ static NSString* STR_FOLDERNAME = @"ImagesAndConfig";
     {
         [self.arr_items addObject:item];
         result = YES;
+        [self saveToFile];
     }
-    [self saveToFile];
     return result;
 }
 
