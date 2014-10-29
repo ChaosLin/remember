@@ -15,7 +15,7 @@
 + (void)destroy;
 
 #pragma mark - ReviewItemManger
-- (BOOL)load;
+- (BOOL)loadFromFile;
 - (BOOL)save;
 
 - (NSArray*)items;

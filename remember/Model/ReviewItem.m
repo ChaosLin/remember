@@ -170,6 +170,11 @@ static NSString* STR_FOLDERNAME = @"ImagesAndConfig";
     _dateId_lastReviewed = dateId_lastReviewed;
 }
 
+- (NSString*)description
+{
+    return [NSString stringWithFormat:@"%@ id:%@ date:%d", [self class], self.id_review, self.dateId_created];
+}
+
 #pragma mark - Image
 - (BOOL)addImage:(UIImage *)image
 {

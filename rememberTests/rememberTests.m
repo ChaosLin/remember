@@ -78,8 +78,8 @@
     XCTAssert([manager deleteAllItems], @"");
     XCTAssert([manager addItem:item], @"");
     XCTAssert([manager addItem:item2], @"");
-    XCTAssert([manager save], @"");
-    XCTAssert([manager load], @"");
+    XCTAssert([manager saveToFile], @"");
+    XCTAssert([manager loadFromFile], @"");
     XCTAssert(2 == manager.items.count, @"");
     XCTAssert([manager deleteItemByID:item.id_review], @"");
     XCTAssert(1 == manager.items.count, @"");
@@ -94,8 +94,8 @@
     XCTAssert([manager deleteAllItems], @"");
     XCTAssert([manager addItem:item], @"");
     XCTAssert([manager addItem:item2], @"");
-    XCTAssert([manager save], @"");
-    XCTAssert([manager load], @"");
+    XCTAssert([manager saveToFile], @"");
+    XCTAssert([manager loadFromFile], @"");
     XCTAssert(2 == manager.items.count, @"");
     XCTAssert([manager deleteItemByID:item2.id_review], @"");
     XCTAssert(1 == manager.items.count, @"");

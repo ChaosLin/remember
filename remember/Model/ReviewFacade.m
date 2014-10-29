@@ -43,14 +43,14 @@ static ReviewFacade* facade = nil;
 }
 
 #pragma mark - ReviewItemManger
-- (BOOL)load
+- (BOOL)loadFromFile
 {
-    return [self.itemManager load];
+    return [self.itemManager loadFromFile];
 }
 
 - (BOOL)save
 {
-    return [self.itemManager save];
+    return [self.itemManager saveToFile];
 }
 
 - (NSArray*)items

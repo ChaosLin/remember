@@ -12,10 +12,11 @@
 
 + (instancetype)sharedInstance;
 
+#warning 这里似乎并不应该直接把数据抛出去，至少copy一份再抛出去，对当前类的数据操作必须得封装
 - (NSArray*)items;
 
-- (BOOL)save;
-- (BOOL)load;
+- (BOOL)saveToFile;
+- (BOOL)loadFromFile;
 
 - (ReviewItem*)getItemByID:(NSString*)uniqueID;
 

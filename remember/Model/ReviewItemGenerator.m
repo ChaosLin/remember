@@ -57,13 +57,13 @@ static ReviewItemGenerator* generator = nil;
                 if (-1 != dayID)
                 {
                     NSString* str_dayID = GetStringFromDayID(dayID);
-                    NSMutableArray* arr_items = (NSMutableArray*)[self.dic_dayID2ItemArr valueForKey:str_dayID];
-                    if (!arr_items)
+                    NSMutableArray* arr_items_temp = (NSMutableArray*)[self.dic_dayID2ItemArr valueForKey:str_dayID];
+                    if (!arr_items_temp)
                     {
-                        arr_items = [NSMutableArray array];
-                        [self.dic_dayID2ItemArr setValue:arr_items forKey:str_dayID];
+                        arr_items_temp = [NSMutableArray array];
+                        [self.dic_dayID2ItemArr setValue:arr_items_temp forKey:str_dayID];
                     }
-                    [arr_items addObject:item];
+                    [arr_items_temp addObject:item];
                 }
             }
         }
