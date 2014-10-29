@@ -53,10 +53,11 @@
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    self.navigationItem.title = NSLocalizedString(@"HomeVCTitle", nil);
+    self.title = NSLocalizedString(@"HomeVCTitle", nil);
 //    0xef8232
 //    NSAttributedString
-//    self.navigationController.navigationBar.titleTextAttributes
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor colorWithHex:0xef8232]};
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithHex:0xef8232];
     
     self.dayID = [DateUtils getTodayDateId];
     //init,prepare data
