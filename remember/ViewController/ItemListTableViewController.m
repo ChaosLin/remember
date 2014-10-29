@@ -124,7 +124,8 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    cell.contentView.backgroundColor = ((0 != indexPath.row % 2) ? [UIColor colorWithHex:0x606aaa] : [UIColor colorWithHex:0xfbcc89]);
+    UIColor* backgroundColor = ((0 != indexPath.row % 2) ? [UIColor colorWithHex:0x606aaa] : [UIColor colorWithHex:0xfbcc89]);
+    cell.backgroundView.backgroundColor = backgroundColor;
     ReviewItem* item = [self.arr_items objectAtIndex:indexPath.row];
     
     

@@ -25,7 +25,7 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])
     {
         self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        self.editingAccessoryType = UITableViewCellAccessoryNone;
+//        self.editingAccessoryType = UITableViewCellAccessoryNone;
         self.label_date = [[UILabel alloc]initWithFrame:CGRectMake(253, 35, 74, 20)];
         self.label_date.textAlignment = NSTextAlignmentRight;
         self.label_date.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
@@ -40,6 +40,8 @@
         self.imageView_second.backgroundColor = [UIColor clearColor];
         self.imageView_second.contentMode = UIViewContentModeScaleAspectFit;
         [self.contentView addSubview:self.imageView_second];
+        
+        self.backgroundView = [[UIView alloc]initWithFrame:self.bounds];
     }
     return self;
 }
