@@ -56,8 +56,8 @@
     self.title = NSLocalizedString(@"HomeVCTitle", nil);
 //    0xef8232
 //    NSAttributedString
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor colorWithHex:0xef8232]};
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithHex:0xef8232];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHex:0xef8232]}];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithHex:0xef8232]];
     
     self.dayID = [DateUtils getTodayDateId];
     //init,prepare data
